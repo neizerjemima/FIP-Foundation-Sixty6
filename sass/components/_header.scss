@@ -74,6 +74,24 @@ a {
       z-index: 1;
    }
 
+#sign-in-header {
+      display: flex;
+      margin-top: 4%;
+      margin-bottom: 4%;
+      padding-left: 30px;
+      
+   }
+
+#sign-in-header a {
+   margin-right: 30px;
+   background-color: #e7b7e5;
+   padding: 5px;
+   border-radius: 20px;
+   color: #fff;
+}
+
+
+
 @media screen and (min-width: 768px) {
 
  #button {
@@ -112,6 +130,7 @@ a {
       margin-top: 4%;
       margin-bottom: 4%;
       padding-left: 30px;
+      display: flex;
    }
 
 
