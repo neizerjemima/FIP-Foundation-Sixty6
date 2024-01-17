@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/components/_footer.scss","../sass/components/_section.scss"],"names":[],"mappings":"AAEA,OACI,aCFJ,UACI,aAGJ,aACI,aAGJ,cACI,aAGJ,YACI","file":"main.css"}
