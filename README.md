@@ -1,6 +1,7 @@
 # FIP-Foundation-Sixty6
 
 FOUNDATION Sixty6
+
 ➡️ This is a website meant to advertise, promote and inform the public about Foundation Sixty6, this organization looks to improve the mental health accesibility for young adults located in Southwestern Ontario suffering from psychosis, bipolar disorder (BPD), and schizophrenia. 
 
 
