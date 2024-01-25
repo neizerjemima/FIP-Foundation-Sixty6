@@ -21,11 +21,11 @@ Push to the branch: git push origin my-new-feature
 Submit a pull request :D
 
 # Credits
-Jemima Ama Neizer 
-Michelle Paola Duque De La Rosa
-Estefania Aguilar Velez
-Apple Grace Gesalan
-Sandra Neira Claros
+- Jemima Ama Neizer 
+- Michelle Paola Duque De La Rosa
+- Estefania Aguilar Velez
+- Apple Grace Gesalan
+- Sandra Neira Claros
 
 # License
 MIT License
