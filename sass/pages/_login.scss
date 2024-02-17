@@ -1,0 +1,21 @@
+.hidden{
+    display: none;
+}
+
+#container-login{
+    display: flex;
+}
+
+.inside-login{
+    flex: 0 0 50%;
+}
+
+#login-form{
+    background-color: green;
+    margin: 0;
+
+}
+
+#login-image{
+    margin: 0;
+}
