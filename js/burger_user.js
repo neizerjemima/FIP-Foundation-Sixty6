@@ -1,6 +1,6 @@
 (() => {
     
-    const logo_section = document.querySelector('#logo-section');
+    const logo_section = document.querySelector('#user-section');
     const user_menu = document.querySelector('.user_menu');
     const burger_menu = document.querySelector('.burger_menu');
     const burger_image = document.querySelector("#hamburger-image");
