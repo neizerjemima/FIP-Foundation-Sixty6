@@ -1,0 +1,132 @@
+.user-website{
+    background-color: #F7F0F0;
+}
+
+.cards-icons{
+    background-color: #F3F3F3;
+    border: 2px solid #462E9F;
+    width: 220px;
+    height: 88px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cards-icons h3{
+    font-size: 30px;
+}
+
+.cards-icons h4{
+    font-size: 17px;
+}
+
+#cards-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cards-section i{
+    font-size: 60px;
+    padding-right: 10px;
+}
+
+.table-section{
+    margin-top: 60px;
+    border: 2px solid #462E9F;
+    background-color: #F3F3F3;
+}
+
+.header-table{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.header-table button{
+    font-weight: 600;
+    width: 70px;
+    height: 30px;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    background: rgb(70,46,159);
+    background: linear-gradient(180deg, rgba(70,46,159) 0%, rgba(39,23,98) 100%);
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.column-names{
+    background-color: #462E9F;
+}
+
+.column-names td{
+    color: #fff;
+}
+
+thead tr{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+
+td {
+    text-align: center;
+    padding: .5rem 1rem;
+    font-size: 12px;
+    color: #222;
+
+}
+
+#title-section{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #title-section{
+        display: block;
+        background-color: transparent;
+        color: #FFFFFF;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    #cards-section{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    td{
+        font-size: 14px;
+    }
+
+    .header-table h3{
+        font-size: 20px;
+    }
+
+    .header-table button{
+        width: 71px;
+        height: 31px;
+    }
+
+    .column-names td:last-child{
+        display: block;
+    }
+
+    tbody tr td:last-child{
+        display: block;
+    }
+
+}

@@ -1,0 +1,145 @@
+.hidden{
+    display: none;
+}
+
+#login-website{
+    background-color: #F7F0F0;
+    margin: 0 auto;
+}
+
+
+
+#container-login{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#login-form{
+    background: rgb(216,173,230);
+    background: linear-gradient(180deg, rgba(216,173,230,1) 0%, rgba(115,48,134,1) 100%);
+    margin: 0 auto;
+    height: 686px;
+    text-align: center;
+
+}
+
+#login-form img{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+#login-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-input input{
+    margin-top: 20px;
+    font-size: 16px;
+    width: 260px;
+    height: 52px;
+    border: none;
+    background-color: #271762;
+    color: white;
+    padding-left: 10px;
+}
+
+#login-input input:last-child{
+    margin-top: 30px;
+    padding-left: 0px;
+}
+
+#login-button{
+    height: 61px;
+    background: rgb(70,46,159);
+    background: linear-gradient(180deg, rgba(70,46,159) 0%, rgba(39,23,98) 100%);
+}
+
+#login-image{
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    
+    #login-form img{
+        height: 80px;
+    }
+
+    #login-input input{
+        margin-top: 25px;
+        font-size: 16px;
+        width: 529px;
+        height: 66px;
+    }
+
+    #login-input input:last-child{
+        margin-top: 50px;
+    }
+
+    #login-button{
+        height: 69px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #container-login{
+    display: flex;
+    height: 670px;
+    }
+
+    #login-form{
+        height: 100%;
+    }
+
+    #login-form img{
+        height: 70px;
+    }
+
+    #login-input input{
+        margin-top: 25px;
+        font-size: 14px;
+        width: 460px;
+        height: 58px;
+    }
+
+    #login-button{
+        height: 61px;
+    }
+
+    .inside-login{
+        flex: 0 0 50%;
+    }
+
+    #login-input{
+        margin-top: 70px;
+    }
+
+    #login-image{
+        display: block;
+    }
+
+}
+
+
+@media screen and (min-width: 1920px) {
+    #login-form img{
+        height: 90px;
+    }
+
+    #login-input{
+        margin-top: 20px;
+    }
+    
+    #login-input input{
+        margin-top: 25px;
+        font-size: 20px;
+        width: 540px;
+        height: 82px;
+    }
+
+}
