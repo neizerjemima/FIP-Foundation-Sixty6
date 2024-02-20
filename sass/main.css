@@ -1,0 +1,509 @@
+a {
+  text-decoration: none;
+}
+
+#main-nav {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-left: 1px;
+  padding-left: 30px;
+}
+
+#main-nav button {
+  width: 30px;
+  height: 30px;
+  background: url(../images/burger.svg) no-repeat center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  border: 0;
+  cursor: pointer;
+}
+
+#main-nav button.expanded {
+  transform: rotate(90deg);
+}
+
+#burger-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#burger-con.slide-toggle {
+  display: block;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 2px 0 5px 0;
+  text-align: center;
+  color: #009DFF;
+  font-size: 14px;
+}
+
+#main-nav ul li a:hover {
+  color: #7A2A85;
+}
+
+#main-nav ul li:last-child {
+  margin-bottom: 10px;
+}
+
+#logo {
+  margin-top: -50px;
+  max-width: 90px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+}
+
+#sticky-nav-con {
+  position: sticky;
+  background-color: #F7F0F0;
+  top: 0px;
+  border-bottom: solid 1px #E6E2C3;
+  z-index: 1;
+}
+
+#sign-in-header {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-left: 30px;
+}
+
+#sign-in-header a {
+  margin-right: 30px;
+  background-color: #e7b7e5;
+  padding: 5px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #button {
+    display: none;
+  }
+  #logo {
+    margin-top: 20px;
+    order: -1;
+    margin-left: 170px;
+  }
+  #burger-con {
+    display: block;
+    font-size: 13px;
+  }
+  #burger-con ul li, #burger-con ul li:first-child {
+    border: none;
+    display: inline;
+  }
+  #main-nav ul li a {
+    display: inline;
+  }
+  #burger-con ul li {
+    margin-right: 10px;
+  }
+  #burger-con ul li:last-child {
+    margin-right: 0;
+  }
+  #main-nav {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 30px;
+    display: flex;
+  }
+}
+footer {
+  height: 200px;
+}
+
+#hero-con {
+  height: 400px;
+}
+
+#mission div {
+  height: 200px;
+}
+
+#articles div {
+  height: 300px;
+}
+
+#donate div {
+  height: 200px;
+}
+
+#location div {
+  height: 200px;
+}
+
+#contact-form form {
+  margin-left: 550px;
+  margin-top: 50px;
+}
+
+#slogan div {
+  height: 150px;
+}
+
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-form {
+  text-align: center;
+}
+
+.sidebar {
+  height: 100%;
+  width: 228px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  background-color: #DFAFE6;
+}
+
+#main-header-user {
+  background-color: #271762;
+}
+
+#burger-nav {
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: transparent;
+}
+
+.hamburger, #user-section {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger img {
+  height: 50px;
+  width: 100%;
+}
+
+.burger_menu, .user_menu {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: #a491e8;
+  padding-top: 120px;
+  transition: 0.4s;
+  list-style-type: none;
+}
+
+.burger_menu.is-active, .user_menu.is-active {
+  left: 0;
+}
+
+.burger_menu ul, .user_menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.burger_menu a, .user_menu a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 12px;
+  font-size: 12px;
+  background: rgb(70, 46, 159);
+  background: linear-gradient(180deg, rgb(70, 46, 159) 0%, rgb(39, 23, 98) 100%);
+  color: #FFF;
+  text-decoration: none;
+}
+
+.burger_menu a:hover {
+  background-color: red;
+}
+
+#user-section {
+  background-color: #7A2A85;
+  padding: 9px;
+  padding-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .burger_menu a, .user_menu a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .burger_menu {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  #user-section {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}
+
+#login-website {
+  background-color: #F7F0F0;
+  margin: 0 auto;
+}
+
+#container-login {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#login-form {
+  background: rgb(216, 173, 230);
+  background: linear-gradient(180deg, rgb(216, 173, 230) 0%, rgb(115, 48, 134) 100%);
+  margin: 0 auto;
+  height: 686px;
+  text-align: center;
+}
+
+#login-form img {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  height: 50px;
+}
+
+#login-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-input input {
+  margin-top: 20px;
+  font-size: 16px;
+  width: 260px;
+  height: 52px;
+  border: none;
+  background-color: #271762;
+  color: white;
+  padding-left: 10px;
+}
+
+#login-input input:last-child {
+  margin-top: 30px;
+  padding-left: 0px;
+}
+
+#login-button {
+  height: 61px;
+  background: rgb(70, 46, 159);
+  background: linear-gradient(180deg, rgb(70, 46, 159) 0%, rgb(39, 23, 98) 100%);
+}
+
+#login-image {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #login-form img {
+    height: 80px;
+  }
+  #login-input input {
+    margin-top: 25px;
+    font-size: 16px;
+    width: 529px;
+    height: 66px;
+  }
+  #login-input input:last-child {
+    margin-top: 50px;
+  }
+  #login-button {
+    height: 69px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #container-login {
+    display: flex;
+    height: 670px;
+  }
+  #login-form {
+    height: 100%;
+  }
+  #login-form img {
+    height: 70px;
+  }
+  #login-input input {
+    margin-top: 25px;
+    font-size: 14px;
+    width: 460px;
+    height: 58px;
+  }
+  #login-button {
+    height: 61px;
+  }
+  .inside-login {
+    flex: 0 0 50%;
+  }
+  #login-input {
+    margin-top: 70px;
+  }
+  #login-image {
+    display: block;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #login-form img {
+    height: 90px;
+  }
+  #login-input {
+    margin-top: 20px;
+  }
+  #login-input input {
+    margin-top: 25px;
+    font-size: 20px;
+    width: 540px;
+    height: 82px;
+  }
+}
+.user-website {
+  background-color: #F7F0F0;
+}
+
+.cards-icons {
+  background-color: #F3F3F3;
+  border: 2px solid #462E9F;
+  width: 220px;
+  height: 88px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cards-icons h3 {
+  font-size: 30px;
+}
+
+.cards-icons h4 {
+  font-size: 17px;
+}
+
+#cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cards-section i {
+  font-size: 60px;
+  padding-right: 10px;
+}
+
+.table-section {
+  margin-top: 60px;
+  border: 2px solid #462E9F;
+  background-color: #F3F3F3;
+}
+
+.header-table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-table button {
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  background: rgb(70, 46, 159);
+  background: linear-gradient(180deg, rgb(70, 46, 159) 0%, rgb(39, 23, 98) 100%);
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.column-names {
+  background-color: #462E9F;
+}
+
+.column-names td {
+  color: #fff;
+}
+
+thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+td {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  color: #222;
+}
+
+#title-section {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #title-section {
+    display: block;
+    background-color: transparent;
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 20px;
+  }
+  #cards-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  td {
+    font-size: 14px;
+  }
+  .header-table h3 {
+    font-size: 20px;
+  }
+  .header-table button {
+    width: 71px;
+    height: 31px;
+  }
+  .column-names td:last-child {
+    display: block;
+  }
+  tbody tr td:last-child {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
