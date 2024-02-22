@@ -3,3 +3,213 @@
 // footer {
 //     height: 200px;
 // }
+
+footer {
+    color: a.$primary-color;
+    background-color: #F7F0F0;
+    font-family: a.$body-font-family;
+    margin-top: 50%;
+
+    img {
+        margin-top: 52px;
+        margin-bottom: 52px;
+    }
+
+    h3{
+        font-family: a.$light-body-font;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .fa-brands{ 
+        font-size: 23px;
+    }
+    #social-icons {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        
+        i 
+        {margin-bottom: 10px;
+            span{
+                margin-left: 10px;
+                font-size: 16px;
+                color: a.$body-text-color;
+                font-family: a.$light-body-font;
+            }
+        }
+    }
+
+    #info {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        a{
+                font-size: 16px;
+                color: a.$body-text-color;
+                font-family: a.$light-body-font;
+        }
+    }
+
+    #insights{
+        text-align: center;
+        line-height: 4;
+        font-family: a.$light-body-font;
+        font-weight:bold;
+        margin-top: 9%;
+
+    form {
+        margin-left: 33px;
+    input {
+        border-radius: 12px;
+        border: none;
+        margin-bottom: 13px;
+        width: 360px;
+        padding-left: 20px;
+        height: 42px;
+        &::placeholder {
+            color: a.$primary-color;
+            font-size: 17px;
+            font-family: a.$light-body-font;
+            padding-left: 30px;
+        }        
+    }
+
+    input[type="submit"] {
+        width: 20%;
+        padding-left: 0;
+       color: a.$secondary-color;
+       background-color: a.$primary-color;
+       font-size: 17px;
+       margin-left: 72%;
+    }
+}
+}
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding-top: 46px;
+    
+        img {
+            margin-top: 44px;
+            margin-bottom: 0;
+        }
+    
+        h3{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .fa-brands{ 
+            font-size: 23px;
+        }
+        #social-icons {
+            margin-left: 50px;
+            
+            i 
+            {margin-bottom: 10px;
+                span{
+                    margin-left: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        #info {
+            margin-left: 50px;
+            a{
+                    font-size: 16px;
+            }
+        }
+    
+        #insights{
+            font-weight:bold;
+            margin-top: 0;
+    
+        form {
+            margin-left: 0;
+        input {
+            padding-left: 17px;
+            
+            &::placeholder {
+                font-size: 17px;
+                padding-left: 30px;
+            }        
+        }
+    
+        input[type="submit"] {
+            width: 20%;
+            padding-left: 0;
+            margin-left: 85%;
+            height: 30px;
+        }
+    }
+    }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+    
+        img {
+            margin-top: 44px;
+            margin-bottom: 0;
+            width: 90%;
+        }
+    
+        h3{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .fa-brands{ 
+            font-size: 23px;
+        }
+        #social-icons {
+            margin-top: 13px;
+            
+            i 
+            {margin-bottom: 10px;
+                span{
+                    margin-left: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        #info {
+            margin-top: 13px;
+            margin-left: 69px;
+            a{
+                    font-size: 16px;
+            }
+        }
+    
+        #insights{
+            font-family: a.$body-font-family;
+            line-height: 3;
+            text-align: left;
+            margin-left: 35px;
+             
+            p{
+                font-size: 18px;
+            }
+    
+        form {
+            margin-left: 26px;
+        input {
+            padding-left: 17px;
+            
+            &::placeholder {
+                font-size: 17px;
+                padding-left: 30px;
+            }        
+        }
+    
+        input[type="submit"] {
+            width: 26%;
+            margin-left: 62%;
+            height: 30px;
+        }
+    }
+    }
+    }
+}
