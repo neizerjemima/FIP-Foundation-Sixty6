@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <title>Foundation Sixty6 Contact</title>
+    <title>Foundation Sixty6</title>
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
   </head>
 
 <body>
-    <h1 class="hidden">Foundation Sixty6 Contact</h1>
+    <h1 class="hidden">Foundation Sixty6</h1>
     <div id="sticky-nav-con">
 <header class="grid-con" id="main-header">
     <nav id="main-nav" class="col-start-1 col-end-2 m-col-start-7 m-col-end-12"><h2 class="hidden">Nav</h2>
@@ -30,44 +31,108 @@
                     <p>Donate!</p></a>
                     <a href="error.html">
                     <p>Volunteer!</p></a>
-        </div>   
+        </div>  
     </nav>
-    <div class="box col-start-3 col-end-5 m-col-start-2 m-col-end-3" id="logo">
-        <!--<img src="#" alt="Logo Foundation Sixty6.">-->
+    <div class="col-start-3 col-end-5 m-col-start-2 m-col-end-3" id="logo">
+        <img src="images/FSixty6-logo.svg" alt="Logo Foundation Sixty6.">
     </div>
     
 </header>
 </div>
 
+    <section class="grid-con" id="hero-con">
+        <h2 class="hidden">Hero image</h2>
+        <div class="col-span-full">
+            <h2>In the Mental Health Journey, we’re here to be your guide, fostering your growth and resilience at every stage…</h2>
+            <img src="images/contacthero.jpeg" alt="sky landscape">
+        </div>
+    </section>
+
+    <div><button id="needHelp">Need Help?</button></div>
+
+    <section class="col-span-full" id="feelings">
+        <h2>Are You...</h2>
+        <div>
+            <p>feeling Sad and Depressed?</p>
+        </div>
+        <div>
+            <p>feeling Anxious and Nervous?</p>
+        </div>
+        <div>
+            <p>having thoughts of death or suicide?</p>
+        </div>
+        <div>
+            <p>having difficulties organizing thoughts?</p>
+        </div>
+        <div>
+            <p>feeling guilty or ashamed about your eating behaviour?</p>
+        </div>
+    </section>
+
     
-    
-   <section class="box col-span-full" id="contact-form">
-           <h2>Drop us a Message!</h2>
-            
+   <section class="col-span-full" id="contact-form">
+           <h2>Reach Out to a Professional</h2>
+           <div>
+            <p>By reaching out for support, you’re taking an important step towards reclaiming control of your mental health. Our dedicated professionals are here to provide compassionate care and guidance tailored to your individual needs. 
+            Please take a moment to fill out the form below to initiate the process of seeking professional assistance for mental health concerns. You are not alone, and help is available.</p>
+           </div>
            <form action="email.php" method="POST" enctype="text/plain">
             <input name="fullName" type="text" placeholder="Name">
-            <input name="phone" type="text" required placeholder="Phone">
             <input name="contactInfo" type="text" required placeholder="Email">
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input name="subject" type="text" required placeholder="Your concern here">
+            <textarea name="message" cols="30" rows="10" placeholder="Feel free to Share your story with us…"></textarea>
             <input name="submit" type="submit" value="Send">
             </form>
-
     </section> 
 
     <section class="grid-con" id="location">
-    <h2 class="box col-span-full hidden">Come to find us</h2>
-        <div class="box col-span-full m-col-start-1 m-col-end-7">Map</div>
-        <div class="box col-span-full m-col-start-7 m-col-end-13">Location info</div>
+    <h2 class="col-span-full">Come to find us</h2>
+        <div class="col-span-full m-col-start-1 m-col-end-7">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5366.754950752639!2d-81.2423409785111!3d42.9645215642869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef2342c533707%3A0xc70df819cdbbf339!2sMetro!5e0!3m2!1ses-419!2sca!4v1708578450904!5m2!1ses-419!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-span-full m-col-start-7 m-col-end-13">
+            <h2>Location info</h2>
+            <p>555 Wellignton Road <br>
+                London - Ontario - Canada
+            </p>
+        </div>
     </section>
 
     <section class="grid-con" id="slogan">
-    <h2 class="box col-span-full hidden">Slogan</h2>
-        <div class="box col-span-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <h2 class="col-span-full hidden">Slogan</h2>
+        <div class="col-span-full">
+            <h2>Give Yourself Time, Emerge Stronger</h2>
+        </div>
     </section>
     
 
     <footer class="grid-con"> 
-        <div class="box col-span-full">Footer</div>
+        <div class="col-span-full">
+            <img src="images/FSixty6-logo.svg" alt="">
+        </div>
+        <div class="col-start-3 col-end-5 m-col-start-2 m-col-end-3" id="social-icons">
+            <h3>Follow Us</h3>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google-plus"></i>
+        </div>
+        <div class="col-start-3 col-end-5 m-col-start-2 m-col-end-3">
+            <h3>Info</h3>
+            <a href="contact.html">Contact</a>
+            <a href="gethelp.html">Get Help</a>
+            <a href="index.html">Volunteer</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <section class="col-span-full m-col-start-10 m-col-end-13 l-col-start-8 l-col-end-12" id="insights">
+            <p>Sign up for Mental-health Insights</p>
+ 
+            <form action="email.php" method="POST" enctype="text/plain">
+             <input name="fullName" type="text" placeholder="Write your name here">
+             <input name="contactInfo" type="text" required placeholder="Email">
+             <input name="submit" type="submit" value="Send">
+             </form>
+             </section> 
     </footer>
 
     <script src="js/main.js"></script>
