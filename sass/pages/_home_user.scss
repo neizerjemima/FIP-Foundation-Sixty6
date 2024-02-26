@@ -71,6 +71,7 @@ table{
 
 .column-names td{
     color: #fff;
+    font-weight: 700;
 }
 
 thead tr{
@@ -128,5 +129,33 @@ td {
     tbody tr td:last-child{
         display: block;
     }
+
+}
+
+@media (min-width: 1200px) {
+
+    #donations-table .column-names td:last-child{
+        display: none;
+    }
+
+    #donations-table tbody tr td:last-child{
+        display: none;
+    }
+
+    .header-table h3{
+        font-size: 24px;
+    }
+
+    td{
+        font-size: 18px;
+    }
+
+    .header-table button{
+        width: 75px;
+        height: 35px;
+        font-size: 17px;
+    }
+
+
 
 }
