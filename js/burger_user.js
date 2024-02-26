@@ -5,6 +5,7 @@
     const burger_menu = document.querySelector('.burger_menu');
     const burger_image = document.querySelector("#hamburger-image");
     const btn_burger = document.querySelector('.hamburger');
+    const dropdown_menu = document.querySelector('.dropdown-menu')
 
     
     
@@ -13,10 +14,10 @@
       burger_menu.classList.toggle('is-active');
       if (btn_burger.classList.contains("is-active")){
         burger_image.src = "../images/close_user.png";
-        logo_section.style.display = 'none';
+        // logo_section.style.display = 'none';
       } else{
         burger_image.src = "../images/white-burger.png";
-        logo_section.style.display = 'block';
+        // logo_section.style.display = 'block';
       }
     };
     
@@ -31,29 +32,34 @@
       }
     };
 
-    function openUserMenu() {
-      logo_section.classList.toggle('is-active');
-      user_menu.classList.toggle('is-active');
-      if (logo_section.classList.contains("is-active")){
-        btn_burger.style.display = 'none';
-      } else{
-        btn_burger.style.display = 'block';
-      }
-
-    };
+  //   function openUserMenu() {
+  //       if (window.innerWidth < 1200) {
+  //         logo_section.classList.toggle('is-active');
+  //         user_menu.classList.toggle('is-active');
+  //         dropdown_menu.classList.toggle('hidden')
+  //         if (logo_section.classList.contains("is-active")){
+  //           btn_burger.style.display = 'none';
+  //         } else{
+  //           btn_burger.style.display = 'block';
+  //         }
+  //     } else {
+  //       dropdown_menu.classList.remove('hidden')
+  //     }
+  //   };
     
     
-    function closeUserMenu() {
-      logo_section.classList.toggle('is-active');
-      user_menu.classList.toggle('is-active');
-
-    };
+  //   function closeUserMenu() {
+  //       if (window.innerWidth < 1200) {
+  //     logo_section.classList.toggle('is-active');
+  //     user_menu.classList.toggle('is-active');
+  //   }
+  // };
 
     burger_menu.addEventListener("click", closeBurgerMenu);
     btn_burger.addEventListener("click", openBurgerMenu);
 
-    user_menu.addEventListener("click", closeUserMenu);
-    logo_section.addEventListener("click", openUserMenu);
+    // user_menu.addEventListener("click", closeUserMenu);
+    // logo_section.addEventListener("click", openUserMenu);
 
     
     
