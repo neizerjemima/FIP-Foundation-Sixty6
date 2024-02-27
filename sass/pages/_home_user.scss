@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    font-family:'Nexa-Regular';
 }
 
 .cards-icons h3{
@@ -45,6 +46,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    font-family:'Nexa-Regular';
 }
 
 
@@ -72,6 +74,7 @@ table{
 .column-names td{
     color: #fff;
     font-weight: 700;
+    font-family:'Nexa-Bold';
 }
 
 thead tr{
@@ -85,6 +88,7 @@ td {
     padding: .5rem 1rem;
     font-size: 12px;
     color: #222;
+    font-family:'Nexa-Light';
 
 }
 
@@ -94,6 +98,7 @@ td {
 
 @media (min-width: 768px) {
     #title-section{
+        font-family:'Nexa-Regular';
         display: block;
         background-color: transparent;
         color: #FFFFFF;
