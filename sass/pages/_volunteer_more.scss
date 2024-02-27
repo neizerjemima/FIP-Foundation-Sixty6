@@ -10,6 +10,16 @@
 }
 
 
+.more-information h3{
+    font-family:'Nexa-Bold';
+    font-size: 14px;
+}
+
+.more-information p{
+    font-family:'Nexa-Light';
+    font-size: 14px;
+}
+
 .more-information-flex h3{
     margin-right: 5px;
     width: 100px;
@@ -46,11 +56,11 @@
     // }
 
     .more-information-long > h3 {
-        margin-right: 33px;
+        margin-right: 37px;
     }
 
     #notes-volunteer{
-        margin-right: 54px;
+        margin-right: 58px;
     }
 
     .buttons-more-info button{
