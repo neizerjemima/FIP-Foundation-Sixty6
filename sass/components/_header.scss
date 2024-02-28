@@ -73,9 +73,9 @@ a {
       margin-bottom: 25px;
    }
 
-   #sign-in-header {
-      margin-top: -50px;
-   }
+   // #sign-in-header {
+   //    margin-top: -50px;
+   // }
 
 .buttond  {
       background-color: a.$primary-color;
@@ -92,6 +92,18 @@ a {
    }
 
 @media screen and (min-width: 768px) {
+
+   #burger-menu li {
+      margin-left: 40px;
+   }
+
+   #burger-menu li:last-child {
+      background-color: a.$primary-color;
+   }
+
+   #burger-menu li:nth-child(5) {
+      background-color: a.$primary-color;
+   }
 
  #button {
       display: none;
