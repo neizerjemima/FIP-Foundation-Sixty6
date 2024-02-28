@@ -1,0 +1,42 @@
+@use '../abstracts' as a;
+
+#recentArticle {
+    
+    h2 {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: 'Nexa-Bold';
+        font-weight: 700;
+        padding-top: 22px;
+    }
+    p{
+        text-align: justify;
+        line-height: 1.7;
+    }
+    button {
+        height: 30px;
+        width: 70px;
+        font-size: 17px;
+        margin-top: 225px;
+        margin-left: -100px;
+        color: #fff;
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .news {
+        
+        h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        img {
+            margin-top: 28px;
+        }
+    }
+}
