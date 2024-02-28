@@ -60,10 +60,8 @@ a {
 }
 
 #logo {
-   margin-top: -50px;
-   max-width: 90px;
-   margin-bottom: 20px;
-   margin-left: 140px;
+   margin-top: 30px;
+   max-width: 40%;
 }
 
 #sticky-nav-con {
@@ -75,20 +73,19 @@ a {
    }
 
 #sign-in-header {
-      display: flex;
-      margin-top: 4%;
-      margin-bottom: 4%;
-      padding-left: 30px;
-      
+      display: block;
+      // margin-top: 4%;
+      // margin-bottom: 4%;
+      // padding-left: 30px;
    }
 
-#sign-in-header a {
-   margin-right: 30px;
-   background-color: #e7b7e5;
-   padding: 5px;
-   border-radius: 20px;
-   color: #fff;
-}
+   // #sign-in-header a {
+   //    margin-right: 30px;
+   //    background-color: #e7b7e5;
+   //    padding: 5px;
+   //    border-radius: 20px;
+   //    color: #fff;
+   // }
 
 
 
@@ -98,11 +95,11 @@ a {
       display: none;
    }
 
-   #logo {
-      margin-top: 20px;
-      order: -1;
-      margin-left: 170px;
-   }
+   // #logo {
+   //    margin-top: 20px;
+   //    order: -1;
+   //    margin-left: 170px;
+   // }
 
    #burger-con {
       display: block;
