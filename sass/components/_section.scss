@@ -1,43 +1,54 @@
-// #hero-con {
-//     height: 800px;
-// }
+@use '../abstracts' as a;
 
-// #mission div {
-//     height: 600px;
-// }
+#hero-con {
+    position: relative;
+}
 
-// #articles div {
-//     height: 300px;
-//     background-color: #7A2A85;
-// }
+#hero-con h2 {
+    position: absolute; 
+    top: 10%; 
+    left: 10%;
+    color: a.$primary-color; 
+}
 
-// // #donate div {
-// //     height: 200px;
-// // }
+#hero-con h3 {
+    position: absolute; 
+    top: 33%; 
+    left: 60%;
+    color: a.$primary-color; 
+}
 
-// #location div {
-//     height: 200px;
-// }
+#list {
+    position: absolute; 
+    top: 40%; 
+    left: 60%;
+    color: a.$primary-color; 
+    border-radius: 20px;
+    padding: 3px;
+    border-color: transparent;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
 
-// #contact-form form {
-//     margin-left: 550px;
-//     margin-top: 50px;
-// }
+#seeMore {
+    position: absolute; 
+    top: 40%; 
+    left: 75%;
+    color: a.$secondary-color; 
+    background-color: a.$third-color;
+    padding:3px ;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
 
-// #slogan div {
-//     height: 150px;
-// }
-
-// input, textarea {
-//    display: block;
-//    margin: 0;
-//    padding: 0;
-// }
-
-// #contact-form {
-//       text-align: center;
-// }
-
-// #about {
-//     background-color: #271762;
-// }
+#needHelp {
+    position: fixed; 
+    top: 30%; 
+    left: 89%;
+    color: a.$secondary-color; 
+    background-color: a.$accent-color;
+    padding:10px ;
+    border-radius: 20px;
+    font-size: 20px;
+    z-index: 1;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
