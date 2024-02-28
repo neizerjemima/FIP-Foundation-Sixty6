@@ -60,7 +60,7 @@ a {
 }
 
 #logo {
-   margin-top: 30px;
+   margin-top: 20px;
    max-width: 40%;
 }
 
@@ -73,21 +73,23 @@ a {
       margin-bottom: 25px;
    }
 
-#sign-in-header {
-      display: block;
-      // margin-top: 4%;
-      // margin-bottom: 4%;
-      // padding-left: 30px;
+   #sign-in-header {
+      margin-top: -50px;
    }
 
-   // #sign-in-header a {
-   //    margin-right: 30px;
-   //    background-color: #e7b7e5;
-   //    padding: 5px;
-   //    border-radius: 20px;
-   //    color: #fff;
-   // }
+.buttond  {
+      background-color: a.$primary-color;
+      padding: 1px;
+      border-radius: 20px;
+      color: a.$secondary-color;
+   }
 
+.buttonv  {
+      background-color: a.$third-color;
+      padding: 1px;
+      border-radius: 20px;
+      color: a.$secondary-color;
+   }
 
 
 @media screen and (min-width: 768px) {
