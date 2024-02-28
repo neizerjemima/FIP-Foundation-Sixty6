@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Animation for the countdown statistics
 function animateCountdown(target, endValue) {
     gsap.to(target, {
         innerText: endValue,
