@@ -91,18 +91,18 @@ a {
       color: a.$secondary-color;
    }
 
-
 @media screen and (min-width: 768px) {
 
  #button {
       display: none;
    }
 
-   // #logo {
-   //    margin-top: 20px;
-   //    order: -1;
-   //    margin-left: 170px;
-   // }
+   #logo {
+      max-width: 1000px;
+      margin-top: 20px;
+      order: -1;
+      
+   }
 
    #burger-con {
       display: block;
@@ -132,6 +132,5 @@ a {
       padding-left: 30px;
       display: flex;
    }
-
 
 }
