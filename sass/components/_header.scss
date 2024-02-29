@@ -88,12 +88,21 @@ a {
       color: white;
    }
 
+   #burger-menu li:last-child a {
+      color: a.$secondary-color;
+   }
+
    #burger-menu li:nth-child(5) {
       background-color: a.$primary-color;
       padding: 8px;
       border-radius: 15px;
       color: white;
    }
+   #burger-menu li:nth-child(5) a {
+      color: a.$secondary-color;
+   }
+
+
 
 
  #button {
@@ -101,10 +110,9 @@ a {
    }
 
    #logo {
-      max-width: 1000px;
-      margin-top: 20px;
-      order: -1;
-      
+      max-width: 100%;
+      // margin-top: 20px;
+      // // order: -1;
    }
 
    #burger-con {
