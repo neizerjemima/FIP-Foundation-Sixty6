@@ -1,0 +1,29 @@
+@use '../abstracts' as a;
+
+#newEvent {
+    grid: 2/2;
+}
+
+#articles{
+    grid-row: 1/2;
+    
+}
+
+.Allevent {
+    margin: 0;
+}
+
+
+#newEvent{
+    background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
+    background-size: 100% 100%;
+
+    p{
+        font-family: a.$body-font-family;
+        font-size: 17px;
+    }
+}
+
+#news {
+    grid-row: 1/2; 
+}

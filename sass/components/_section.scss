@@ -9,6 +9,7 @@
     top: 10%; 
     left: 10%;
     color: a.$primary-color; 
+    font-family: a.$bold-body-font;
 }
 
 #hero-con h3 {
@@ -42,7 +43,6 @@
 
 #needHelp {
     position: fixed; 
-    // float: right;
     top: 30%; 
     left: 89%;
     color: a.$secondary-color; 
@@ -56,16 +56,22 @@
 
 @media screen and (min-width: 768px) {
 
+#mission {
+    grid-row: 1/2;
+}
 
+#mission img {
+    grid-row:1/2 ;
+}
 
 #mission p {
-    grid-row: 1;
+    grid-row: 1/2;
     background-color: a.$third-color;
     margin: 0 auto;
     padding: 60px;
-    color: a.$secondary-color;
+    color: a.$secondary-color; 
 
- }
+}
 
  #mission h2 {
     position: absolute;
@@ -107,10 +113,10 @@
     background-color: a.$secondary-color;
 }
 
-#articles {
-    position: absolute;
-    margin-top: 50px;
-}
+// #articles {
+//     position: absolute;
+//     margin-top: 50px;
+// }
 
 #articles p {
     color: a.$secondary-color;
@@ -122,19 +128,19 @@
 }
 
 .seeMore1 {
-    background-color: a.$third-color;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    color: a.$secondary-color;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.seeMore2 {
     background-color: a.$primary-color;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 4px;
+}
+
+.seeMore2 {
+    background-color: a.$third-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 #news {
