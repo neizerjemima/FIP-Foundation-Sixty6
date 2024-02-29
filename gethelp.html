@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+<script defer src="js/gethelp_slider.js"></script>
+<script defer src="js/gethelp_lightbox.js"></script>
   </head>
 
 <body>
@@ -40,11 +42,11 @@
 </header>
 </div>
 
-    <section class="grid-con" id="hero-con">
+    <section class="hero-gethelp grid-con" id="hero-con">
         <h2 class="hidden">Hero image</h2>
-        <div class="col-span-full">
+        <div class="col-span-full" id="hero-box-gethelp">
             <h2>In the Mental Health Journey, we are here to be your guide, fostering your growth and resilience at every stage…</h2>
-            <img src="images/contacthero.jpeg" alt="sky landscape">
+            <img src="images/contacthero.jpeg" alt="sky landscape" id="hero-gethelp">
         </div>
     </section>
 
@@ -52,36 +54,78 @@
 
     <section class="col-span-full" id="feelings">
         <h2>Are You...</h2>
-        <div>
-            <p>feeling Sad and Depressed?</p>
+        <div id="slider-container">
+        <div id="text-slider"> 
+            <div class="light-box-1 box-text-slider">
+                <p>feeling Sad and Depressed?</p>
+            </div>
+            <div class="light-box-2 box-text-slider">   
+                <p>feeling Anxious and Nervous?</p>
+            </div>
+            <div class="light-box-3 box-text-slider">
+                <p>having thoughts of death or suicide?</p>
+            </div>
+            <div class="light-box-4 box-text-slider">
+                <p>having difficulties organizing thoughts?</p>
+            </div>
+            <div class="light-box-5 box-text-slider">
+                <p>feeling guilty or ashamed about your eating behaviour?</p>
+            </div>
         </div>
-        <div>
-            <p>feeling Anxious and Nervous?</p>
-        </div>
-        <div>
-            <p>having thoughts of death or suicide?</p>
-        </div>
-        <div>
-            <p>having difficulties organizing thoughts?</p>
-        </div>
-        <div>
-            <p>feeling guilty or ashamed about your eating behaviour?</p>
+            <button id="prev-btn">&#10094;</button>
+            <button id="next-btn">&#10095;</button>
         </div>
     </section>
 
+    <section  id="light-section">
+        <div class="light-box-1 lightbox-help hidden">
+            <a href="#" class="closeContent-help" type="button">&times;</a>
+            <h3>Title 1</h3>
+            <img src="images/lightbox1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam ad, sapiente, cum ab rem sunt optio quam facere maiores ipsa id facilis dolorem, suscipit quas repellat modi tempora esse!</p>
+        </div>
+        <div class="light-box-2 lightbox-help hidden">
+            <a href="#" class="closeContent-help" type="button">&times;</a>
+            <h3>Title 2</h3>
+            <img src="images/lightbox1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam ad, sapiente, cum ab rem sunt optio quam facere maiores ipsa id facilis dolorem, suscipit quas repellat modi tempora esse!</p>
+        </div>
+        <div class="light-box-3 lightbox-help hidden">
+            <a href="#" class="closeContent-help" type="button">&times;</a>
+            <h3>Title 3</h3>
+            <img src="images/lightbox1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam ad, sapiente, cum ab rem sunt optio quam facere maiores ipsa id facilis dolorem, suscipit quas repellat modi tempora esse!</p>
+        </div>
+        <div class="light-box-4 lightbox-help hidden">
+            <a href="#" class="closeContent-help" type="button">&times;</a>
+            <h3>Title 4</h3>
+            <img src="images/lightbox1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam ad, sapiente, cum ab rem sunt optio quam facere maiores ipsa id facilis dolorem, suscipit quas repellat modi tempora esse!</p>
+        </div>
+        <div class="light-box-5 lightbox-help hidden">
+           <a href="#" class="closeContent-help" type="button">&times;</a>
+            <h3>Title 5</h3>
+            <img src="images/lightbox1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam ad, sapiente, cum ab rem sunt optio quam facere maiores ipsa id facilis dolorem, suscipit quas repellat modi tempora esse!</p>
+        </div>
+
+    </section>
+
     
-   <section class="col-span-full" id="contact-form">
+   <section class="col-span-full" id="contact-form-help">
            <h2>Reach Out to a Professional</h2>
-           <div>
-            <p>By reaching out for support, you’re taking an important step towards reclaiming control of your mental health. Our dedicated professionals are here to provide compassionate care and guidance tailored to your individual needs. 
-            Please take a moment to fill out the form below to initiate the process of seeking professional assistance for mental health concerns. You are not alone, and help is available.</p>
+           <div id="help-p-contact">
+            <p>By reaching out for support, you’re taking an important step towards reclaiming control of your mental health. Our dedicated professionals are here to provide compassionate care and guidance tailored to your individual needs. </p>
+            <p>Please take a moment to fill out the form below to initiate the process of seeking professional assistance for mental health concerns. You are not alone, and help is available.</p>
            </div>
-           <form action="email.php" method="POST" enctype="text/plain">
+           <form action="email.php" method="POST" enctype="text/plain" id="help-form">
+            <div id="input-box-help">
             <input name="fullName" type="text" placeholder="Name">
             <input name="contactInfo" type="text" required placeholder="Email">
+            </div>
             <input name="subject" type="text" required placeholder="Your concern here">
             <textarea name="message" cols="30" rows="10" placeholder="Feel free to Share your story with us…"></textarea>
-            <input name="submit" type="submit" value="Send">
+            <input name="submit" type="submit" value="Go!" id="button-help-contact">
             </form>
     </section> 
 
