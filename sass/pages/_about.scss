@@ -1,0 +1,71 @@
+@use '../abstracts' as a;
+
+#about {
+    background-color: a.$third-color;
+}
+
+#about h2 {
+    color: a.$secondary-color;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#about p {
+    color: a.$secondary-color;
+    padding: 20px;
+}
+
+#team {
+    background-color: a.$primary-color;
+}
+
+#team h2 {
+    color: a.$secondary-color;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#team h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#team img {
+    border-radius: 50%;
+    padding: 30px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#team p {
+   text-align: center;
+   color: a.$third-color;
+}
+
+#where {
+    background-color: a.$third-color;
+}
+
+#where h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#where p {
+    color: a.$secondary-color;
+    padding: 10px;
+}
+
+#impact {
+    padding: 120px;
+    text-align: center;
+}
+
+#impact img {
+    max-width: 30%;
+    margin-bottom: 20px;
+}
+
+#impact p{
+    color: a.$third-color;
+}
