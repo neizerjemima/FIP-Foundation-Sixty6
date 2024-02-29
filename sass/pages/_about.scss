@@ -1,5 +1,16 @@
 @use '../abstracts' as a;
 
+#about-con {
+    position: relative;
+}
+
+#about-con h2 {
+    position: absolute; 
+    top: 10%; 
+    left: 10%;
+    color: a.$secondary-color; 
+}
+
 #about {
     background-color: a.$third-color;
 }
@@ -53,7 +64,8 @@
 
 #where p {
     color: a.$secondary-color;
-    padding: 10px;
+    margin-left: 40px;
+    // padding: 10px;
 }
 
 #impact {
