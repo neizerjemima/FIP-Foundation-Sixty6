@@ -13,57 +13,58 @@
   </head>
 
   <body>
-    <h1 class="hidden">Foundation Sixty6</h1>
-    <div id="sticky-nav-con">
-<header class="grid-con" id="main-header">
-    <nav id="main-nav" class="col-start-1 col-end-2 m-col-start-7 m-col-end-12"><h2 class="hidden">Nav</h2>
-      <button id="button"></button>
-        <div id="burger-con">
-            <ul id="burger-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="gethelp.html">Get Help</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <h1 class="hidden">Foundation Sixty6</h1>
+        <div id="sticky-nav-con">
+            <header class="grid-con" id="main-header">
+
+                <div class="col-start-2 col-end-4 m-col-start-2 m-col-end-4" id="logo">
+                    <img src="images/FSixty6-logo.svg" alt="Logo Foundation Sixty6.">
+                </div>
+            
+                <nav id="main-nav" class=" col-start-1 col-end-3 m-col-start-4 m-col-end-12"><h2 class="hidden">Nav</h2>
+                <button id="button"></button>
+                    <div id="burger-con">
+                        <ul id="burger-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="gethelp.html">Get Help</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Donate</a></li>
+                            <li><a href="contact.html">Volunteer</a></li>
+                        </ul>
+                    </div> 
+                </nav>
+                
+            </header>
         </div>
-        <div id="sign-in-header">
-                    <a href="error.html">
-                    <p>Donate!</p></a>
-                    <a href="error.html">
-                    <p>Volunteer!</p></a>
-        </div>  
-    </nav>
-    <div class="col-start-3 col-end-5 m-col-start-2 m-col-end-3" id="logo">
-        <img src="images/FSixty6-logo.svg" alt="Logo Foundation Sixty6.">
-    </div>
-    
-</header>
-</div>
 
-    <section class="grid-con" id="hero-con">
-        <h2 class="hidden">Hero image</h2>
-        <div class="col-span-full">
-            <h2>We are Here to Help</h2>
-            <img src="images/gethelp.jpeg" alt="Friends hugging">
-        </div>
-    </section>
+        <section class="grid-con" id="hero-con">
+            <h2 class="hidden">Hero image</h2>
+            <div class="col-span-full">
+                <h2>We are Here to Help</h2>
+                <img src="images/gethelp.png" alt="Friends hugging">
+            </div>
+        </section>
 
-    <div><button id="needHelp">Need Help?</button></div>
+        <div><button id="needHelp">Need Help?</button></div>
 
 
-    <section class="col-span-full" id="contact-form">
-        <h2>Connect with Us</h2>
-        <div>
-         <p>Feel free to reach out to us for any questions, inquiries, or to delve deeper into understanding our services. Whether you’re seeking clarification, assistance, or just curious to learn more, our team is here to provide comprehensive support and guidance tailored to your needs. Your connection with us is the first step towards empowerment and well-being.</p>
-        </div>
-        <form action="email.php" method="POST" enctype="text/plain">
-            <input name="fullName" type="text" placeholder="Name">
-            <input name="contactInfo" type="text" required placeholder="Email">
-            <input name="subject" type="text" required placeholder="Subject">
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input name="submit" type="submit" value="Send">
-         </form>
- </section> 
+        <section class="grid-con" id="contact-form">
+            <h2 class="col-span-full">Connect with Us</h2>
+            <div class="col-end-4 col-start-1 m-col-end-11 m-col-start-3">
+            <p>Feel free to reach out to us for any questions, inquiries, or to delve deeper into for more understanding of our services. Whether you are seeking clarification, assistance, or just curious to learn more, our team is here to provide comprehensive support and guidance tailored to your needs. Your connection with us marks the first step towards empowerment and well-being.</p>
+            </div>
+            <form class="col-end-4 col-start-1 m-col-end-11 m-col-start-3" action="email.php" method="POST" enctype="text/plain" id="contacts-form">
+                <div id="input-box-contact">
+                    <input name="fullName" type="text" placeholder="Name">
+                    <input name="contactInfo" type="text" required placeholder="Email">
+                </div>
+                
+                <input name="subject" type="text" required placeholder="Subject">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input name="submit" type="submit" value="Send" id="sub">
+            </form>
+        </section> 
     
 
     <footer class="grid-con"> 
