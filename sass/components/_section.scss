@@ -52,3 +52,140 @@
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (min-width: 768px) {
+
+
+
+#mission p {
+    grid-row: 1;
+    background-color: a.$third-color;
+    margin: 0 auto;
+    padding: 60px;
+    color: a.$secondary-color;
+
+ }
+
+ #mission h2 {
+    position: absolute;
+    margin-top: 150px;
+    color: a.$secondary-color;
+    padding: 40px;
+ }
+
+#statistics {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#statistics h2 {
+    padding: 15px;
+}
+
+#statistics p {
+    font-size: 48px;
+    color: a.$third-color;
+}
+
+#statistics span {
+    font-size: 100px;
+    color: a.$primary-color;
+}
+
+#statistics div {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#statistics img {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#video {
+    background-color: a.$secondary-color;
+}
+
+#articles {
+    position: absolute;
+    margin-top: 50px;
+}
+
+#articles p {
+    color: a.$secondary-color;
+    padding: 8px; 
+}
+
+#articles div {
+    background-color: a.$primary-color;
+}
+
+.seeMore1 {
+    background-color: a.$third-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.seeMore2 {
+    background-color: a.$primary-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#news {
+    margin-top: 50px;
+}
+
+#news div {
+    background-color: a.$third-color;
+    padding-bottom: 20px;
+}
+
+#news p {
+    color: a.$secondary-color;
+    padding: 8px;
+}
+
+#colaborators {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+#colaborators h2 {
+    text-align: center;
+}
+
+.colaborators-images {
+    display: flex;
+    align-items: center; 
+}
+
+.colaborators-images img {
+    margin: 80px; 
+}
+
+#donate {
+    background-color: a.$third-color;
+}
+
+
+#donate h2 {
+    text-align: center; 
+    margin-top: 80px;  
+    margin-bottom: 60px;
+    color: a.$secondary-color;
+}
+
+#donate a {
+   margin-left: 200px;
+   font-size: 32px;
+   padding: 20px;
+   border-radius: 90px;
+}
+
+
+}
