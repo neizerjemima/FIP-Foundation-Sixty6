@@ -52,18 +52,18 @@
                If you <br>think you may have a mental disorder, it is important to seek help...
                 </p>
             </article>
-            <a href="#newsReveal"><button class="read">Read</button></a>
+            <a href=""><button class="read">Read</button></a>
         </div>
 
         <div class="grid-con">
-        <div class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news content">
+        <div class="article-box col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news content" id="stigma1">
                 <img src="images/news-2.jpg" alt="An image to a recent article">
             <article>
                 <h2>YOU ARE NOT ALONE</h2>
                 
                 <p>Education is key to combatting mental health stigma.</p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">Article</h4> 
@@ -71,7 +71,7 @@
             </a>
         </div>
 
-        <div class="col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 news content">
+        <div class="article-box col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 news content" id="stigma2">
             <div>
                 <img src="images/article-1.jpg" alt="An image to a recent article">
                 
@@ -81,7 +81,7 @@
                 
                 <p>Mental health stigma is a problem that exists in our society due to a lack of understanding.</p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">Article</h4> 
@@ -89,7 +89,7 @@
             </a>
         </div>
 
-        <div class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news">
+        <div class="article-box col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news" id="stigma3">
             <div>
                 <img src="images/article-2.jpg" alt="An image to a recent article">
                 <!-- <h3>Article</h3> -->
@@ -99,7 +99,7 @@
                 
                 <p>Mental health stigma is a problem that exists in our society due to a lack of understanding.</p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">News</h4> 
@@ -107,7 +107,7 @@
             </a>
         </div>
 
-        <div class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news">
+        <div class="article-box col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news" id="stigma4">
             <div>
                 <img src="images/new.jpg" alt="An image to a recent article">
             </div>
@@ -116,7 +116,7 @@
                 
                 <p>The ages 16-25 is a problem that exists in our society due to a lack of understanding.....</p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">News</h4> 
@@ -124,7 +124,7 @@
             </a>
         </div>
 
-        <div class="col-span-full m-col-end-9 m-col-start-5 l-col-start-5 l-col-end-9 news">
+        <div class="article-box col-span-full m-col-end-9 m-col-start-5 l-col-start-5 l-col-end-9 news" id="stigma5">
             <div>
                 <img src="images/new-1.jpg" alt="An image to a recent article">
             </div>
@@ -133,7 +133,7 @@
                 
                 <p>The media often portrays people with various types psychosis as dangerous,unstable.... </p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">Article</h4> 
@@ -141,7 +141,7 @@
             </a>
         </div>
 
-        <div class="col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news">
+        <div class="article-box col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news" id="stigma6">
             <div>
                 <img src="images/new.jpg" alt="An image to a recent article">
             </div>
@@ -150,7 +150,7 @@
                 
                 <p>Mental health stigma is a problem that exists.....</p>
             </article>
-            <a href="#newsReveal">
+            <a class="button-article">
                 <button class="read">
                     <h5 class="noshow">Read</h5>  
                     <h4 class="show">News</h4> 
@@ -190,19 +190,28 @@
         </section> 
         
     </footer>
-    <section class="lightbox" id="newsReveal">
-        <a href="" class="closeContent">X</a>
+
+
+    <section class="lightbox hidden" id="newsReveal">
+        <div class="grid-con">
+         <div class="col-span-full">   
+        <a href="" class="closeContent">&times;</a>
         
-        <article>
-            <img src="images/news-2.jpg" class="contentPic1" alt="An image to a recent">
+        <article class="content-lightbox">
             <div>
-                    <p><span class="heading"></span></p>
+            <img src="images/news-2.jpg" alt="An image to a recent" class="image-lightbox">
+            </div>
+            <div class="text-lightbox">
+                    <p><span class="heading-text">This is the heading</span></p>
                     <p class="subHeading"></p>
-                    <p><span class="content"></span></p>
+                    <p><span class="content-article"></span></p>
                     <p><span class="date"></span></p>
             </div>
 
         </article>
+    </div>
+        </div>
     </section>
+    <script src="js/article_lightbox.js"></script>
 </body>
 </html>

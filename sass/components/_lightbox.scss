@@ -1,0 +1,39 @@
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 9999; 
+    text-align: center;
+}
+
+.image-lightbox{
+    margin-top: 50px;
+    height: 200px;
+}
+
+.closeContent {
+    font-size: 30px;
+    float: right; 
+}
+
+@media (min-width: 1200px) {
+    .content-lightbox {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center; 
+        height: 100vh;
+    }
+
+    .content-lightbox div {
+        padding: 50px;
+    }
+    .text-lightbox{
+        text-align: left;
+    }
+}

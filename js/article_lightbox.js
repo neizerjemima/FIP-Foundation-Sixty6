@@ -1,71 +1,83 @@
-// (() => {
-    const articleNews = document.querySelectorAll (".content a");
-    const lightBox = document.querySelector("#newsReveal");
+const buttonArticle = document.querySelectorAll(".button-article");
+const headingText = document.querySelector('.heading-text');
+const subHeading = document.querySelector(".subHeading");
+const contentArticle = document.querySelector(".content-article");
+const date = document.querySelector(".date");
+const image_article = document.querySelector(".image-lightbox");
+const closeContent = document.querySelector(".closeContent");
+const lightBox = document.querySelector(".lightbox");
 
-    const headingText = document.querySelector('.heading')
+const articles = [{
+    title: "stigma1",
+    picture: "images/news-2.jpg",
+    heading: "You are not Alone",
+    subHeading: "Support and Understanding for Mental Health",
+    contentArticle: "Education is key to combatting mental health stigma.",
+}, {
+    title: "stigma2",
+    picture: "images/article-1.jpg",
+    heading: "Young Adults and Psychosis",
+    subHeading: "Impact",
+    contentArticle: "Mental health stigma is a problem that exists in our society due to a lack of understanding.",
+    date: "21st May, 2024",
+},{
+    title: "stigma3",
+    picture: "images/article-2.jpg",
+    heading: "Health Crisis is Real",
+    subHeading: "Mental Health",
+    contentArticle: "Mental health stigma is a problem that exists in our society due to a lack of understanding...",
+    date: "21st May, 2024",
+},{
+    title: "stigma4",
+    picture: "images/new.jpg",
+    heading: "Healthcare For Young People",
+    subHeading: "Dispelling Stereotypes",
+    contentArticle: "The ages 16-25 is a problem that exists in our society due to a lack of understanding.....",
+},{
+    title: "stigma5",
+    picture: "images/new-1.jpg",
+    heading: "Health Awareness",
+    subHeading: "Breaking Stigma",
+    contentArticle: "The media often portrays people with various types psychosis as dangerous,unstable.... ",
+},
+,{
+    title: "stigma6",
+    picture: "images/new.jpg",
+    heading: "Mental Health Stigma",
+    subHeading: "Challenging Misconceptions",
+    contentArticle: "Mental health stigma is a problem that exists.....",
+}
+];
 
-    function loadText(){
-        articles.forEach((article, index) => {
+function loadText(event) {
+    const button = event.currentTarget;
+    const articleBox = button.closest('.article-box');
+    const id = articleBox.getAttribute('id');
 
-            let selected = document.querySelector(`.contentPic1${index+1}`);
-          function hoverPhotoAboutme() {
-  
-              headingText.textContent = article.description;
-      
-              selected.appendChild(headingText);
-      
-              paboutme.classList.add("aboutme-p");
-              paboutme.classList.remove("aboutme-p-inactive");
-          };
-  
-          function onlyPhotoAboutme() {
-              paboutme.classList.remove("aboutme-p");
-              paboutme.classList.add("aboutme-p-inactive");
-            };
-  
-  
-          selected.addEventListener("mouseleave", onlyPhotoAboutme);
-          selected.addEventListener("mouseenter", hoverPhotoAboutme);
-    
-        })
-    
-      }
-    
-    loadAboutMe()
-  
-  
+    articles.forEach(article => {
+        if (article.title === id) {
+            lightBox.classList.remove('hidden');
+            headingText.textContent = article.heading;
+            subHeading.textContent = article.subHeading;
+            contentArticle.textContent = article.contentArticle;
+            date.textContent = article.date;
+            image_article.src = article.picture;
+        }
+    });
+}
 
-    // function newsContent() {
-    //     lightBox.querySelector(".contentPic").src =
-    //     article[this.dataset.img].picture;
+function hideModel(event) {
+  event.preventDefault();
+  lightBox.classList.add('hidden');
+}
 
-    //      heading = document.querySelector(".heading");
-    //     heading.textContent = article.heading
+// event listeners
+buttonArticle.forEach(button => {
+    button.addEventListener("click", loadText);
+});
 
-    //     lightBox.querySelector(".subHeading").textContent=
-    //     article[this.dataset.img].subHeading;
-
-    //     lightBox.querySelector(".content").textContent=
-    //     article[this.dataset.img].content;
-        
-    //     lightBox.querySelector(".date").textContent=
-    //     article[this.dataset.img].date;
-        
-    // }
-
-    const articles = {
-        picture: "images/img1.jpg",
-        heading: "The Impact of Mental Health Stigma",
-        subHeading: "Impact",
-        content:
-            "Stigma exists for mental health issues due to a lack of understanding. The media often portrays people with mental disorders as dangerous, violent or unstable.This can lead to people feeling afraid of those with mental disorders and can fuel discrimination. Some of the most common reasons this exists are: The belief that mental disorders are not real medical conditions. This can lead to people thinking that those who have mental disorders are simply weak or crazy.The belief that mental disorders are caused by personal failings. This can lead to people thinking that those with mental disorders are lazy, weird or attention-seeking.                The belief that mental disorders are untreatable. This can lead to people thinking that there is no point in seeking help for mental disorders. Fear of violence. People with mental disorders are often stereotyped as being dangerous, unpredictable and violent. This can make people very wary of interacting with them. The belief that mental disorders are contagious. This can lead to people avoiding those with mental disorders, as they believe they may catch the disorder themselves. Fundamentally, mental health stigma eventuates from a lack of understanding mental health issues and faulty beliefs that mental health is a personal issue rather than a genuine medical condition. ",
-        Date: "21st May, 2024",
-        };
+closeContent.addEventListener("click", hideModel);
 
 
-    //     articleNews.forEach(function(info) {
-    //     info.addEventListener("click", newsContent)
-    // });
 
 
-// })();
