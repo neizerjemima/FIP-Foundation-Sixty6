@@ -9,7 +9,6 @@ a {
       margin-bottom: 4%;
       border-left: 1px;
       padding-left: 30px;
-      
    }
 
 #main-nav button {
@@ -60,8 +59,10 @@ a {
 }
 
 #logo {
+   position: relative;
+   z-index: 1;
    margin-top: 20px;
-   max-width: 40%;
+   margin-left: 60px;
 }
 
 #sticky-nav-con {
@@ -73,19 +74,12 @@ a {
       margin-bottom: 25px;
    }
 
-
-@media screen and (min-width: 768px) {
-
-   #burger-menu li {
-      margin-left: 40px;
-      text-decoration: none;
-   }
-
    #burger-menu li:last-child {
       background-color: a.$third-color;
-      padding: 8px;
+      padding: 3px;
       border-radius: 15px;
-      color: white;
+      padding: 10px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
    }
 
    #burger-menu li:last-child a {
@@ -94,16 +88,23 @@ a {
 
    #burger-menu li:nth-child(5) {
       background-color: a.$primary-color;
-      padding: 8px;
+      padding: 3px;
       border-radius: 15px;
-      color: white;
+      padding: 10px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
    }
+   
    #burger-menu li:nth-child(5) a {
       color: a.$secondary-color;
    }
 
 
+@media screen and (min-width: 768px) {
 
+   #burger-menu li {
+      margin-left: 40px;
+      text-decoration: none;
+   }
 
  #button {
       display: none;
@@ -111,8 +112,6 @@ a {
 
    #logo {
       max-width: 100%;
-      // margin-top: 20px;
-      // // order: -1;
    }
 
    #burger-con {
@@ -136,12 +135,4 @@ a {
    #burger-con ul li:last-child {
       margin-right: 0;
    }
-
-   //  #main-nav {
-   //    margin-top: 4%;
-   //    margin-bottom: 4%;
-   //    padding-left: 30px;
-   //    display: flex;
-   // }
-
 }
