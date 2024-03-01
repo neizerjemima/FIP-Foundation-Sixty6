@@ -16,7 +16,21 @@
         donationLightBox.classList.remove("hidden");
         donationLightBox.style.backgroundColor ="#F7F0F0";
 
-        gsap.fromTo('#response-form-donation', {
+    }
+
+
+    function showModelDonationReceived(event){
+        event.preventDefault(); 
+        donationBoxForm.style.display = "none";
+        donationBoxForm.classList.add("hidden")
+        donationLightBox.style.backgroundColor ="#7A2A85";
+
+        responseBoxFormDonation.style.display = "block";
+        responseBoxFormDonation.classList.remove("hidden")
+
+         //Gsap Animation 
+        
+         gsap.fromTo('#response-form-donation', {
             y: 35,
             opacity: 0,
           },
@@ -31,19 +45,7 @@
             amount: 0.5, 
           },
         })
-
-    }
-
-
-    function showModelDonationReceived(event){
-        event.preventDefault(); 
-        donationBoxForm.style.display = "none";
-        donationBoxForm.classList.add("hidden")
-        donationLightBox.style.backgroundColor ="#7A2A85";
-
-        responseBoxFormDonation.style.display = "block";
-        responseBoxFormDonation.classList.remove("hidden")
-
+    
     }
 
     function closeDonationBox(event){
@@ -61,8 +63,10 @@
         responseBoxFormDonation.style.display = "none";
         responseBoxFormDonation.classList.add("hidden")
 
+
         donationBoxForm.style.display = "flex";
         donationBoxForm.classList.remove("hidden")
+
     }
 
 
