@@ -195,10 +195,15 @@
    font-size: 30px;
    padding: 3%;
    border-radius: 90px;
+   cursor: pointer;
 }
 
 #donate img {
     margin-top: 40px;
+}
+
+.donation-button:hover {
+    background-color: a.$primary-color;
 }
 
 @media screen and (min-width: 768px) {
@@ -233,7 +238,6 @@
     padding: 20px;
     color: a.$secondary-color;
     font-size: 10px; 
-
 }
 
  #mission h2 {
@@ -427,7 +431,7 @@
     //     padding: 3%;
     //     border-radius: 90px;
     //  }
-
+    }
     #newEvent{
         background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
         background-size: 100% 100%;
@@ -461,6 +465,12 @@
 
     #list {
         font-size: 22px;
+    }
+
+    #mission p {
+        line-height: normal;
+        padding: 50px;
+        font-size: 36px; 
     }
 
     
