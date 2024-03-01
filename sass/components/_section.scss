@@ -426,11 +426,7 @@
     }
 
     #donate a {
-        margin-left:  250px;
-    //     font-size: 30px;
-    //     padding: 3%;
-    //     border-radius: 90px;
-
+        margin-left:  230px;
     }
 
     #newEvent{
@@ -474,5 +470,41 @@
         font-size: 36px; 
     }
 
+
+    
+    #statistics img {
+       
+        margin-left: 130px;
+        margin-bottom: 30px;
+    }
+    
+    #statistics h2 {
+        padding: 20px;
+        font-size: 48px;
+    }
+    
+    #statistics p {
+        font-size: 80px;
+        color: a.$third-color;
+    }
+    
+    #statistics span {
+        font-size: 200px;
+        color: a.$primary-color;
+    }
+    
+    .colaborators-images img {
+
+        margin-left: 180px; 
+    }
+
+    #donate h2 {
+        margin-top: 250px;
+    }
+
+    #donate a {
+        margin-left:  400px;
+        font-size: 50px;
+    }
     
 }
