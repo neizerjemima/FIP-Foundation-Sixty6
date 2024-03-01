@@ -393,6 +393,41 @@
         font-size: 14px;
     }
 
+    #mission p {
+        font-size: 20px; 
+        padding: 50px;
+    }
+    
+     #mission h2 {
+        position: absolute;
+        margin-top: 160px;
+        color: a.$secondary-color;
+        padding: 10px;
+     }
+
+    #statistics img {
+        max-width: 50%;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    #statistics h2 {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .colaborators-images img {
+
+        margin-left: 105px; 
+    }
+
+    #donate a {
+        margin-left:  250px;
+    //     font-size: 30px;
+    //     padding: 3%;
+    //     border-radius: 90px;
+    //  }
+
     #newEvent{
         background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
         background-size: 100% 100%;
