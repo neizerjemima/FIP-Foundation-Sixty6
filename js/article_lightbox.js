@@ -1,3 +1,5 @@
+(() => {
+    
 const buttonArticle = document.querySelectorAll(".button-article");
 const headingText = document.querySelector('.heading-text');
 const subHeading = document.querySelector(".subHeading");
@@ -78,6 +80,7 @@ buttonArticle.forEach(button => {
 
 closeContent.addEventListener("click", hideModel);
 
+})();
 
 
 

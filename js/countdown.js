@@ -1,3 +1,5 @@
+(() => {
+
 gsap.registerPlugin(ScrollTrigger);
 
 function animateCountdown(target, endValue) {
@@ -21,3 +23,5 @@ gsap.utils.toArray("#statistics").forEach(section => {
         }
     });
 });
+
+})();
