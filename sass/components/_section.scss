@@ -119,6 +119,13 @@
     margin-top: 20px;
 }
 
+#video a {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+
+}
+
 #newEvent {
     background-color: a.$third-color;
 }
@@ -176,7 +183,6 @@
     background-color: a.$third-color;
 }
 
-
 #donate h2 {
     text-align: center; 
     margin-top: 40px;  
@@ -187,17 +193,13 @@
 #donate a {
    margin-left:  120px;
    font-size: 30px;
-   padding: 20px;
+   padding: 3%;
    border-radius: 90px;
-   margin-bottom: 20px;
 }
 
 #donate img {
-    margin-top: 60px;
-    margin: 0;
+    margin-top: 40px;
 }
-
- 
 
 @media screen and (min-width: 768px) {
 
@@ -210,6 +212,11 @@
         left: 60%;
     }
 
+    #seeMore {
+        top: 40%; 
+        left: 80%;
+    }
+
 #mission {
     grid-row: 1/2;
 }
@@ -219,6 +226,7 @@
 }
 
 #mission p {
+    position: relative;
     grid-row: 1/2;
     background-color: a.$third-color;
     margin: 0 auto;
@@ -359,6 +367,16 @@
 }
 
 @media screen and (min-width: 1200px) {
+    #seeMore {
+        top: 40%; 
+        left: 75%;
+        font-size: 14px;
+    }
+
+    #list {
+        font-size: 14px;
+    }
+
     #newEvent{
         background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
         background-size: 100% 100%;
@@ -379,7 +397,20 @@
 }
 
 @media screen and (min-width: 1920px) {
+
+    #seeMore {
+        top: 40%; 
+        left: 75%;
+        font-size: 22px;
+    }
+    
     #needHelp {
         top: 20%;
     }
+
+    #list {
+        font-size: 22px;
+    }
+
+    
 }
