@@ -52,6 +52,7 @@
     font-size: 20px;
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    width: 500px;
 }
 
 @media screen and (min-width: 768px) {
@@ -195,4 +196,25 @@
 }
 
 
+}
+
+@media screen and (min-width: 1200px) {
+    #newEvent{
+        background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
+        background-size: 100% 100%;
+    
+        p{
+            font-family: a.$body-font-family;
+            font-size: 17px;
+        }
+    }
+
+    #needHelp {
+        left: 89%;
+        padding: 10px 10px 10px 30px ;
+        border-radius: 20px;
+        font-size: 30px;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.766);
+        width: 500px;
+    }
 }
