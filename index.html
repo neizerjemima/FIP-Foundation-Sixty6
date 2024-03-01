@@ -7,18 +7,19 @@
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> -->
-<script src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-<script defer src="js/main.js"></script>
-<script defer src="js/countdown.js"></script>
-<script defer src="js/volunteer_button.js"></script>
-<script defer src="js/donation_buttton.js"></script>
-  </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/countdown.js"></script>
+    <script defer src="js/volunteer_button.js"></script>
+    <script defer src="js/donation_buttton.js"></script>
+    <script defer type="module" src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    </head>
 
 <body>
     <h1 class="hidden">Foundation Sixty6</h1>
@@ -46,7 +47,6 @@
 </header>
 </div>
 
-
 <section class="grid-con" id="hero-con">
     <h2 class="hidden">Hero image</h2>
     <div class="col-span-full">
@@ -63,6 +63,7 @@
             <option value="eatingDisorders">Eating Disorders</option>
             <option value="substanceAbuse">Substance Abuse</option>
         </select>
+        
         <!-- <a href="gethelp.html" id="seeMore">See More
         </a> -->
         <img src="images/hero.jpg" alt="Friends hugging">
@@ -108,11 +109,16 @@
     </section>
 
     <section class="grid-con" id="video">
-        <div class="col-span-full m-col-start-5 m-col-end-12">  
-            <h2 class="col-span-full">Pass the Message</h2>
-            <p>Video here
-            </p>
+        <div class="col-span-full">  
+            <h2>Pass the Message</h2>
         </div>
+        <div class="col-span-full m-col-end-11 m-col-start-2 l-col-start-2 l-col-end-12">    
+            <video controls poster="images/video.jpg">
+                <source src="video/mainfoundationvideo.mp4" type="video/mp4">
+                <p>You're using a very old browser, that doesn't support video playback.</p>
+            </video>
+        </div>
+       <a href="media.html" class="col-span-full"> <button>Find More</button></a>
     </section>
 
     <section class="grid-con" id="newEvent">
@@ -124,7 +130,7 @@
         </div>
         <div class="col-span-full m-col-start-4 m-col-end-7 Allevent">
             <img src="images/article2.jpg" alt="">
-            <p>Young people’s mental health is finally getting the attention it needs</p>
+            <p class="Allevents">Young people’s mental health is finally getting the attention it needs</p>
             <a href="articles.html" class="seeMore1">More</a>
         </div>
         <div class="col-span-full m-col-start-7 m-col-end-10">
