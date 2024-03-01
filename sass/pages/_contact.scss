@@ -253,70 +253,20 @@
 }
 
 @media (min-width: 1200px) {
-    #contact-form {
-        margin-bottom: 40px;
-        p { 
-            margin-bottom: 20px;
-        };    
-    }
-    
-    #input-box-contact input {
-        width: calc(100% - 10px);
-    }
-
-    #contacts-form input:not(:last-child), #contacts-form textarea {
-        width: 877px;
-    }
-
-    #input-box-contact input {
-        width: 751px;
-        padding: 2px;
-        font-size: 14px;
-        height: 53px;
-        padding-left: 20px;
-    }
-    #input-box-contact {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 877px;
-    }
+    // #contact-form {
+    //     margin-bottom: 40px;
+    //     p { 
+    //         margin-bottom: 20px;
+    //     };    
+    // }
 
     #sub {
-        width: 177px;
-        height: 55px;
-        font-size: 20px;
-        margin-top: 15px;
-        font-weight: bolder;
-        margin-left: 701px;
-    }
-
-    #contact-con {
-        
-        .mobilE { display: none;}
-        .taB { display: block;}
-        h2{
-            font-size: 90px;
-            top: 46%;
-        }    
-    }
-
-    #contacts-form input:not(:last-child),
-    #contacts-form textarea {
-        width: 877px; 
-    }
-
-    #input-box-contact input {
-        width: 751px; 
-    }
-
-    #input-box-contact {
-        width: 877px; 
-        margin: 0 auto; 
-    }
-
-    #sub {
-        width: 177px; 
-        margin: 0 auto; 
+        width: 50%; 
+        max-width: 877px; 
+        margin: 0 auto;
         margin-top: 15px; 
+        margin-bottom: 30px;
     }
 }
+
+
