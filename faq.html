@@ -29,8 +29,8 @@
                 <li><a href="About.html">About</a></li>
                 <li><a href="gethelp.html">Get Help</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html">Donate</a></li>
-                <li><a href="contact.html">Volunteer</a></li>
+                <li id="donation-button"><a>Donate</a></li>
+                <li id="volunteer-button"><a>Volunteer</a></li>
             </ul>
         </div> 
     </nav>
@@ -58,6 +58,94 @@
                 </ul>
             </div>
  </section> 
+
+ <section id="volunteer-lightbox" class="hidden"> 
+    <div>
+        <div id="volunteer-form-box">
+        <a href="#" id="closeContentGeneral" type="button">&times;</a>
+        <h3>INSPIRE CHANGE - VOLUNTEER WITH US</h3>
+        <div class="container-volunteer">
+            <div id="paragraph-volunteer">
+                <p>Join us in making a difference! Become a volunteer today and help us create positive change in our community. Together, we can make a real impact on the lives of those in need.</p>
+                <p>Sign up now and be part of something meaningful!</p>
+            </div>
+            <div id="form-volunteer">
+                <form id="volunteer-forms" class="hidden">
+                    <input name="firstName" type="text" placeholder="FIRST NAME">
+                    <input name="lastName" type="text" placeholder="LAST NAME">
+                    <input name="email" type="email" placeholder="EMAIL">
+                    <input name="phone" type="tel" placeholder="PHONE">
+                    <select id="volunteer-role" class="dropdown-select-volunteer" name="Role">
+                        <option id="role-input" value="" selected disabled>ROLE</option>
+                        <option value="marketing-volunteer">MARKETING</option>
+                        <option value="mentor-volunteer">MENTOR</option>
+                        <option value="event-volunteer">EVENT COORDINATOR</option>
+                    </select>
+                   <button id="volunteer-submit-button">VOLUNTEER</button>
+                </form> 
+            </div>                       
+        </div>
+        <div class="logo-form">
+            <img src="images/FSixty6-logo.svg" alt="">
+        </div>
+        </div>
+        <div class="hidden" id="response-form-volunteer">
+            <a href="#" id="closeContentGeneralReceived" type="button">&times;</a>
+            <h3>THANK YOU FOR VOLUNTEERING</h3>
+            <p class="p-msg-vol">Your submission has been received.</p>
+            <p class="p-msg-vol">We appreciate your commitment to our cause.</p>
+            <p id="togethermsg">Together, we can make a positive impact!</p>
+            <img src="images/logo_lightbox.svg" alt="">
+        </div>
+    </div>
+</section> 
+
+<section id="donation-lightbox" class="hidden"> 
+<div id="donation-box">
+    <div id="donation-form-box">
+    <a href="#" id="closeContentDonation" type="button">&times;</a>
+    <h3>Empower Change With Your Contribution</h3>
+        <div id="donation-p">
+            <p class="hidden" id="generosity-p">Your Generosity Fuels Our Mission</p>
+            <p>Your donation is a powerful contribution to our mission. </p>
+        </div>
+        <div class="form-box-donation">
+            <form id="form-donation">
+                <div id="form-donation-1">
+                <input name="firstName" type="text" placeholder="First Name">
+                <input name="lastName" type="text" placeholder="Last Name">
+                </div>
+                <div id="form-donation-2">
+                <input name="email" type="email" placeholder="Email">
+                </div>
+                <div id="form-donation-3">
+                <input name="amount" type="text" placeholder="Amount">
+                <input name="type" type="text" placeholder="Type">
+                </div>
+                <div id="donation-submit-box">
+               <button id="donation-submit-button">SEND</button>
+                </div>
+            </form>                        
+    </div>
+    <div id="footer-donation-form">
+        <div id="text-footer-donation">
+        <h4>We are grateful for <br id="space-donation">
+            your support.</h4>
+        </div>
+        <div class="logo-form">
+            <img src="images/FSixty6-logo.svg" alt="">
+        </div>
+     </div>
+    </div>
+    <div class="hidden" id="response-form-donation">
+        <a href="#" id="closeContentDonationReceived" type="button">&times;</a>
+        <h3>THANK YOU FOR GENEROSITY!</h3>
+        <p class="p-msg-vol">Thank you for your generous donation! You’ve been elevated to Platinum status.</p>
+        <p id="changemsg"> Together, we can create meaningful change!</p>
+        <img src="images/logo_lightbox.svg" alt="">
+    </div>
+</div>
+</section> 
     
 
     <footer class="grid-con"> 
