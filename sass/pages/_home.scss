@@ -1,21 +1,36 @@
 @use '../abstracts' as a;
 
-// #newEvent {
-//     grid: 2/2;
-// }
+#video{
+    padding-top: 55px;
+    padding-bottom: 55px;
+    h2{
+        text-align: center;
+        font-family: a.$bold-body-font;
+    }
+    button {
+        text-align: center;
+        width: 100px;
+        height: 40px;
+        border: none;
+        background-color: a.$primary-color;
+        border-radius: 5px;
+        color: a.$secondary-color;
+        margin-left: 47%;
+        cursor: pointer;
+        font-size: 17px;
+        letter-spacing: 1.3px;
+        padding: 5px;
+        margin-top: 20px;
+        &:hover {
+            background-color: a.$accent-color;
+        }
+    }
+}
 
-// #articles{
-//     grid-row: 1/2;
-    
-// }
+.Allevents {
+    display: none;
+}
 
-// .Allevent {
-//     margin: 0;
-// }
-
-
-
-
-// #news {
-//     grid-row: 1/2; 
-// }
+.Allevent img :hover ~ .Allevents {
+    display: block;
+}
