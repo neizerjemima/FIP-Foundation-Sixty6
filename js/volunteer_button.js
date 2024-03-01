@@ -15,6 +15,23 @@
         lightBoxVolunteer.style.display = "block";
         lightBoxVolunteer.classList.remove('hidden');
         volunteerBoxReceived.classList.add("hidden");
+
+
+        gsap.fromTo('#response-form-volunteer', {
+            y: 35,
+            opacity: 0,
+          },
+          {
+          delay: 0.5, 
+          duration: 1, 
+          y: 0,
+          opacity: 1,
+          ease: 'power2.easeOut',
+          stagger: {
+            from: 'start', 
+            amount: 0.5, 
+          },
+        })
     }
 
     function closeVolunteerBox(event){
