@@ -1,3 +1,5 @@
+(() => {
+
 // Burger menu
   (function () {
     let button = document.querySelector('#button');
@@ -10,3 +12,5 @@
 
     button.addEventListener('click', hamburgerMenu, false);
   })();
+
+})();
