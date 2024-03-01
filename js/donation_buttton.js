@@ -1,6 +1,6 @@
 (() => {
 
-    const donationButton = document.querySelector("#donation-button")
+    const donationButton = document.querySelectorAll(".donation-button")
     const donationLightBox = document.querySelector("#donation-lightbox")
     const donationButtonForm = document.querySelector("#donation-submit-button")
     const donationBoxForm = document.querySelector("#donation-form-box")
@@ -49,7 +49,12 @@
         donationBoxForm.classList.remove("hidden")
     }
 
-    donationButton.addEventListener("click", showModelDonation);
+
+    donationButton.forEach(donation => {
+        donation.addEventListener("click", showModelDonation);
+    });
+
+
     donationButtonForm.addEventListener("click", showModelDonationReceived);
 
     closeDonation.addEventListener("click", closeDonationBox);

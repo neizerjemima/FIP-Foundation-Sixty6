@@ -6,12 +6,8 @@
 
 
     function openLightBox(index) {
-        console.log(`Opening lightbox with index: ${index}`);
         lightboxes.forEach(lightbox => {
-            console.log('Lightbox:', lightbox);
-            console.log('Contains class:', lightbox.classList.contains(`light-box-${index}`));
             if (lightbox.classList.contains(`light-box-${index}`)) {
-                console.log(`Removing hidden class from lightbox with index: ${index}`);
                 lightbox.style.display = "block";
                 lightbox.classList.remove('hidden');
 
@@ -30,7 +26,6 @@
 
     boxTextSliders.forEach((boxTextSlider, index) => {
         boxTextSlider.addEventListener("click", () => {
-            console.log(`Clicked on box-text-slider with index: ${index}`);
             openLightBox(index + 1);
         });
     });
