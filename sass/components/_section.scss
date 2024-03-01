@@ -67,6 +67,73 @@
     margin-top: 20px;
 }
 
+#mission h2 {
+    position: absolute;
+    padding: 30px;
+ }
+
+ #mission p {
+    position: absolute;
+    padding: 30px;
+    color: a.$secondary-color;
+    margin-top: 30px;
+ }
+
+ #statistics {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#statistics img {
+    max-width: 50%;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+#statistics h2 {
+    padding: 10px;
+}
+
+#statistics p {
+    font-size: 20px;
+    color: a.$third-color;
+}
+
+#statistics span {
+    font-size: 60px;
+    color: a.$primary-color;
+}
+
+#statistics div {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#video {
+    background-color: a.$secondary-color;
+}
+
+#video h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#newEvent {
+    background-color: a.$third-color;
+}
+
+#newEvent h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#newEvent p {
+    color: a.$secondary-color;
+    padding: 20px;
+}
+
+ 
+
 @media screen and (min-width: 768px) {
 
     #hero-con h3 {
