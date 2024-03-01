@@ -111,11 +111,19 @@
 
 #video {
     background-color: a.$secondary-color;
+    margin-bottom: 30px;
 }
 
 #video h2 {
     text-align: center;
     margin-top: 20px;
+}
+
+#video a {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+
 }
 
 #newEvent {
@@ -132,7 +140,66 @@
     padding: 20px;
 }
 
- 
+#newEvent div {
+    margin-bottom: 30px;
+}
+
+.seeMore1 {
+    background-color: a.$primary-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.seeMore2 {
+    background-color: a.$accent-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#colaborators {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#colaborators h2 {
+    text-align: center;
+}
+
+.colaborators-images {
+    display: flex;
+    align-items: center; 
+}
+
+.colaborators-images img {
+    max-width: 60%;
+    margin: 15px; 
+}
+
+#donate {
+    background-color: a.$third-color;
+}
+
+#donate h2 {
+    text-align: center; 
+    margin-top: 40px;  
+    margin-bottom: 60px;
+    color: a.$secondary-color;
+}
+
+#donate a {
+   margin-left:  120px;
+   font-size: 30px;
+   padding: 3%;
+   border-radius: 90px;
+}
+
+#donate img {
+    margin-top: 40px;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -145,6 +212,11 @@
         left: 60%;
     }
 
+    #seeMore {
+        top: 40%; 
+        left: 80%;
+    }
+
 #mission {
     grid-row: 1/2;
 }
@@ -154,6 +226,7 @@
 }
 
 #mission p {
+    position: relative;
     grid-row: 1/2;
     background-color: a.$third-color;
     margin: 0 auto;
@@ -294,6 +367,16 @@
 }
 
 @media screen and (min-width: 1200px) {
+    #seeMore {
+        top: 40%; 
+        left: 75%;
+        font-size: 14px;
+    }
+
+    #list {
+        font-size: 14px;
+    }
+
     #newEvent{
         background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
         background-size: 100% 100%;
@@ -314,7 +397,20 @@
 }
 
 @media screen and (min-width: 1920px) {
+
+    #seeMore {
+        top: 40%; 
+        left: 75%;
+        font-size: 22px;
+    }
+    
     #needHelp {
         top: 20%;
     }
+
+    #list {
+        font-size: 22px;
+    }
+
+    
 }
