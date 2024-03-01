@@ -111,6 +111,7 @@
 
 #video {
     background-color: a.$secondary-color;
+    margin-bottom: 30px;
 }
 
 #video h2 {
@@ -130,6 +131,70 @@
 #newEvent p {
     color: a.$secondary-color;
     padding: 20px;
+}
+
+#newEvent div {
+    margin-bottom: 30px;
+}
+
+.seeMore1 {
+    background-color: a.$primary-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.seeMore2 {
+    background-color: a.$accent-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#colaborators {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#colaborators h2 {
+    text-align: center;
+}
+
+.colaborators-images {
+    display: flex;
+    align-items: center; 
+}
+
+.colaborators-images img {
+    max-width: 60%;
+    margin: 15px; 
+}
+
+#donate {
+    background-color: a.$third-color;
+}
+
+
+#donate h2 {
+    text-align: center; 
+    margin-top: 40px;  
+    margin-bottom: 60px;
+    color: a.$secondary-color;
+}
+
+#donate a {
+   margin-left:  120px;
+   font-size: 30px;
+   padding: 20px;
+   border-radius: 90px;
+   margin-bottom: 20px;
+}
+
+#donate img {
+    margin-top: 60px;
+    margin: 0;
 }
 
  
