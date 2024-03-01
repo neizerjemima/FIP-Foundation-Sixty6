@@ -1,3 +1,5 @@
+(() => {
+    
 const dropDown = document.querySelector('.dropdown-select');
 const tableContent = document.querySelectorAll('.email-volunteer, .phone-volunteer, .message-volunteer, .notes-volunteer');
 const emails = document.querySelectorAll('.email-volunteer');
@@ -33,4 +35,6 @@ function valueDropDown(){
 
 
 dropDown.addEventListener("change", valueDropDown);
+
+})();
 
