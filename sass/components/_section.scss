@@ -206,18 +206,23 @@
     background-color: a.$primary-color;
 }
 
+#slogan {
+    text-align: center;
+    padding: 20px;
+}
+
 @media screen and (min-width: 768px) {
 
     #hero-con h3 {
         top: 33%; 
     }
 
-    #list {
+#list {
         top: 40%; 
         left: 60%;
     }
 
-    #seeMore {
+#seeMore {
         top: 40%; 
         left: 80%;
     }
@@ -463,6 +468,12 @@
     #list {
         font-size: 22px;
     }
+
+    #mission h2 {
+margin-left: 60px;
+    }
+        
+
 
     #mission p {
         line-height: normal;
