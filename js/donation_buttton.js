@@ -28,6 +28,24 @@
         responseBoxFormDonation.style.display = "block";
         responseBoxFormDonation.classList.remove("hidden")
 
+         //Gsap Animation 
+        
+         gsap.fromTo('#response-form-donation', {
+            y: 35,
+            opacity: 0,
+          },
+          {
+          delay: 0.5, 
+          duration: 1, 
+          y: 0,
+          opacity: 1,
+          ease: 'power2.easeOut',
+          stagger: {
+            from: 'start', 
+            amount: 0.5, 
+          },
+        })
+    
     }
 
     function closeDonationBox(event){
@@ -45,8 +63,10 @@
         responseBoxFormDonation.style.display = "none";
         responseBoxFormDonation.classList.add("hidden")
 
+
         donationBoxForm.style.display = "flex";
         donationBoxForm.classList.remove("hidden")
+
     }
 
 
