@@ -9,6 +9,7 @@
     top: 10%; 
     left: 10%;
     color: a.$primary-color; 
+    font-family: a.$bold-body-font;
 }
 
 #hero-con h3 {
@@ -51,20 +52,27 @@
     font-size: 20px;
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    width: 500px;
 }
 
 @media screen and (min-width: 768px) {
 
+#mission {
+    grid-row: 1/2;
+}
 
+#mission img {
+    grid-row:1/2 ;
+}
 
 #mission p {
-    grid-row: 1;
+    grid-row: 1/2;
     background-color: a.$third-color;
     margin: 0 auto;
     padding: 60px;
-    color: a.$secondary-color;
+    color: a.$secondary-color; 
 
- }
+}
 
  #mission h2 {
     position: absolute;
@@ -106,10 +114,10 @@
     background-color: a.$secondary-color;
 }
 
-#articles {
-    position: absolute;
-    margin-top: 50px;
-}
+// #articles {
+//     position: absolute;
+//     margin-top: 50px;
+// }
 
 #articles p {
     color: a.$secondary-color;
@@ -121,19 +129,19 @@
 }
 
 .seeMore1 {
-    background-color: a.$third-color;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    color: a.$secondary-color;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.seeMore2 {
     background-color: a.$primary-color;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 4px;
+}
+
+.seeMore2 {
+    background-color: a.$third-color;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: a.$secondary-color;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 #news {
@@ -188,4 +196,25 @@
 }
 
 
+}
+
+@media screen and (min-width: 1200px) {
+    #newEvent{
+        background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
+        background-size: 100% 100%;
+    
+        p{
+            font-family: a.$body-font-family;
+            font-size: 17px;
+        }
+    }
+
+    #needHelp {
+        left: 89%;
+        padding: 10px 10px 10px 30px ;
+        border-radius: 20px;
+        font-size: 30px;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.766);
+        width: 500px;
+    }
 }
