@@ -2,6 +2,7 @@
 
 #hero-con {
     position: relative;
+    padding: 0;
 }
 
 #hero-con h2 {
@@ -17,29 +18,18 @@
     top: 13%; 
     left: 60%;
     color: a.$primary-color; 
+    font-size: 18px;
 }
 
 #list {
-    position: absolute; 
-    top: 20%; 
+    top: 19%; 
     left: 60%;
-    color: a.$primary-color; 
-    border-radius: 20px;
-    padding: 1px;
-    border-color: transparent;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     font-size: 10px;
 }
 
 #seeMore {
-    position: absolute; 
     top: 30%; 
     left: 75%;
-    color: a.$secondary-color; 
-    background-color: a.$third-color;
-    padding: 2px ;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     font-size: 10px;
 }
 
@@ -214,11 +204,11 @@
 @media screen and (min-width: 768px) {
 
     #hero-con h3 {
-        top: 33%; 
+        top: 30%; 
     }
 
 #list {
-        top: 40%; 
+        top: 36%; 
         left: 60%;
     }
 
@@ -313,20 +303,16 @@
     background-color: a.$primary-color;
 }
 
-.seeMore1 {
+.seeMore1, .seeMore2 {
     background-color: a.$primary-color;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .seeMore2 {
     background-color: a.$accent-color;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    color: a.$secondary-color;
-    padding: 5px;
-    border-radius: 4px;
 }
 
 #news {
@@ -378,7 +364,7 @@
    margin-left: 120px;
    font-size: 22px;
    padding: 20px;
-   border-radius: 90px;
+   border-radius: 2px;
 }
 
 #needHelp {
@@ -393,13 +379,14 @@
 
 @media screen and (min-width: 1200px) {
     #seeMore {
-        top: 40%; 
-        left: 75%;
-        font-size: 14px;
+        top: 36%; 
+        margin-left: 10px;
+        padding-bottom: 8px;
+        font-size: 16px;
     }
 
     #list {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     #mission p {
@@ -456,9 +443,9 @@
 @media screen and (min-width: 1920px) {
 
     #seeMore {
-        top: 40%; 
-        left: 75%;
         font-size: 22px;
+        padding-bottom: 7px;
+        padding-top: 7px;
     }
     
     #needHelp {
