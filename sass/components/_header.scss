@@ -14,7 +14,7 @@ a {
 
 #main-nav {
       margin-top: 4%;
-      margin-bottom: 4%;
+      margin-bottom: 2%;
       border-left: 1px;
       padding-left: 30px;
       grid-row: 1;
@@ -70,13 +70,15 @@ a {
 #logo {
    grid-row: 1;
    z-index: 1;
-   margin-top: 20px;
    margin-left: 60px;
+   nav{
+      margin-top: 20px;
+   }
 }
 
    #burger-menu li:last-child {
       background-color: a.$third-color;
-      border-radius: 15px;
+      border-radius: 2px;
       padding: 1px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       cursor: pointer;
@@ -89,7 +91,7 @@ a {
    #burger-menu li:nth-child(5) {
       background-color: a.$primary-color;
       padding: 3px;
-      border-radius: 15px;
+      border-radius: 2px;
       padding: 1px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       cursor: pointer;
@@ -112,8 +114,13 @@ a {
    }
 
    #logo {
-     margin-top: 40px;
       margin-left: 20px;
+      nav{
+         margin-top: 40px;
+      }
+      img {
+         margin-top: 15px;
+      }
    }
 
    #burger-con {
@@ -155,8 +162,19 @@ a {
 }
 
 #logo {
-   padding-left: 30px;
+   margin-left: 20px;
+   img {
+      margin-top: 20px;
+   }
 }
 
+}
 
+@media screen and (min-width: 1920px) {
+   #logo {
+      margin-left: 20px;
+      img {
+         margin-top: 15px;
+      }
+   }   
 }

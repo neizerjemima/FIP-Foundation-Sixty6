@@ -34,3 +34,29 @@
 .Allevent img :hover ~ .Allevents {
     display: block;
 }
+
+.section-title h2{
+    color: #fff;
+}
+
+#list {
+    position: absolute; 
+    width: 20%;
+    color: a.$primary-color; 
+    border-radius: 2px;
+    padding: 5px;
+    border-color: transparent;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    img {
+        object-fit: cover;
+    }
+}
+
+#seeMore {
+    position: absolute; 
+    color: a.$secondary-color; 
+    background-color: a.$third-color;
+    padding: 5px ;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
