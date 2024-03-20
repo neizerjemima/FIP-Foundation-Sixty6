@@ -1,4 +1,4 @@
-(() => {
+export function donation_button(){  
 
     const donationButton = document.querySelectorAll(".donation-button")
     const donationLightBox = document.querySelector("#donation-lightbox")
@@ -80,4 +80,4 @@
     closeDonation.addEventListener("click", closeDonationBox);
     closeDonationReceived.addEventListener("click", closeDonationBoxReceived);
 
-})();
+}

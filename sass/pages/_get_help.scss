@@ -62,24 +62,19 @@
 
 #feelings {
     display: flex;
-    height: 170px;
+    // height: 170px;
     flex-direction: column;
     justify-content: center; 
+    align-items: center;
     background-color: b.$secondary-color;
 }
 
-#slider-container {
-    overflow: hidden;
-    position: relative;
-    max-width: 100%
-  }
+// #slider-container {
+//     overflow: hidden;
+//     position: relative;
+//     max-width: 100%
+//   }
 
-  #text-slider {
-    // make images display side by side as one long row
-    display: flex;
-
-    transition: transform 0.5s ease-in-out;
-  }
 
 
   #prev-btn, #next-btn {
@@ -264,9 +259,7 @@
         font-weight: bold;
     }
 
-    #feelings {
-        height: 300px;
-    }
+
 
     
     .box-text-slider{
@@ -329,8 +322,8 @@
 
     #input-box-help {
         display: flex;
-        flex-direction: row; /* Align items horizontally */
-        justify-content: space-between; /* Add space between elements */
+        flex-direction: row; 
+        justify-content: space-between; 
         width: 668px;
     }
     
@@ -361,6 +354,15 @@
         margin-top: 15px;
         margin-bottom: 20px;
     }
+
+    #text-slider{
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    
 }
 
 @media (min-width: 1200px) {
@@ -393,15 +395,17 @@
     }
 
     #feelings h2{
+        margin-top: 20px;
         font-size: 40px;
-        text-align: left;
-        float: left;
-        width: 1200px;
     }
 
-    #text-slider{
-        width: 1200px;
-    }
+    // #text-slider{
+    //     width: 1200px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
 
 
         .box-text-slider{
@@ -415,6 +419,11 @@
         align-items: center;
         justify-content: center;
         border-radius: 10px;
+        margin-left: 90px;
+    }
+
+    .box-text-slider:first-child{
+        margin-left: 0;
     }
     
     #text-slider div p {

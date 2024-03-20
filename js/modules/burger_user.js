@@ -1,4 +1,5 @@
-(() => {
+export function burger_user(){  
+
   const logo_section = document.querySelector('#user-section');
   const user_menu = document.querySelector('.user_menu');
   const burger_menu = document.querySelector('.burger_menu');
@@ -26,4 +27,4 @@
           openBurgerMenu();
       }
   });
-})();
+}

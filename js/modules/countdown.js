@@ -1,4 +1,4 @@
-(() => {
+export function countdown(){  
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -34,4 +34,4 @@
         });
     });
 
-})();
+}

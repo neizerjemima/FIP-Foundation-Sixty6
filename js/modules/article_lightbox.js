@@ -1,4 +1,4 @@
-(() => {
+export function article_lightbox(){  
     
 const buttonArticle = document.querySelectorAll(".button-article");
 const headingText = document.querySelector('.heading-text');
@@ -80,7 +80,6 @@ buttonArticle.forEach(button => {
 
 closeContent.addEventListener("click", hideModel);
 
-})();
-
+}
 
 
