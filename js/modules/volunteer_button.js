@@ -1,4 +1,4 @@
-(() => {
+export function volunteer_button(){  
 
     const volunteerButton = document.querySelector("#volunteer-button")
     const lightBoxVolunteer = document.querySelector("#volunteer-lightbox")
@@ -66,4 +66,4 @@
 
     volunteerButtonForm.addEventListener("click", showResponseVolunteer);
 
-})();
+}

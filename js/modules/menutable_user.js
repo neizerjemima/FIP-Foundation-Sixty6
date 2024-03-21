@@ -1,4 +1,4 @@
-(() => {
+export function menutable_user(){  
     
 const dropDown = document.querySelector('.dropdown-select');
 const tableContent = document.querySelectorAll('.email-volunteer, .phone-volunteer, .message-volunteer, .notes-volunteer');
@@ -36,5 +36,6 @@ function valueDropDown(){
 
 dropDown.addEventListener("change", valueDropDown);
 
-})();
 
+
+}

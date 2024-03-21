@@ -1,4 +1,5 @@
-(() => {
+export function gethelp_lightbox(){  
+
     const lightboxes = document.querySelectorAll('.lightbox-help');
     const boxTextSliders = document.querySelectorAll('.box-text-slider');
     const closeButtons = document.querySelectorAll('.closeContent-help');
@@ -34,5 +35,5 @@
         close.addEventListener("click", closeLightBox);
     });
 
-})();
+}
 
