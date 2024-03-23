@@ -7,6 +7,7 @@
         <link href="css/grid.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet" />
     <script defer src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
@@ -103,23 +104,29 @@
 
     </section>
 
-    
-   <section class="col-span-full" id="contact-form-help">
-           <h2>Reach Out to a Professional</h2>
-           <div id="help-p-contact">
-            <p>By reaching out for support, you’re taking an important step towards reclaiming control of your mental health. Our dedicated professionals are here to provide compassionate care and guidance tailored to your individual needs. </p>
-            <p>Please take a moment to fill out the form below to initiate the process of seeking professional assistance for mental health concerns. You are not alone, and help is available.</p>
-           </div>
-           <form action="email.php" method="POST" enctype="text/plain" id="help-form">
-            <div id="input-box-help">
-            <input name="fullName" type="text" placeholder="Name">
-            <input name="contactInfo" type="text" required placeholder="Email">
+    <div id="app">
+        <section class="col-span-full" id="contact-form-help">
+            <h2>Reach Out to a Professional</h2>
+            <div id="help-p-contact">
+                <p>By reaching out for support, you’re taking an important step towards reclaiming control of your mental health. Our dedicated professionals are here to provide compassionate care and guidance tailored to your individual needs.</p>
+                <p>Please take a moment to fill out the form below to initiate the process of seeking professional assistance for mental health concerns. You are not alone, and help is available.</p>
             </div>
-            <input name="subject" type="text" required placeholder="Your concern here">
-            <textarea name="message" cols="30" rows="10" placeholder="Feel free to Share your story with us…"></textarea>
-            <input name="submit" type="submit" value="Go!" id="button-help-contact">
+            <form @submit.prevent="submitForm" class="col-span-full m-col-start-2 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11" id="help-form">
+                <div id="input-box-help">
+                    <input v-model="name" type="text" name="name" placeholder="Name">
+                    <input v-model="email" type="text" name="email" required placeholder="Email">
+                </div>
+                <input v-model="subject" type="text" name="subject" required placeholder="Your concern here">
+                <textarea v-model="message" name="message" cols="30" rows="10" placeholder="Feel free to Share your story with us…"></textarea>
+                <button type="submit" id="button-help-contact">Go!</button>
             </form>
-    </section> 
+        </section>
+        <section id="feedback">
+            <p v-html="feedback"></p>
+        </section>
+    </div>
+    
+    
 
     <!-- <section class="grid-con" id="location">
     <h2 class="col-span-full">Come to find us</h2>

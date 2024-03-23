@@ -11,6 +11,7 @@ import { menutable_user } from "./modules/menutable_user.js";
 import { backend_article } from "./modules/backend_article.js";
 import { backend_event } from "./modules/backend_event.js";
 import { backend_contact } from "./modules/backend_contact.js";
+import { backend_gethelp } from "./modules/backend_gethelp.js";
 
 
 
@@ -26,36 +27,28 @@ if (document.body.dataset.page === "home"){
     burger_menu();
     volunteer_button();
     donation_button();
- } else if (document.body.dataset.page === "gethelp"){
-    burger_menu();
-    volunteer_button();
-    donation_button();
-    gethelp_lightbox();
+ }  else if (document.body.dataset.page === "gethelp"){
+    backend_gethelp();
+      burger_menu();
+      volunteer_button();
+      donation_button();
+      gethelp_lightbox();
  } else if (document.body.dataset.page === "about"){
   burger_menu();
   volunteer_button();
   donation_button();
  }else if (document.body.dataset.page === "contact"){
-  burger_menu();
-  volunteer_button();
-  donation_button();
-}else if (document.body.dataset.page === "contact-backend"){
    backend_contact();
    burger_menu();
    volunteer_button();
    donation_button();
  }else if (document.body.dataset.page === "articles"){
-  burger_menu();
-  volunteer_button();
-  donation_button();
-  article_lightbox();
- }else if (document.body.dataset.page === "articles-backend"){
    backend_article();
    burger_menu();
    volunteer_button();
    donation_button();
    // article_lightbox();
-}else if (document.body.dataset.page === "events-backend"){
+}else if (document.body.dataset.page === "events"){
    backend_event();
    burger_menu();
    volunteer_button();
