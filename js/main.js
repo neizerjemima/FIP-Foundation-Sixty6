@@ -12,6 +12,7 @@ import { backend_article } from "./modules/backend_article.js";
 import { backend_event } from "./modules/backend_event.js";
 import { backend_contact } from "./modules/backend_contact.js";
 import { backend_gethelp } from "./modules/backend_gethelp.js";
+import { backend_volunteer } from "./modules/backend_volunteer.js";
 
 
 
@@ -19,41 +20,49 @@ import { backend_gethelp } from "./modules/backend_gethelp.js";
 //Principal Website
 
 if (document.body.dataset.page === "home"){
+  backend_volunteer();
   burger_menu();
   countdown();
   volunteer_button();
   donation_button();
  } else if (document.body.dataset.page === "faq"){
+    backend_volunteer();
     burger_menu();
     volunteer_button();
     donation_button();
  }  else if (document.body.dataset.page === "gethelp"){
+  backend_volunteer();
     backend_gethelp();
       burger_menu();
       volunteer_button();
       donation_button();
       gethelp_lightbox();
  } else if (document.body.dataset.page === "about"){
+  backend_volunteer();
   burger_menu();
   volunteer_button();
   donation_button();
  }else if (document.body.dataset.page === "contact"){
+  backend_volunteer();
    backend_contact();
    burger_menu();
    volunteer_button();
    donation_button();
  }else if (document.body.dataset.page === "articles"){
+  backend_volunteer();
    backend_article();
    burger_menu();
    volunteer_button();
    donation_button();
    // article_lightbox();
 }else if (document.body.dataset.page === "events"){
+  backend_volunteer();
    backend_event();
    burger_menu();
    volunteer_button();
    donation_button();
   }else if (document.body.dataset.page === "media"){
+    backend_volunteer();
   burger_menu();
   volunteer_button();
   donation_button();

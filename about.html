@@ -7,6 +7,7 @@
         <link href="css/grid.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet" />
     <script defer src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
@@ -112,6 +113,7 @@
     </div>
 </section>
 
+
 <section id="volunteer-lightbox" class="hidden"> 
     <div>
         <div id="volunteer-form-box">
@@ -123,20 +125,19 @@
                 <p>Sign up now and be part of something meaningful!</p>
             </div>
             <div id="form-volunteer">
-                <form id="volunteer-forms" class="hidden">
-                    <input name="firstName" type="text" placeholder="FIRST NAME">
-                    <input name="lastName" type="text" placeholder="LAST NAME">
-                    <input name="email" type="email" placeholder="EMAIL">
-                    <input name="phone" type="tel" placeholder="PHONE">
-                    <select id="volunteer-role" class="dropdown-select-volunteer" name="Role">
-                        <option id="role-input" value="" selected disabled>ROLE</option>
-                        <option value="marketing-volunteer">MARKETING</option>
-                        <option value="mentor-volunteer">MENTOR</option>
-                        <option value="event-volunteer">EVENT COORDINATOR</option>
-                    </select>
-                   <button id="volunteer-submit-button">VOLUNTEER</button>
+                <form id="volunteer-forms" class="hidden" @submit.prevent="submitForm">
+                    <input v-model="formData.firstname" type="text" name="firstname" placeholder="FIRST NAME">
+                    <input v-model="formData.lastname" type="text" name="lastname" placeholder="LAST NAME">
+                    <input v-model="formData.email" type="email" name="email" placeholder="EMAIL">
+                    <input v-model="formData.phone" type="tel" name="phone" placeholder="PHONE">
+                    <select v-model="formData.role" id="volunteer-role" class="dropdown-select-volunteer" name="Role">
+                        <option value="" selected disabled>SELECT ROLE</option>
+                        <option v-for="role in roles" :key="role.id" :value="role.id">{{ role.name }}</option>
+                    </select>                    
+                    <button id="volunteer-submit-button" type="submit">VOLUNTEER</button>
                 </form> 
-            </div>                       
+            </div>
+                                  
         </div>
         <div class="logo-form">
             <img src="images/FSixty6-logo.svg" alt="">
@@ -151,7 +152,7 @@
             <img src="images/logo_lightbox.svg" alt="">
         </div>
     </div>
-</section> 
+</section>  
 
 <section id="donation-lightbox" class="hidden"> 
 <div id="donation-box">
