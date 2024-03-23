@@ -8,6 +8,11 @@ import { burger_user } from "./modules/burger_user.js";
 import { menutable_user } from "./modules/menutable_user.js";
 
 
+import { backend_article } from "./modules/backend_article.js";
+
+
+
+
 //Principal Website
 
 if (document.body.dataset.page === "home"){
@@ -37,7 +42,13 @@ if (document.body.dataset.page === "home"){
   volunteer_button();
   donation_button();
   article_lightbox();
- }else if (document.body.dataset.page === "media"){
+ }else if (document.body.dataset.page === "articles-backend"){
+   backend_article();
+   burger_menu();
+   volunteer_button();
+   donation_button();
+   // article_lightbox();
+  }else if (document.body.dataset.page === "media"){
   burger_menu();
   volunteer_button();
   donation_button();
