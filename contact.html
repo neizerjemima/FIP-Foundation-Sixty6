@@ -7,6 +7,7 @@
         <link href="css/grid.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet" />
     <script defer src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
@@ -52,23 +53,28 @@
 
         <div><a href="gethelp.html" id="needHelp">NEED <br> HELP?</a></div>
 
-
-        <section class="grid-con" id="contact-form">
-            <h2 class="col-span-full">Connect with Us</h2>
-            <div class="col-span-full m-col-start-2 m-col-end-12   l-col-start-3 l-col-end-11">
-            <p>Feel free to reach out to us for any questions, inquiries, or to delve deeper into for more understanding of our services. Whether you are seeking clarification, assistance, or just curious to learn more, our team is here to provide comprehensive support and guidance tailored to your needs. Your connection with us marks the first step towards empowerment and well-being.</p>
-            </div>
-            <form class="col-span-full  m-col-start-2 m-col-end-11  l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11" action="email.php" method="POST" enctype="text/plain" id="contacts-form">
-                <div id="input-box-contact">
-                    <input name="fullName" type="text" placeholder="Name" id="name-contact">
-                    <input name="contactInfo" type="text" required placeholder="Email" id="email-contact">
+        <div id="app">
+            <section class="grid-con" id="contact-form">
+                <h2 class="col-span-full">Connect with Us</h2>
+                <div class="col-span-full m-col-start-2 m-col-end-12 l-col-start-3 l-col-end-11">
+                    <p>Feel free to reach out to us for any questions, inquiries, or to delve deeper into for more understanding of our services. Whether you are seeking clarification, assistance, or just curious to learn more, our team is here to provide comprehensive support and guidance tailored to your needs. Your connection with us marks the first step towards empowerment and well-being.</p>
                 </div>
-                <div>
-                <input name="subject" type="text" required placeholder="Subject">
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input name="submit" type="submit" value="Send" id="sub">
-            </form>
-        </section> 
+                <form @submit.prevent="submitForm" class="col-span-full m-col-start-2 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11" id="contacts-form">
+                    <div id="input-box-contact">
+                        <input v-model="name" type="text" name="name" placeholder="Name" id="name-contact">
+                        <input v-model="email" type="text" name="email" required placeholder="Email" id="email-contact">
+                    </div>
+                    <div>
+                        <input v-model="subject" type="text" name="subject" required placeholder="Subject">
+                        <textarea v-model="textinput" name="textinput" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        <button type="submit" id="sub">Send</button>
+                    </div>
+                </form>
+            </section>
+            <section id="feedback">
+                <p v-html="feedback"></p>
+            </section>
+        </div>
     </div>
 
         <section id="volunteer-lightbox" class="hidden"> 
@@ -137,7 +143,7 @@
                         <div id="donation-submit-box">
                        <button id="donation-submit-button">SEND</button>
                         </div>
-                    </form>                        
+                    </form>                      
             </div>
             <div id="footer-donation-form">
                 <div id="text-footer-donation">

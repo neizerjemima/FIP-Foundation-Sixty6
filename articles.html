@@ -7,6 +7,7 @@
         <link href="css/grid.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet" />
     <script defer src="https://kit.fontawesome.com/c65e6bc5cc.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
@@ -43,109 +44,23 @@
     <main>
         
 
-        <div class="grid-con">
-        <div class="article-box col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news content" id="stigma1">
-                <img src="images/news-2.jpg" alt="An image to a recent article">
-            <article>
-                <h2>YOU ARE NOT ALONE</h2>
-                
-                <p>Education is key to combatting mental health stigma.</p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">Article</h4> 
-                </button>
-            </a>
-        </div>
-
-        <div class="article-box col-span-full m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 news content" id="stigma2">
-            <div>
-                <img src="images/article-1.jpg" alt="An image to a recent article">
-                
+        <div class="app article-content grid-con">
+            <div class="article-box col-span-full news content" v-for="article in articlesData">
+                <img :src="'images/' + article.image" :alt="article.title">
+                <article>
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.attention_phrase }}</p>
+                </article>
+                <a :id="'button-' + article.id" @click="handleButtonClick" class="button-article">
+                    <button class="read">
+                        <h5 class="noshow">Read</h5>  
+                        <h4 class="show">Article</h4> 
+                    </button>
+                </a>
             </div>
-            <article>
-                <h2>Young Adults and Psychosis</h2>
-                
-                <p>Mental health stigma is a problem that exists in our society due to a lack of understanding.</p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">Article</h4> 
-                </button>
-            </a>
         </div>
-
-        <div class="article-box col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news" id="stigma3">
-            <div>
-                <img src="images/article-2.jpg" alt="An image to a recent article">
-                <!-- <h3>Article</h3> -->
-            </div>
-            <article>
-                <h2>Health Crisis is Real</h2>
-                
-                <p>Mental health stigma is a problem that exists in our society due to a lack of understanding.</p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">News</h4> 
-                </button>
-            </a>
-        </div>
-
-        <div class="article-box col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 news" id="stigma4">
-            <div>
-                <img src="images/new.jpg" alt="An image to a recent article">
-            </div>
-            <article>
-                <h2>HEALTHCARE FOR YOUNG PEOPLE</h2>
-                
-                <p>The ages 16-25 is a problem that exists in our society due to a lack of understanding.....</p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">News</h4> 
-                </button>
-            </a>
-        </div>
-
-        <div class="article-box col-span-full m-col-end-9 m-col-start-5 l-col-start-5 l-col-end-9 news" id="stigma5">
-            <div>
-                <img src="images/new-1.jpg" alt="An image to a recent article">
-            </div>
-            <article>
-                <h2>Health Awareness</h2>
-                
-                <p>The media often portrays people with various types psychosis as dangerous,unstable.... </p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">Article</h4> 
-                </button>
-            </a>
-        </div>
-
-        <div class="article-box col-span-full m-col-start-9 m-col-end-13 l-col-start-9 l-col-end-13 news" id="stigma6">
-            <div>
-                <img src="images/new.jpg" alt="An image to a recent article">
-            </div>
-            <article>
-                <h2>Mental Health Stigma</h2>
-                
-                <p>Mental health stigma is a problem that exists.....</p>
-            </article>
-            <a class="button-article">
-                <button class="read">
-                    <h5 class="noshow">Read</h5>  
-                    <h4 class="show">News</h4> 
-                </button>
-            </a>
-        </div>
-    </div>
+        
+        
 
 
     <section id="volunteer-lightbox" class="hidden"> 
@@ -274,23 +189,24 @@
 
     <section class="lightbox hidden" id="newsReveal">
         <div class="grid-con">
-         <div class="col-span-full">   
-        <a href="" class="closeContent">&times;</a>
-        
-        <article class="content-lightbox">
-            <div>
-            <img src="images/news-2.jpg" alt="An image to a recent" class="image-lightbox">
+            <div class="app col-span-full">   
+                <a href=" " class="closeContent">&times;</a>
+                <article class="content-lightbox" v-for="article in articlesData">
+                    <div>
+                        <img :src="'images/' + article.image" :alt="article.title" class="image-lightbox">
+                    </div>
+                    <div class="text-lightbox">
+                        <p><span class="heading-text">{{ article.title }}</span></p>
+                        <p><span class="content-article">{{ article.text }}</span></p>
+                        <p><span class="author">{{article.first_name}} {{ article.last_name }}</span></p>
+                        <p><span class="about">{{article.about}}</span></p>
+                    </div>
+                </article>
             </div>
-            <div class="text-lightbox">
-                    <p><span class="heading-text">This is the heading</span></p>
-                    <p class="subHeading"></p>
-                    <p><span class="content-article"></span></p>
-                    <p><span class="date"></span></p>
-            </div>
-
-        </article>
-    </div>
         </div>
     </section>
+    
+    
+
 </body>
 </html>
