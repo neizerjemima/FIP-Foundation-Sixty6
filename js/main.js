@@ -10,6 +10,7 @@ import { menutable_user } from "./modules/menutable_user.js";
 
 import { backend_article } from "./modules/backend_article.js";
 import { backend_event } from "./modules/backend_event.js";
+import { backend_contact } from "./modules/backend_contact.js";
 
 
 
@@ -38,6 +39,11 @@ if (document.body.dataset.page === "home"){
   burger_menu();
   volunteer_button();
   donation_button();
+}else if (document.body.dataset.page === "contact-backend"){
+   backend_contact();
+   burger_menu();
+   volunteer_button();
+   donation_button();
  }else if (document.body.dataset.page === "articles"){
   burger_menu();
   volunteer_button();
