@@ -1,12 +1,12 @@
-export function backend_article(){  
-    const article = Vue.createApp({
+export function backend_event(){  
+    const event = Vue.createApp({
         created() {
             console.log("created lifecycle hook called");
-            fetch("http://localhost/backend_fip/public/articlesandauthors")
+            fetch("http://localhost/backend_fip/public/events")
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    this.articlesData = data;
+                    this.eventsData = data;
                 })
                 .catch(error => {
                     console.log(error);
@@ -15,7 +15,7 @@ export function backend_article(){
     
         data() {
             return {
-                articlesData: [],
+                eventsData: [],
                 error: ""
             };
         },
@@ -23,24 +23,23 @@ export function backend_article(){
         methods: {
             handleButtonClick(event) {
                 const buttonId = event.currentTarget.id;
-                const articleId = buttonId.split('-')[1];
-                const articleData = this.articlesData.find(article => article.id === parseInt(articleId));
+                const eventId = buttonId.split('-')[1];
+                const eventData = this.eventsData.find(event => event.id === parseInt(eventId));
     
-                if (articleData) {
+                if (eventData) {
                     const lightboxContent = document.querySelector('.content-lightbox');
                     if (lightboxContent) {
                         lightboxContent.innerHTML = `
                             <div>
-                                <img src="images/${articleData.image}" alt="${articleData.title}" class="image-lightbox">
+                                <img src="images/${eventData.photo}" alt="${eventData.title}" class="image-lightbox-event">
                             </div>
-                            <div class="text-lightbox">
-                            <p><span class="heading-text">${articleData.title}</span></p>
-                            <p><span class="content-article">${articleData.text}</span></p>
-                            <p><span class="author">${articleData.first_name} ${articleData.last_name}</span></p>
-                            <p><span class="about">${articleData.about}</span></p>
+                            <div class="text-lightbox-event">
+                            <p><span class="heading-text-event">${eventData.title}</span></p>
+                            <p><span class="date-event">${eventData.date}</span></p>
+                            <p><span class="about-event">${eventData.description}</span></p>
                             </div>
                         `;
-                        const lightbox = document.querySelector('#newsReveal');
+                        const lightbox = document.querySelector('#eventsReveal');
                         lightbox.classList.remove('hidden');
 
                         const closeContent = document.querySelector(".closeContent");
@@ -56,12 +55,11 @@ export function backend_article(){
                         console.error("Lightbox content not found");
                     }
                 } else {
-                    console.error("Article not found");
+                    console.error("event not found");
                 }
             },
         }
     });
     
-    article.mount(".app");
+    event.mount(".app");
 }
-

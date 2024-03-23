@@ -9,6 +9,7 @@ import { menutable_user } from "./modules/menutable_user.js";
 
 
 import { backend_article } from "./modules/backend_article.js";
+import { backend_event } from "./modules/backend_event.js";
 
 
 
@@ -48,6 +49,11 @@ if (document.body.dataset.page === "home"){
    volunteer_button();
    donation_button();
    // article_lightbox();
+}else if (document.body.dataset.page === "events-backend"){
+   backend_event();
+   burger_menu();
+   volunteer_button();
+   donation_button();
   }else if (document.body.dataset.page === "media"){
   burger_menu();
   volunteer_button();
