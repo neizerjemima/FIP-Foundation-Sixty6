@@ -13,6 +13,7 @@ import { backend_event } from "./modules/backend_event.js";
 import { backend_contact } from "./modules/backend_contact.js";
 import { backend_gethelp } from "./modules/backend_gethelp.js";
 import { backend_volunteer } from "./modules/backend_volunteer.js";
+import { backend_donation } from "./modules/backend_donation.js";
 
 
 
@@ -21,17 +22,20 @@ import { backend_volunteer } from "./modules/backend_volunteer.js";
 
 if (document.body.dataset.page === "home"){
   backend_volunteer();
+  backend_donation();
   burger_menu();
   countdown();
   volunteer_button();
   donation_button();
  } else if (document.body.dataset.page === "faq"){
     backend_volunteer();
+    backend_donation();
     burger_menu();
     volunteer_button();
     donation_button();
  }  else if (document.body.dataset.page === "gethelp"){
   backend_volunteer();
+  backend_donation();
     backend_gethelp();
       burger_menu();
       volunteer_button();
@@ -39,17 +43,20 @@ if (document.body.dataset.page === "home"){
       gethelp_lightbox();
  } else if (document.body.dataset.page === "about"){
   backend_volunteer();
+  backend_donation();
   burger_menu();
   volunteer_button();
   donation_button();
  }else if (document.body.dataset.page === "contact"){
   backend_volunteer();
+  backend_donation();
    backend_contact();
    burger_menu();
    volunteer_button();
    donation_button();
  }else if (document.body.dataset.page === "articles"){
   backend_volunteer();
+  backend_donation();
    backend_article();
    burger_menu();
    volunteer_button();
@@ -57,15 +64,17 @@ if (document.body.dataset.page === "home"){
    // article_lightbox();
 }else if (document.body.dataset.page === "events"){
   backend_volunteer();
+  backend_donation();
    backend_event();
    burger_menu();
    volunteer_button();
    donation_button();
   }else if (document.body.dataset.page === "media"){
     backend_volunteer();
-  burger_menu();
-  volunteer_button();
-  donation_button();
+    backend_donation();
+    burger_menu();
+    volunteer_button();
+    donation_button();
  }
 
 //User interface

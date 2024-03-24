@@ -68,6 +68,8 @@
 }
 
 
+
+
 #volunteer-submit-button{
     cursor: pointer;
     float: right;
@@ -176,6 +178,18 @@
 
 
 #form-donation input{
+    width: 310px;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: v.$heading-font-family;
+    font-weight: bold;
+    color: #605a5a;
+}
+
+#form-donation input:not(:last-child), .dropdown-select-donation{
     width: 310px;
     height: 40px;
     background-color: #FFFFFF;
@@ -360,6 +374,10 @@
 
 
     #form-donation input{
+        width: 500px;
+    }
+
+    #form-donation input:not(:last-child), .dropdown-select-donation{
         width: 500px;
     }
 
