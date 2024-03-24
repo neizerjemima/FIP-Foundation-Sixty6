@@ -14,6 +14,7 @@ import { backend_contact } from "./modules/backend_contact.js";
 import { backend_gethelp } from "./modules/backend_gethelp.js";
 import { backend_volunteer } from "./modules/backend_volunteer.js";
 import { backend_donation } from "./modules/backend_donation.js";
+import { backend_team } from "./modules/backend_team.js";
 
 
 
@@ -47,6 +48,7 @@ if (document.body.dataset.page === "home"){
   burger_menu();
   volunteer_button();
   donation_button();
+  backend_team();
  }else if (document.body.dataset.page === "contact"){
   backend_volunteer();
   backend_donation();

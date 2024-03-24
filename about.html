@@ -62,22 +62,15 @@
 
 <section class="grid-con" id="team">
     <h2 class="col-span-full">Meet the Team</h2>
-    <div class="col-span-full m-col-start-1 m-col-end-5">
-        <img src="images/team1.jpeg" alt="">
-        <h3>Sarah Thompson</h3>
-        <p>Director of Community <br> Outreach and Education</p>
-    </div>
-    <div class="col-span-full m-col-start-5 m-col-end-9">
-        <img src="images/team2.jpeg" alt="">
-        <h3>Dr. Michael Smith</h3>
-        <p>Clinical Advisor <br> And Psychiatrist</p>
-    </div>
-    <div class="col-span-full m-col-start-9 m-col-end-13">
-        <img src="images/team3.jpeg" alt="">
-        <h3>Jennifer Kant</h3>
-        <p>Fundraising Coordinator <br> And Volunteer Coordinator</p> 
+    <div class="members-list col-span-full">
+        <div v-for="teammember in teammembersData" :key="teammember.id">
+        <img :src="'images/' + teammember.photo" alt="">
+        <h3>{{ teammember.firstname }} {{ teammember.lastname }}</h3>
+        <p>{{ teammember.title }}</p>
+        </div>
     </div>
 </section>
+
 
 <section class="grid-con" id="where">
     <div class="col-span-full">

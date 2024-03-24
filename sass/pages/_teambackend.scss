@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+    .members-list{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+       justify-content: space-between;
+       padding: 0;
+       margin: 0;
+    }
+}
