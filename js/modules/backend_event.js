@@ -39,14 +39,14 @@ export function backend_event(){
                             <p><span class="about-event">${eventData.description}</span></p>
                             </div>
                         `;
-                        const lightbox = document.querySelector("#eventsReveal");
-                        lightbox.classList.remove("hidden");
+                        const lightbox = document.querySelector('#eventsReveal');
+                        lightbox.classList.remove('hidden');
 
                         const closeContent = document.querySelector(".closeContent");
 
                         function hideModel(event) {
                             event.preventDefault();
-                            lightbox.classList.add("hidden2");
+                            lightbox.classList.add('hidden');
                           }
 
                         closeContent.addEventListener("click", hideModel);
