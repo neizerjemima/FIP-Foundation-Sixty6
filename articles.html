@@ -107,39 +107,42 @@
 <section id="donation-lightbox" class="hidden"> 
     <div id="donation-box">
         <div id="donation-form-box">
-        <a href="#" id="closeContentDonation" type="button">&times;</a>
-        <h3>Empower Change With Your Contribution</h3>
+            <a href="" id="closeContentDonation" type="button">&times;</a>
+            <h3>Empower Change With Your Contribution</h3>
             <div id="donation-p">
                 <p class="hidden" id="generosity-p">Your Generosity Fuels Our Mission</p>
                 <p>Your donation is a powerful contribution to our mission. </p>
             </div>
             <div class="form-box-donation">
-                <form id="form-donation">
+                <form id="form-donation" @submit.prevent="submitForm">
                     <div id="form-donation-1">
-                    <input name="firstName" type="text" placeholder="First Name">
-                    <input name="lastName" type="text" placeholder="Last Name">
+                        <input v-model="formData.firstname" name="firstname" type="text" placeholder="First Name">
+                        <input v-model="formData.lastname" name="lastname" type="text" placeholder="Last Name">
                     </div>
                     <div id="form-donation-2">
-                    <input name="email" type="email" placeholder="Email">
+                        <input v-model="formData.email" name="email" type="email" placeholder="Email">
                     </div>
                     <div id="form-donation-3">
-                    <input name="amount" type="text" placeholder="Amount">
-                    <input name="type" type="text" placeholder="Type">
+                        <input v-model="formData.amount" name="amount" type="text" placeholder="Amount">
+                        <select v-model="formData.type" name="type" id="donation-type" class="dropdown-select-donation">
+                            <option value="" selected disabled>Choose Type</option>
+                            <option v-for="type in types" :key="type.id" :value="type.id">{{ type.title }}</option>
+                        </select>
                     </div>
                     <div id="donation-submit-box">
-                   <button id="donation-submit-button">SEND</button>
+                        <button id="donation-submit-button" type="submit">SEND</button>
                     </div>
                 </form>                        
-        </div>
-        <div id="footer-donation-form">
-            <div id="text-footer-donation">
-            <h4>We are grateful for <br id="space-donation">
-                your support.</h4>
             </div>
-            <div class="logo-form">
-                <img src="images/FSixty6-logo.svg" alt="">
+            <div id="footer-donation-form">
+                <div id="text-footer-donation">
+                    <h4>We are grateful for <br id="space-donation">
+                        your support.</h4>
+                </div>
+                <div class="logo-form">
+                    <img src="images/FSixty6-logo.svg" alt="">
+                </div>
             </div>
-         </div>
         </div>
         <div class="hidden" id="response-form-donation">
             <a href="#" id="closeContentDonationReceived" type="button">&times;</a>
@@ -150,7 +153,6 @@
         </div>
     </div>
 </section> 
-
 
     </main>
 

@@ -19,34 +19,34 @@ export function donation_button(){
     }
 
 
-    function showModelDonationReceived(event){
-        event.preventDefault(); 
-        donationBoxForm.style.display = "none";
-        donationBoxForm.classList.add("hidden")
-        donationLightBox.style.backgroundColor ="#7A2A85";
+    // function showModelDonationReceived(event){
+    //     event.preventDefault(); 
+    //     donationBoxForm.style.display = "none";
+    //     donationBoxForm.classList.add("hidden")
+    //     donationLightBox.style.backgroundColor ="#7A2A85";
 
-        responseBoxFormDonation.style.display = "block";
-        responseBoxFormDonation.classList.remove("hidden")
+    //     responseBoxFormDonation.style.display = "block";
+    //     responseBoxFormDonation.classList.remove("hidden")
 
-         //Gsap Animation 
+    //      //Gsap Animation 
         
-         gsap.fromTo('#response-form-donation', {
-            y: 35,
-            opacity: 0,
-          },
-          {
-          delay: 0.5, 
-          duration: 1, 
-          y: 0,
-          opacity: 1,
-          ease: 'power2.easeOut',
-          stagger: {
-            from: 'start', 
-            amount: 0.5, 
-          },
-        })
+    //      gsap.fromTo('#response-form-donation', {
+    //         y: 35,
+    //         opacity: 0,
+    //       },
+    //       {
+    //       delay: 0.5, 
+    //       duration: 1, 
+    //       y: 0,
+    //       opacity: 1,
+    //       ease: 'power2.easeOut',
+    //       stagger: {
+    //         from: 'start', 
+    //         amount: 0.5, 
+    //       },
+    //     })
     
-    }
+    // }
 
     function closeDonationBox(event){
         event.preventDefault(); 
@@ -75,7 +75,7 @@ export function donation_button(){
     });
 
 
-    donationButtonForm.addEventListener("click", showModelDonationReceived);
+    // donationButtonForm.addEventListener("click", showModelDonationReceived);
 
     closeDonation.addEventListener("click", closeDonationBox);
     closeDonationReceived.addEventListener("click", closeDonationBoxReceived);
