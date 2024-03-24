@@ -1,12 +1,12 @@
-export function backend_team() {
-    const team = Vue.createApp({
+export function backend_collaborator() {
+    const collaborator = Vue.createApp({
         created() {
             console.log("created lifecycle hook called");
-            fetch("http://localhost/backend_fip/public/teammembers")
+            fetch("http://localhost/backend_fip/public/collaborators")
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    this.teammembersData = data; 
+                    this.collaboratorsData = data; 
                 })
                 .catch(error => {
                     console.log(error);
@@ -15,7 +15,7 @@ export function backend_team() {
     
         data() {
             return {
-                teammembersData: [],
+                collaboratorsData: [],
                 error: ""
             };
         },
@@ -25,5 +25,5 @@ export function backend_team() {
         }
     });
     
-    team.mount("#team");
+    collaborator.mount("#colaborators");
 }

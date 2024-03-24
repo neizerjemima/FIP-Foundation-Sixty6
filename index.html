@@ -143,15 +143,14 @@
     </section>
 
     <section class="grid-con" id="colaborators">
-            <h2 class="col-span-full">Collaborator</h2>
-            <div class="colaborators-images">
-                <img src="images/col1.png" alt="">
-                <img src="images/col2.png" alt="">
-                <img src="images/col3.png" alt="">
-                <img src="images/col4.png" alt="">
-                <img src="images/col5.png" alt="">
+        <h2 class="col-span-full">Collaborators</h2>
+        <div class="colaborators-images col-span-full" >
+            <div v-for="collaborator in collaboratorsData" :key="collaborator.id">
+            <img :src="'images/' + collaborator.logo" :alt="collaborator.company_name">
             </div>
+        </div>
     </section>
+    
 
      
     <section class="grid-con" id="donate">

@@ -30,17 +30,17 @@ export function backend_donation() {
             },
             submitForm() {
                 if (!this.formData.firstname || !this.formData.lastname || !this.formData.email || !this.formData.amount || !this.formData.type) {
-                    this.formData.feedback = '*Please fill out all required fields';
+                    this.formData.feedback = "*Please fill out all required fields";
                     return;
                 }
 
                 const url = "http://localhost/backend_fip/public/donations/add";
                 const formData = new FormData();
-                formData.append('firstname', this.formData.firstname);
-                formData.append('lastname', this.formData.lastname);
-                formData.append('email', this.formData.email);
-                formData.append('amount', this.formData.amount);
-                formData.append('type', this.formData.type);
+                formData.append("firstname", this.formData.firstname);
+                formData.append("lastname", this.formData.lastname);
+                formData.append("email", this.formData.email);
+                formData.append("amount", this.formData.amount);
+                formData.append("type", this.formData.type);
 
                 fetch(url, {
                     method: "POST",
@@ -53,7 +53,7 @@ export function backend_donation() {
 
                     if (responseText.errors) {
                         responseText.errors.forEach(error => {
-                            this.formData.feedback += error + '<br>';
+                            this.formData.feedback += error + "<br>";
                         });
                     } else {
                         this.formData.firstname = '';
@@ -99,5 +99,5 @@ export function backend_donation() {
         }
     });
 
-    const vm = app.mount("#donation-lightbox");
+    app.mount("#donation-lightbox");
 }

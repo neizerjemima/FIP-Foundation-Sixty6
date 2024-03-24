@@ -64,7 +64,7 @@
     <h2 class="col-span-full">Meet the Team</h2>
     <div class="members-list col-span-full">
         <div v-for="teammember in teammembersData" :key="teammember.id">
-        <img :src="'images/' + teammember.photo" alt="">
+        <img :src="'images/' + teammember.photo" :alt="teammember.firstname">
         <h3>{{ teammember.firstname }} {{ teammember.lastname }}</h3>
         <p>{{ teammember.title }}</p>
         </div>

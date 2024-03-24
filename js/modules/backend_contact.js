@@ -30,7 +30,7 @@ export function backend_contact() {
 
                     if (responseText.errors) {
                         responseText.errors.forEach(error => {
-                            this.feedback += error + '<br>';
+                            this.feedback += error + "<br>";
                         });
                     } else {
                         this.name = '';
