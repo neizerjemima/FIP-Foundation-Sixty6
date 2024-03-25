@@ -53,12 +53,12 @@ const articles = [{
 
 function loadText(event) {
     const button = event.currentTarget;
-    const articleBox = button.closest('.article-box');
-    const id = articleBox.getAttribute('id');
+    const articleBox = button.closest(".article-box");
+    const id = articleBox.getAttribute("id");
 
     articles.forEach(article => {
         if (article.title === id) {
-            lightBox.classList.remove('hidden');
+            lightBox.classList.remove("hidden");
             headingText.textContent = article.heading;
             subHeading.textContent = article.subHeading;
             contentArticle.textContent = article.contentArticle;
@@ -70,7 +70,7 @@ function loadText(event) {
 
 function hideModel(event) {
   event.preventDefault();
-  lightBox.classList.add('hidden');
+  lightBox.classList.add("hidden");
 }
 
 // event listeners

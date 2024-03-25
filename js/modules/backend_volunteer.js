@@ -36,11 +36,11 @@ export function backend_volunteer() {
 
                 const url = "http://localhost/backend_fip/public/volunteers/add";
                 const formData = new FormData();
-                formData.append('firstname', this.formData.firstname);
-                formData.append('lastname', this.formData.lastname);
-                formData.append('email', this.formData.email);
-                formData.append('phone', this.formData.phone);
-                formData.append('role', this.formData.role);
+                formData.append("firstname", this.formData.firstname);
+                formData.append("lastname", this.formData.lastname);
+                formData.append("email", this.formData.email);
+                formData.append("phone", this.formData.phone);
+                formData.append("role", this.formData.role);
 
                 fetch(url, {
                     method: "POST",
@@ -53,7 +53,7 @@ export function backend_volunteer() {
 
                     if (responseText.errors) {
                         responseText.errors.forEach(error => {
-                            this.formData.feedback += error + '<br>';
+                            this.formData.feedback += error + "<br>";
                         });
                     } else {
                         this.formData.firstname = '';
@@ -68,7 +68,7 @@ export function backend_volunteer() {
                         const volunteerBox = document.querySelector("#volunteer-form-box")
                         const volunteerBoxReceived = document.querySelector("#response-form-volunteer")
 
-                        volunteerBox.classList.add('hidden');
+                        volunteerBox.classList.add("hidden");
                         volunteerBox.style.display = "none"; 
                         lightBoxVolunteer.style.backgroundColor ="#7A2A85";
                         volunteerBoxReceived.classList.remove("hidden");
@@ -98,5 +98,5 @@ export function backend_volunteer() {
         }
     });
 
-    const vm = app.mount("#volunteer-lightbox");
+    app.mount("#volunteer-lightbox");
 }

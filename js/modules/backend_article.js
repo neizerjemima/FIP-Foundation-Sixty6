@@ -27,7 +27,7 @@ export function backend_article(){
                 const articleData = this.articlesData.find(article => article.id === parseInt(articleId));
     
                 if (articleData) {
-                    const lightboxContent = document.querySelector('.content-lightbox');
+                    const lightboxContent = document.querySelector(".content-lightbox");
                     if (lightboxContent) {
                         lightboxContent.innerHTML = `
                             <div>
@@ -40,14 +40,14 @@ export function backend_article(){
                             <p><span class="about">${articleData.about}</span></p>
                             </div>
                         `;
-                        const lightbox = document.querySelector('#newsReveal');
-                        lightbox.classList.remove('hidden');
+                        const lightbox = document.querySelector("#newsReveal");
+                        lightbox.classList.remove("hidden");
 
                         const closeContent = document.querySelector(".closeContent");
 
                         function hideModel(event) {
                             event.preventDefault();
-                            lightbox.classList.add('hidden');
+                            lightbox.classList.add("hidden");
                           }
 
                         closeContent.addEventListener("click", hideModel);

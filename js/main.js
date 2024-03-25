@@ -15,6 +15,7 @@ import { backend_gethelp } from "./modules/backend_gethelp.js";
 import { backend_volunteer } from "./modules/backend_volunteer.js";
 import { backend_donation } from "./modules/backend_donation.js";
 import { backend_team } from "./modules/backend_team.js";
+import { backend_collaborator } from "./modules/backend_collaborator.js";
 
 
 
@@ -26,6 +27,7 @@ if (document.body.dataset.page === "home"){
   backend_donation();
   burger_menu();
   countdown();
+  backend_collaborator();
   volunteer_button();
   donation_button();
  } else if (document.body.dataset.page === "faq"){
