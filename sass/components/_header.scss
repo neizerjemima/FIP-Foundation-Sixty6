@@ -71,6 +71,7 @@ a {
    grid-row: 1;
    z-index: 1;
    margin-left: 60px;
+   margin-top: 20px;
    nav{
       margin-top: 20px;
    }
@@ -159,6 +160,10 @@ a {
 
 #main-nav {
    padding-left: 60px;
+}
+
+#main-nav ul li a {
+   font-size: 14px;
 }
 
 #logo {
