@@ -161,10 +161,10 @@
     font-size: 17px;
     margin-right: 20px;
     margin-left: auto; 
-    background-color: b.$secondary-color;
+    background-color: b.$primary-color;
     font-family: b.$heading-font-family;
     font-weight: bolder;
-    color: b.$primary-color;
+    color: b.$secondary-color;
     margin-bottom: 20px;
 }
 
@@ -225,8 +225,8 @@
 
 #button-help-contact:hover {
     cursor: pointer;
-    background-color: #7A2A85;
-    color: #FFFFFF;
+    background-color: b.$accent-color;
+    
 }
 
 
@@ -340,10 +340,10 @@
         font-size: 17px;
         margin-right: 90px;
         margin-left: auto; 
-        background-color: b.$secondary-color;
+        background-color: b.$primary-color;
         font-family: b.$heading-font-family;
         font-weight: bolder;
-        color: b.$primary-color;
+        color: b.$secondary-color;
         margin-top: 15px;
         margin-bottom: 20px;
     }

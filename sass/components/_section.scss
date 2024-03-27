@@ -44,7 +44,7 @@
     color: a.$secondary-color; 
     background-color: a.$accent-color;
     letter-spacing: .8px;
-    padding:5px ;
+    padding:4px ;
     font-size: 14px;
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -140,11 +140,19 @@
     padding: 5px;
 }
 
+.seeMore1:hover {
+    background-color: a.$accent-color;
+}
+
 .seeMore2 {
     background-color: a.$accent-color;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
+}
+
+.seeMore2:hover {
+    background-color: a.$third-color;
 }
 
 #colaborators {
@@ -189,9 +197,9 @@
     margin-top: 40px;
 }
 
-.donation-button:hover {
-    background-color: a.$primary-color;
-}
+// .donation-button:hover {
+//     background-color: a.$primary-color;
+// }
 
 #slogan {
     text-align: center;
@@ -200,8 +208,10 @@
 
 @media screen and (min-width: 768px) {
 
-    #hero-con h3 {
-        top: 30%; 
+#hero-con h3 {
+        top: 30%;
+        left: 60%;
+        font-size: 10px;
     }
 
 #list {
@@ -210,7 +220,7 @@
     }
 
 #seeMore {
-        top: 40%; 
+        top: 37%; 
         left: 80%;
     }
 
@@ -364,8 +374,12 @@
 #needHelp {
     top: 20%; 
     left: 86%;
-    padding: 10px 10px 10px 25px ;
+    // padding: 10px 0px 10px 25px ;
     font-size: 20px;
+}
+
+#needHelp:hover {
+    background-color: a.$primary-color;
 }
 
 
@@ -373,10 +387,16 @@
 
 @media screen and (min-width: 1200px) {
     #seeMore {
-        top: 36%; 
+        top: 37%; 
         margin-left: 10px;
         padding-bottom: 8px;
         font-size: 16px;
+    }
+
+    #hero-con h3 {
+        top: 30%;
+        left: 60%;
+        font-size: 18px;
     }
 
     #list {
@@ -428,7 +448,7 @@
     #needHelp {
         top:25%;
         left: 89%;
-        padding: 10px 10px 10px 30px ;
+        // padding: 10px 10px 10px 30px ;
         font-size: 30px;
         box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.766);
     }
@@ -444,6 +464,24 @@
 }
 
 @media screen and (min-width: 1600px) {
+    #hero-con h2 {
+        top: 20%;
+    }
+    #hero-con h3 {
+        top: 30%;
+        left: 60%;
+        font-size: 22px;
+    }
+
+#list {
+        top: 36%; 
+        left: 60%;
+    }
+
+#seeMore {
+        top: 37%; 
+        left: 80%;
+    }
 
     #mission p {
         line-height: normal;
