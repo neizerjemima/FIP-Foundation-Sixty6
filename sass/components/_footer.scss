@@ -1,8 +1,5 @@
 @use '../abstracts' as a;
 
-// footer {
-//     height: 200px;
-// }
 
 footer {
     color: a.$primary-color;
@@ -60,7 +57,6 @@ footer {
     form {
         margin-left: 33px;
     input {
-        border-radius: 12px;
         border: none;
         margin-bottom: 13px;
         width: 360px;
@@ -81,6 +77,10 @@ footer {
        background-color: a.$primary-color;
        font-size: 17px;
        margin-left: 72%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: a.$accent-color;
     }
 }
 }
