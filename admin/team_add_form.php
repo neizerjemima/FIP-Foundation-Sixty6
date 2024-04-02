@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<?php
-session_start();
-
-if(!$_SESSION['username']) {
-  header( 'Location: login_form.php');
-}
-
-require_once('../includes/connect.php');
-$stmt = $connection->prepare('SELECT v.*, p.title AS position FROM teammembers v JOIN positions p ON v.position = p.id ORDER BY v.created_at ASC');
-$stmt->execute();
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +9,7 @@ $stmt->execute();
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
 </head>
-<body class="user-website" data-page="volunteer-principal-cms">
+<body class="user-website" data-page="volunteer-add-cms">
     <header id="main-header-user" class="grid-con">
 
     
@@ -55,7 +42,7 @@ $stmt->execute();
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="volunteer.html">Volunteers</a></li>
-                <li><a href="team.php">Team</a></li>
+                <li><a href="team.html">Team</a></li>
                 <li><a href="collaborators.html">Collaborators</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="donations.html">Donations</a></li>
@@ -76,10 +63,10 @@ $stmt->execute();
                 <li>
                     <a href="home.html">Home</a>
                   </li>
-                  <li>
+                  <li class="active-user">
                     <a href="volunteer.html" >Volunteers</a>
                   </li>
-                  <li class="active-user">
+                  <li>
                     <a href="" >Team</a>
                   </li>
                   <li>
@@ -111,63 +98,55 @@ $stmt->execute();
     <main class="content-user">
 
         <section class="grid-con">
-            <h2 class="hidden">Volunteer Table</h2>
-
+            <h2 class="hidden">Volunteer More Information</h2>
+          
+        
             <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                <a href="team_add_form.php"><button>CREATE</button></a>
+                <a href="volunteer.php"><button>Go Back</button></a>
             </div>
 
-            <div class="col-span-full l-col-start-1 l-col-end-13 table-section volunteer-general">
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                                <tr class="column-names">
-                                    <td>First Name</td>
-                                    <td>Last Name</td>
-                                    <td class="dropdown-table">
-                                        <select class="dropdown-select">
-                                            <option value="email-volunteer">Photo</option>
-                                            <option value="phone-volunteer">Position</option>
-                                            <option value="message-volunteer">Description</option>
-                                        </select>
-                                    </td>
-                                    <td class="desktop-options hidden">Photo</td>
-                                    <td class="desktop-options hidden">Position</td>
-                                    <td class="desktop-options hidden">Description</td>
-                                    <td>Action</td>
-                                </tr>
-                                <tbody>
-                                    <tr>
+            <form action="add_team.php" method="post"  enctype="multipart/form-data" class="col-span-full">
 
-                                <?php
+            <div class="col-span-full more-information-section">
+                <div class="more-information more-information-flex">
+                    <label for="firstname">First Name: </label>
+                    <input name="firstname" type="text">
+                </div>
+                <div class="more-information more-information-flex">
+                    <label for="lastname">Last Name: </label>
+                    <input name="lastname" type="text" >
+                </div>
+                <div class="more-information more-information-flex">
+                    <label for="photo">Photo: </label>
+                    <input name="photo" type="file" >
+                </div>
+                <div class="more-information more-information-long">
+                    <label for="position">Position: </label>
+                    <select name="position">
+                            <?php
+                            require_once('../includes/connect.php');
+                            // Query to fetch roles
+                            $query = 'SELECT * FROM positions';
+                            $stmt = $connection->prepare($query);
+                            $stmt->execute();
+                            $positions = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                                
-
-                                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                    $first_three_words = implode(' ', array_slice(explode(' ', $row['description']), 0, 3));
-                                    echo 
-                                        '<td>'.$row['firstname'].'</td>
-                                        <td>'.$row['lastname'].'</td>
-                                        <td class="email-volunteer">'.$row['photo'].'</td>
-                                        <td class="message-volunteer hidden">'.$row['position'].'</td>
-                                        <td class="notes-volunteer hidden">'.$first_three_words.'...</td>
-                                        <td class="buttons-column">
-                                            <a href="team_more.php?id='.$row['id'].'"><button class="button-table-general">More</button></a>
-                                            <a href="team_edit.php?id='.$row['id'].'"><button class="button-table-general">Edit</button></a>
-                                            <a href="delete_team.php?id='.$row['id'].'"><button class="button-table-general">Delete</button></a>
-                                        </td>
-                                    </tr>';
-                                 }
-
-                                $stmt = null;
-
-                                ?> 
-                                </tbody>
-                            </tr>
-                        </thead>
-                    </table>
+                            // Populate dropdown with roles
+                            foreach ($positions as $position) {
+                                echo "<option value='{$position['id']}'>{$position['title']}</option>";
+                            }
+                            ?>
+                        </select>
+                </div>
+                <div class="more-information more-information-long">
+                    <label for="description">Description: </label>
+                    <textarea name="description"></textarea>
+                </div>
+                     <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
+                    <button type="submit" name="save">Save</button>
                 </div>
             </div>
+        </form>
         </section>
     </main>
 </body>

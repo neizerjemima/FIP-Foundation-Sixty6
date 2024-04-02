@@ -9,8 +9,11 @@ if(!$_SESSION['username']) {
 }
 
 require_once('../includes/connect.php');
-$stmt = $connection->prepare('SELECT v.*, r.name AS role_name FROM volunteers v JOIN roles r ON v.role = r.id ORDER BY v.created_at ASC');
+$stmt = $connection->prepare('SELECT v.*, p.title AS position FROM teammembers v INNER JOIN positions p ON v.position = p.id WHERE v.id = :teamId');
+$teamId = $_GET['id'];
+$stmt->bindParam(':teamId', $teamId, PDO::PARAM_INT);
 $stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <head>
@@ -22,7 +25,7 @@ $stmt->execute();
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
 </head>
-<body class="user-website" data-page="volunteer-principal-cms">
+<body class="user-website" data-page="volunteer-more-cms">
     <header id="main-header-user" class="grid-con">
 
     
@@ -55,7 +58,7 @@ $stmt->execute();
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="volunteer.html">Volunteers</a></li>
-                <li><a href="team.php">Team</a></li>
+                <li><a href="team.html">Team</a></li>
                 <li><a href="collaborators.html">Collaborators</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="donations.html">Donations</a></li>
@@ -80,7 +83,7 @@ $stmt->execute();
                     <a href="volunteer.html" >Volunteers</a>
                   </li>
                   <li>
-                    <a href="team.php" >Team</a>
+                    <a href="" >Team</a>
                   </li>
                   <li>
                     <a href="" >Collaborators</a>
@@ -111,64 +114,33 @@ $stmt->execute();
     <main class="content-user">
 
         <section class="grid-con">
-            <h2 class="hidden">Volunteer Table</h2>
+            <h2 class="hidden">Volunteer More Information</h2>
 
             <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                <a href="volunteer_add_form.php"><button>CREATE</button></a>
+                <a href="team.php"><button>Go Back</button></a>
+               <a href="team_edit.php?id=<?php echo $row['id']; ?>"><button>Edit</button></a>
             </div>
 
-            <div class="col-span-full l-col-start-1 l-col-end-13 table-section volunteer-general">
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                                <tr class="column-names">
-                                    <td>First Name</td>
-                                    <td>Last Name</td>
-                                    <td class="dropdown-table">
-                                        <select class="dropdown-select">
-                                            <option value="email-volunteer">Email</option>
-                                            <option value="phone-volunteer">Phone</option>
-                                            <option value="message-volunteer">Message</option>
-                                            <option value="notes-volunteer">Notes</option>
-                                        </select>
-                                    </td>
-                                    <td class="desktop-options hidden">Email</td>
-                                    <td class="desktop-options hidden">Phone</td>
-                                    <td class="desktop-options hidden">Category</td>
-                                    <td class="desktop-options hidden">Notes</td>
-                                    <td>Action</td>
-                                </tr>
-                                <tbody>
-                                    <tr>
-
-                                <?php
-
-                                
-
-                                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                    $first_three_words = implode(' ', array_slice(explode(' ', $row['notes']), 0, 3));
-                                    echo 
-                                        '<td>'.$row['firstname'].'</td>
-                                        <td>'.$row['lastname'].'</td>
-                                        <td class="email-volunteer">'.$row['email'].'</td>
-                                        <td class="phone-volunteer hidden">'.$row['phone'].'</td>
-                                        <td class="message-volunteer hidden">'.$row['role_name'].'</td>
-                                        <td class="notes-volunteer hidden">'.$first_three_words.'...</td>
-                                        <td class="buttons-column">
-                                            <a href="volunteer_more.php?id='.$row['id'].'"><button class="button-table-general">More</button></a>
-                                            <a href="volunteer_edit.php?id='.$row['id'].'"><button class="button-table-general">Edit</button></a>
-                                            <a href="delete_volunteer.php?id='.$row['id'].'"><button class="button-table-general">Delete</button></a>
-                                        </td>
-                                    </tr>';
-                                 }
-
-                                $stmt = null;
-
-                                ?> 
-                                </tbody>
-                            </tr>
-                        </thead>
-                    </table>
+            <div class="col-span-full more-information-section">
+                <div class="more-information more-information-flex">
+                    <h3>First Name:</h3>
+                    <p><?php echo $row['firstname']; ?></p>
+                </div>
+                <div class="more-information more-information-flex">
+                    <h3>Last Name:</h3>
+                    <p><?php echo $row['lastname']; ?></p>
+                </div>
+                <div class="more-information more-information-flex">
+                    <h3>Photo:</h3>
+                    <p><?php echo $row['photo']; ?></p>
+                </div>
+                <div class="more-information more-information-flex">
+                    <h3>Position:</h3>
+                    <p><?php echo $row['position']; ?></p>
+                </div>
+                <div class="more-information more-information-long">
+                    <h3 id="notes-volunteer">Description:</h3>
+                    <p><?php echo $row['description']; ?></p>
                 </div>
             </div>
         </section>
