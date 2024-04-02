@@ -63,13 +63,13 @@
                 <li>
                     <a href="home.html">Home</a>
                   </li>
-                  <li class="active-user">
+                  <li>
                     <a href="volunteer.html" >Volunteers</a>
                   </li>
                   <li>
                     <a href="" >Team</a>
                   </li>
-                  <li>
+                  <li class="active-user">
                     <a href="" >Collaborators</a>
                   </li>
                   <li>
@@ -102,45 +102,19 @@
           
         
             <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                <a href="team.php"><button>Go Back</button></a>
+                <a href="collaborators.php"><button>Go Back</button></a>
             </div>
 
-            <form action="add_team.php" method="post"  enctype="multipart/form-data" class="col-span-full">
+            <form action="add_collaborators.php" method="post"  enctype="multipart/form-data" class="col-span-full">
 
             <div class="col-span-full more-information-section">
                 <div class="more-information more-information-flex">
-                    <label for="firstname">First Name: </label>
-                    <input name="firstname" type="text">
+                    <label for="company_name">Name: </label>
+                    <input name="company_name" type="text">
                 </div>
                 <div class="more-information more-information-flex">
-                    <label for="lastname">Last Name: </label>
-                    <input name="lastname" type="text" >
-                </div>
-                <div class="more-information more-information-flex">
-                    <label for="photo">Photo: </label>
-                    <input name="photo" type="file" >
-                </div>
-                <div class="more-information more-information-long">
-                    <label for="position">Position: </label>
-                    <select name="position">
-                            <?php
-                            require_once('../includes/connect.php');
-                            // Query to fetch roles
-                            $query = 'SELECT * FROM positions';
-                            $stmt = $connection->prepare($query);
-                            $stmt->execute();
-                            $positions = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                            // Populate dropdown with roles
-                            foreach ($positions as $position) {
-                                echo "<option value='{$position['id']}'>{$position['title']}</option>";
-                            }
-                            ?>
-                        </select>
-                </div>
-                <div class="more-information more-information-long">
-                    <label for="description">Description: </label>
-                    <textarea name="description"></textarea>
+                    <label for="logo">Photo: </label>
+                    <input name="logo" type="file" >
                 </div>
                      <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
                     <button type="submit" name="save">Save</button>
