@@ -1,74 +1,71 @@
-
-
 .more-information {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.more-information-flex{
-    display: flex;
-    align-items: center;
+.more-information-flex {
+  display: flex;
+  align-items: center;
 }
 
-
-.more-information h3{
-    font-family:'Nexa-Bold';
-    font-size: 14px;
+.more-information h3 {
+  font-family: "Nexa-Bold";
+  font-size: 14px;
 }
 
-.more-information p{
-    font-family:'Nexa-Light';
-    font-size: 14px;
+.more-information p {
+  font-family: "Nexa-Light";
+  font-size: 14px;
 }
 
-.more-information-flex h3{
-    margin-right: 5px;
-    width: 100px;
+.more-information-flex h3 {
+  color: black;
+  margin-right: 5px;
+  width: 100px;
 }
 
-
-.buttons-more-info{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
-    margin-bottom: 20px;
+.buttons-more-info {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.buttons-more-info button{
-    margin-left: 20px;
-    font-weight: 600;
-    width: 70px;
-    height: 30px;
-    color: #fff;
-    cursor: pointer;
-    background: rgb(70,46,159);
-    background: linear-gradient(180deg, rgba(70,46,159) 0%, rgba(39,23,98) 100%);
+.buttons-more-info button {
+  margin-left: 20px;
+  font-weight: 600;
+  width: 70px;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+  background: rgb(70, 46, 159);
+  background: linear-gradient(
+    180deg,
+    rgba(70, 46, 159) 0%,
+    rgba(39, 23, 98) 100%
+  );
 }
 
 @media (min-width: 768px) {
+  .more-information-long {
+    display: flex;
+    align-items: flex-start;
+  }
 
-    .more-information-long{
-        display: flex;
-        align-items: flex-start;
-    }
+  .more-information-long h3 {
+    color: black;
+  }
 
-    // .more-information-long h3{
-    //     margin-right: 35px;
-    // }
+  .more-information-long > h3 {
+    margin-right: 37px;
+  }
 
-    .more-information-long > h3 {
-        margin-right: 37px;
-    }
+  #notes-volunteer {
+    margin-right: 58px;
+  }
 
-    #notes-volunteer{
-        margin-right: 58px;
-    }
-
-    .buttons-more-info button{
-        width: 80px;
-        height: 40px;
-        font-size: 15px;
-    }
+  .buttons-more-info button {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+  }
 }
-
-
-
