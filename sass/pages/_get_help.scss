@@ -37,8 +37,7 @@
     background-color: #7A2A85;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+    justify-content: center;    
 }
 
 .box-text-slider:hover{
@@ -141,7 +140,6 @@
     font-family: b.$body-font-family;
     font-weight: bold;
     padding: 2px;
-    border-radius: 6px;
     font-size: 14px;
     margin-bottom: 10px;
     height: 40px;
@@ -163,11 +161,10 @@
     font-size: 17px;
     margin-right: 20px;
     margin-left: auto; 
-    border-radius: 50px;
-    background-color: b.$secondary-color;
+    background-color: b.$primary-color;
     font-family: b.$heading-font-family;
     font-weight: bolder;
-    color: b.$primary-color;
+    color: b.$secondary-color;
     margin-bottom: 20px;
 }
 
@@ -191,7 +188,6 @@
     max-width: 90%; 
     max-height: 90%; 
     overflow: auto;
-    border-radius: 10px;
     z-index: 99999; 
 }
 .lightbox-help {
@@ -229,8 +225,8 @@
 
 #button-help-contact:hover {
     cursor: pointer;
-    background-color: #7A2A85;
-    color: #FFFFFF;
+    background-color: b.$accent-color;
+    
 }
 
 
@@ -271,7 +267,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
     }
     
     #text-slider div p {
@@ -314,7 +309,6 @@
     #help-form input:not(:last-child), #help-form textarea{
         width: 668px;
         padding: 2px;
-        border-radius: 6px;
         font-size: 14px;
         margin-bottom: 10px;
         height: 40px;
@@ -346,11 +340,10 @@
         font-size: 17px;
         margin-right: 90px;
         margin-left: auto; 
-        border-radius: 50px;
-        background-color: b.$secondary-color;
+        background-color: b.$primary-color;
         font-family: b.$heading-font-family;
         font-weight: bolder;
-        color: b.$primary-color;
+        color: b.$secondary-color;
         margin-top: 15px;
         margin-bottom: 20px;
     }
@@ -418,7 +411,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
         margin-left: 90px;
     }
 
