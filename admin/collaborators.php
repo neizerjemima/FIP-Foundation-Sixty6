@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+session_start();
+
+if(!$_SESSION['username']) {
+  header( 'Location: login_form.php');
+}
+
+require_once('../includes/connect.php');
+$stmt = $connection->prepare('SELECT * FROM collaborators ORDER BY company_name ASC');
+$stmt->execute();
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +22,7 @@
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
 </head>
-<body class="user-website" data-page="volunteer-add-cms">
+<body class="user-website" data-page="volunteer-principal-cms">
     <header id="main-header-user" class="grid-con">
 
     
@@ -42,7 +55,7 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="volunteer.html">Volunteers</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="team.php">Team</a></li>
                 <li><a href="collaborators.html">Collaborators</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="donations.html">Donations</a></li>
@@ -63,13 +76,13 @@
                 <li>
                     <a href="home.html">Home</a>
                   </li>
-                  <li class="active-user">
+                  <li>
                     <a href="volunteer.html" >Volunteers</a>
                   </li>
                   <li>
                     <a href="" >Team</a>
                   </li>
-                  <li>
+                  <li class="active-user">
                     <a href="" >Collaborators</a>
                   </li>
                   <li>
@@ -98,55 +111,49 @@
     <main class="content-user">
 
         <section class="grid-con">
-            <h2 class="hidden">Volunteer More Information</h2>
-          
-        
+            <h2 class="hidden">Volunteer Table</h2>
+
             <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                <a href="team.php"><button>Go Back</button></a>
+                <a href="collaborators_add_form.php"><button>CREATE</button></a>
             </div>
 
-            <form action="add_team.php" method="post"  enctype="multipart/form-data" class="col-span-full">
+            <div class="col-span-full l-col-start-1 l-col-end-13 table-section volunteer-general">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                                <tr class="column-names">
+                                    <td>Company Name</td>
+                                    <td>Logo Image</td>
+                                    <td>Action</td>
+                                </tr>
+                                <tbody>
+                                    <tr>
 
-            <div class="col-span-full more-information-section">
-                <div class="more-information more-information-flex">
-                    <label for="firstname">First Name: </label>
-                    <input name="firstname" type="text">
-                </div>
-                <div class="more-information more-information-flex">
-                    <label for="lastname">Last Name: </label>
-                    <input name="lastname" type="text" >
-                </div>
-                <div class="more-information more-information-flex">
-                    <label for="photo">Photo: </label>
-                    <input name="photo" type="file" >
-                </div>
-                <div class="more-information more-information-long">
-                    <label for="position">Position: </label>
-                    <select name="position">
-                            <?php
-                            require_once('../includes/connect.php');
-                            // Query to fetch roles
-                            $query = 'SELECT * FROM positions';
-                            $stmt = $connection->prepare($query);
-                            $stmt->execute();
-                            $positions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                <?php
 
-                            // Populate dropdown with roles
-                            foreach ($positions as $position) {
-                                echo "<option value='{$position['id']}'>{$position['title']}</option>";
-                            }
-                            ?>
-                        </select>
-                </div>
-                <div class="more-information more-information-long">
-                    <label for="description">Description: </label>
-                    <textarea name="description"></textarea>
-                </div>
-                     <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                    <button type="submit" name="save">Save</button>
+                                
+
+                                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                    echo 
+                                        '<td>'.$row['company_name'].'</td>
+                                        <td>'.$row['logo'].'</td>
+                                        <td class="buttons-column">
+                                            <a href="collaborators_more.php?id='.$row['id'].'"><button class="button-table-general">More</button></a>
+                                            <a href="collaborators_edit.php?id='.$row['id'].'"><button class="button-table-general">Edit</button></a>
+                                            <a href="delete_collaborators.php?id='.$row['id'].'"><button class="button-table-general">Delete</button></a>
+                                        </td>
+                                    </tr>';
+                                 }
+
+                                $stmt = null;
+
+                                ?> 
+                                </tbody>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
-        </form>
         </section>
     </main>
 </body>
