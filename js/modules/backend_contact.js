@@ -12,7 +12,7 @@ export function backend_contact() {
         methods: {
             submitForm() {
                 if (!this.name || !this.email || !this.subject || !this.textinput) {
-                    this.feedback = '*Please ensure all required fields are filled out';
+                    this.feedback = "*Please verify that all fields have been filled in.";
                     return; 
                 }
 
@@ -37,7 +37,7 @@ export function backend_contact() {
                         this.email = '';
                         this.subject = '';
                         this.textinput = '';
-                        this.feedback = responseText.message;
+                        this.feedback = "Your message has been received!";
                     }
                 })
                 .catch(error => {
