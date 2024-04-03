@@ -1,78 +1,74 @@
-.sidebar{
+.sidebar {
   display: none;
 }
 
 @media (min-width: 1200px) {
-
   .sidebar {
-    font-family:'Nexa-Regular';
+    font-family: "Nexa-Regular";
     text-align: center;
     display: block;
-    height: 100%; 
-    width: 228px; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
+    height: 100%;
+    width: 228px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: #DFAFE6; 
-    overflow-x: hidden; 
+    background-color: #fff4ea;
+    overflow-x: hidden;
     padding-top: 20px;
-    }
+  }
 
-  .sidebar-brand{
+  .sidebar-brand {
     text-align: center;
     margin-bottom: 60px;
   }
 
-  .sidebar-brand img{
+  .sidebar-brand img {
     height: 60px;
   }
 
-  #title-section{
+  #title-section {
     order: -1;
   }
 
-  #main-header-user{
+  #main-header-user {
     max-width: 1920px;
     height: 78px;
   }
-  
-  #user-section img{
+
+  #user-section img {
     height: 20px;
   }
 
-  .content-user,   #main-header-user{
+  .content-user,
+  #main-header-user {
     margin-left: 228px;
     padding: 0px 10px;
   }
 
-  .sidebar-menu ul{
+  .sidebar-menu ul {
     padding: 0;
     list-style: none;
   }
 
-
-  .sidebar-menu ul li{
+  .sidebar-menu ul li {
     padding: 7px;
     height: 33px;
     width: 200px;
-    background-color: #271762;
+    background-color: #282828;
     margin: 0 auto;
     margin-bottom: 20px;
-
   }
 
-  .sidebar-menu ul li:hover{
-    background-color: rgb(0, 3, 13);
-  }
-  
-  .sidebar-menu ul .active-user{
-    background-color: #7A2A85;
+  .sidebar-menu ul li:hover {
+    background-color: #88b274;
   }
 
-  .sidebar-menu ul li a{
+  .sidebar-menu ul .active-user {
+    background-color: #f48f28;
+  }
+
+  .sidebar-menu ul li a {
     color: #ffff;
   }
-
-
 }

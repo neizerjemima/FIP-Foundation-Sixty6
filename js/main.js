@@ -8,6 +8,7 @@ import { burger_user } from "./modules/burger_user.js";
 import { menutable_user } from "./modules/menutable_user.js";
 
 
+
 import { backend_article } from "./modules/backend_article.js";
 import { backend_event } from "./modules/backend_event.js";
 import { backend_contact } from "./modules/backend_contact.js";
@@ -16,6 +17,7 @@ import { backend_volunteer } from "./modules/backend_volunteer.js";
 import { backend_donation } from "./modules/backend_donation.js";
 import { backend_team } from "./modules/backend_team.js";
 import { backend_collaborator } from "./modules/backend_collaborator.js";
+import { backend_newsletter } from "./modules/backend_newsletter.js";
 
 
 
@@ -51,6 +53,7 @@ if (document.body.dataset.page === "home"){
   volunteer_button();
   donation_button();
   backend_team();
+  backend_newsletter();
  }else if (document.body.dataset.page === "contact"){
   backend_volunteer();
   backend_donation();
