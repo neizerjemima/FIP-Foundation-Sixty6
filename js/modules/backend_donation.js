@@ -8,7 +8,8 @@ export function backend_donation() {
                     email: '',
                     amount: '',
                     type: '',
-                    feedback: ''
+                    feedback: "*Please fill out all required fields"
+                    
                 },
                 types: []
             };
@@ -30,7 +31,7 @@ export function backend_donation() {
             },
             submitForm() {
                 if (!this.formData.firstname || !this.formData.lastname || !this.formData.email || !this.formData.amount || !this.formData.type) {
-                    this.formData.feedback = "*Please fill out all required fields";
+                    this.formData.feedback = "*Please verify that all fields have been filled in.";
                     return;
                 }
 
@@ -53,7 +54,7 @@ export function backend_donation() {
 
                     if (responseText.errors) {
                         responseText.errors.forEach(error => {
-                            this.formData.feedback += error + "<br>";
+                            this.formData.feedback = error + "<br>";
                         });
                     } else {
                         this.formData.firstname = '';
@@ -61,7 +62,6 @@ export function backend_donation() {
                         this.formData.email = '';
                         this.formData.amount = '';
                         this.formData.type = '';
-                        this.formData.feedback = responseText.message;
 
                         // Show the lightbox
                         const donationLightBox = document.querySelector("#donation-lightbox")

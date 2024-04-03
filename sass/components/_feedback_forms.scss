@@ -2,9 +2,42 @@
     font-size: 10px;
 }
 
+#form-donation #feedbackdonate{
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+#volunteer-lightbox #feedbackvolunteer{
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+@media (min-width: 768px) {
+    #form-donation #feedbackdonate{
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #volunteer-lightbox #feedbackvolunteer{
+    text-align: left;
+    font-size: 12px;
+    margin-left: 40px;
+    width: 100%;
+}
+}
+
+
 @media (min-width: 1200px) {
     footer #insights #feedback-newsletter{
     font-size: 10px;
+}
+
+#form-donation #feedbackdonate{
+    font-size: 14px;
+}
+
+#volunteer-lightbox #feedbackvolunteer{
+    font-size: 14px;
 }
 
 }
