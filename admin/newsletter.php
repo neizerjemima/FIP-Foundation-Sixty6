@@ -9,7 +9,7 @@ if(!$_SESSION['username']) {
 }
 
 require_once('../includes/connect.php');
-$stmt = $connection->prepare('SELECT * FROM newsletter ORDER BY created_at ASC');
+$stmt = $connection->prepare('SELECT * FROM newsletters ORDER BY created_at ASC');
 $stmt->execute();
 ?>
 

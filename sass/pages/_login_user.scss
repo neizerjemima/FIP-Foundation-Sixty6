@@ -3,7 +3,7 @@
 }
 
 #login-website {
-  background-color: #f7f0f0;
+  background-color: #de760b;
   margin: 0 auto;
 }
 
@@ -13,11 +13,21 @@
 }
 
 #login-form {
-  background: rgb(216, 173, 230);
-  background: linear-gradient(
-    180deg,
-    rgba(216, 173, 230, 1) 0%,
-    rgba(115, 48, 134, 1) 100%
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #8e8e8e,
+  //   #a9a9a9,
+  //   #c5c5c5,
+  //   #e2e2e2,
+  //   #ffffff
+  // );
+  background-image: linear-gradient(
+    to right top,
+    #000000,
+    #171717,
+    #262626,
+    #373737,
+    #484848
   );
   margin: 0 auto;
   height: 686px;
@@ -42,8 +52,8 @@
   width: 260px;
   height: 52px;
   border: none;
-  background-color: #271762;
-  color: white;
+  background-color: #fff4f4;
+  color: rgb(0, 0, 0);
   padding-left: 10px;
 }
 
@@ -53,12 +63,24 @@
 }
 
 #login-button {
+  cursor: pointer;
   height: 61px;
-  background: rgb(70, 46, 159);
-  background: linear-gradient(
-    180deg,
-    rgba(70, 46, 159) 0%,
-    rgba(39, 23, 98) 100%
+  font-weight: bold;
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #f48f28,
+  //   #f78c20,
+  //   #f98818,
+  //   #fc840e,
+  //   #ff8000
+  // );
+  background-image: linear-gradient(
+    to right top,
+    #ff3e09,
+    #ff5800,
+    #ff6d00,
+    #ff7f00,
+    #ff9000
   );
 }
 
