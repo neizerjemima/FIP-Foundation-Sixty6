@@ -8,7 +8,7 @@ export function backend_volunteer() {
           email: "",
           phone: "",
           role: "",
-          feedback: "",
+          feedback: "*Please fill out all required fields"
         },
         roles: [],
       };
@@ -36,7 +36,7 @@ export function backend_volunteer() {
           !this.formData.phone ||
           !this.formData.role
         ) {
-          this.formData.feedback = "*Please fill out all required fields";
+          this.formData.feedback = "*Please verify that all fields have been filled in.";
           return;
         }
 

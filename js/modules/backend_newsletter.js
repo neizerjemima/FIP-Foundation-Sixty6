@@ -4,15 +4,15 @@ export function backend_newsletter() {
       return {
         formData: {
           name: "",
-          email: ""
+          email: "",
+          feedback: "*Please fill out all required fields",
         },
-        feedback: "*Please fill out all required fields",
       };
     },
     methods: {
       submitForm() {
         if (!this.formData.name || !this.formData.email) {
-          this.feedback = "*Please ensure all required fields are filled out";
+          this.formData.feedback = "*Please verify that all fields have been filled in.";
           return;
         }
 
@@ -35,7 +35,7 @@ export function backend_newsletter() {
             } else {
               this.formData.name = "";
               this.formData.email = "";
-             this.feedback = "Thank you for signing up!";
+              this.formData.feedback = "Thank you for signing up!";
             }
           })
           .catch((error) => {

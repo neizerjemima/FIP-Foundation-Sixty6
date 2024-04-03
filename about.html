@@ -133,7 +133,8 @@
                     <select v-model="formData.role" id="volunteer-role" class="dropdown-select-volunteer" name="Role">
                         <option value="" selected disabled>SELECT ROLE</option>
                         <option v-for="role in roles" :key="role.id" :value="role.id">{{ role.name }}</option>
-                    </select>                    
+                    </select>
+                    <p v-if="formData.feedback" class="feedback" id="feedbackvolunteer">{{ formData.feedback }}<p>                    
                     <button id="volunteer-submit-button" type="submit">VOLUNTEER</button>
                 </form> 
             </div>
@@ -179,6 +180,8 @@
                             <option v-for="type in types" :key="type.id" :value="type.id">{{ type.title }}</option>
                         </select>
                     </div>
+
+                    <p v-if="formData.feedback" class="feedback" id="feedbackdonate">{{ formData.feedback }}</p>
                     <div id="donation-submit-box">
                         <button id="donation-submit-button" type="submit">SEND</button>
                     </div>
@@ -229,9 +232,9 @@
         <p>SIGN UP FOR MENTAL HEALTH INSIGHTS</p>
                 
         <form id="newsletter-form" @submit.prevent="submitForm">
-            <input v-model="formData.name" name="name" type="text" required placeholder="Write your name here">
+            <input v-model="formData.name" name="name" type="text" placeholder="Write your name here">
             <input v-model="formData.email" name="email" type="email" required placeholder="Email">
-            <p v-if="feedback" class="feedback" id="feedback-newsletter">{{ feedback }}</p>
+            <p v-if="formData.feedback" class="feedback" id="feedback-newsletter">{{ formData.feedback }}<p>  
             <input name="submit" type="submit" value="SEND">
         </form>
     </section>
