@@ -6,13 +6,13 @@ export function backend_gethelp() {
                 email: '',
                 subject: '',
                 message: '',
-                feedback: ''
+                feedback: '*Please fill out all required fields'
             };
         },
         methods: {
             submitForm() {
                 if (!this.name || !this.email || !this.subject || !this.message) {
-                    this.feedback = '*Please fill out all required fields';
+                    this.feedback = "*Please verify that all fields have been filled in.";
                     return;
                 }
 
@@ -37,7 +37,7 @@ export function backend_gethelp() {
                         this.email = '';
                         this.subject = '';
                         this.message = '';
-                        this.feedback = responseText.message;
+                        this.feedback = "Thanks for reaching out. Help is on its way.";
                     }
                 })
                 .catch(error => {

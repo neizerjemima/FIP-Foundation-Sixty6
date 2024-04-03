@@ -46,6 +46,7 @@ if (document.body.dataset.page === "home"){
       volunteer_button();
       donation_button();
       gethelp_lightbox();
+        backend_newsletter();
  } else if (document.body.dataset.page === "about"){
   backend_volunteer();
   backend_donation();
