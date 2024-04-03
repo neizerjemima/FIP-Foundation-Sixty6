@@ -24,25 +24,24 @@ $stmt->execute();
     <script type="module" src="../js/main.js"></script>
 </head>
 <body class="user-website" data-page="volunteer-principal-cms">
-    <header id="main-header-user" class="grid-con">
+      <header id="main-header-user" class="grid-con">
 
     
         <div class="box col-start-1 col-end-2 m-col-start-1 m-col-end-2 l-col-start-10 l-col-end-12 xl-col-start-10 xl-col-end-12"  id="user-section">
 
             <div class="nav-user">
                 <ul id="list-user">
-                <li><a href="#"><i class="fa-solid fa-caret-down" id="triangle"></i></a>
+              <li><i class="fa-solid fa-caret-down" id="triangle"></i>
                     <ul class="dropdown">
-                    <li><a href="#">Edit Profile</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="logout.php">Log Out</a></li>
                     </ul>
                 </li>
                 </ul>
             </div>
-            <h3 class="hidden" id="user-name">User Name</h3>
+            <h3 class="hidden" id="user-name"><?php echo $_SESSION['username']; ?></h3>
         </div>
         <div class="box m-col-start-2 m-col-end-6 l-col-start-1 l-col-end-5 xl-col-start-1 xl-col-end-5" id="title-section">
-            <h3>VOLUNTEERS</h3>
+            <h3>ARTICLES</h3>
         </div>
 
 
@@ -54,55 +53,56 @@ $stmt->execute();
         </div>
         <nav class="burger_menu">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="volunteer.html">Volunteers</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="volunteer.php">Volunteers</a></li>
                 <li><a href="team.php">Team</a></li>
-                <li><a href="collaborators.html">Collaborators</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="donations.html">Donations</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="gethelp.html">Get Help</a></li>
-                <li><a href="messages.html">Messages</a></li>
+                <li><a href="collaborators.php">Collaborators</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="donations.php">Donations</a></li>
+                <li><a href="articles.php">Articles</a></li>
+                <li><a href="gethelp.php">Get Help</a></li>
+                <li><a href="messages.php">Messages</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="sidebar">
         <div class="sidebar-brand">
-            <a href=""><img src="../images/FSixty6-logo.svg" alt="" class="logo"></a>
+            <a href="home.php"><img src="../images/FSixty6-logo.svg" alt="" class="logo"></a>
         </div>
 
-        <div class="sidebar-menu">
+         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="home.php">Home</a>
                   </li>
                   <li>
-                    <a href="volunteer.html" >Volunteers</a>
+                    <a href="volunteer.php" >Volunteers</a>
                   </li>
                   <li>
-                    <a href="" >Team</a>
+                    <a href="team.php" >Team</a>
                   </li>
                   <li>
-                    <a href="" >Collaborators</a>
+                    <a href="collaborators.php" >Collaborators</a>
                   </li>
                   <li>
-                    <a href="" >Events</a>
+                    <a href="events.php" >Events</a>
                   </li>
                   <li>
-                    <a href="" >Events</a>
+                    <a href="newsletter.php" >Newsletter</a>
                   </li>
                   <li>
-                    <a href="" >Donations</a>
+                    <a href="donations.php" >Donations</a>
                   </li>
-                  <li class="active-user">
-                    <a href="" >Articles</a>
-                  </li>
-                  <li>
-                    <a href="">Get Help</a>
+                  <li  class="active-user">
+                    <a href="articles.php" >Articles</a>
                   </li>
                   <li>
-                    <a href="" >Messages</a>
+                    <a href="gethelp.php">Get Help</a>
+                  </li>
+                  <li>
+                    <a href="messages.php" >Messages</a>
                   </li>
             </ul>
         </div>
@@ -112,11 +112,11 @@ $stmt->execute();
     <main class="content-user">
 
         <section class="grid-con">
-            <h2 class="hidden">Volunteer Table</h2>
+            <h2 class="hidden">Articles Table</h2>
 
             <div class="col-start-2 col-end-5 m-col-start-6 m-col-end-13 xl-col-start-7 xl-col-end-13 buttons-more-info">
-                <a href="article_add_form.php"><button>CREATE</button></a>
-                <a href="authors.php"><button>AUTHORS</button></a>
+                <a href="article_add_form.php"><button class="article-button-user">CREATE</button></a>
+                <a href="authors.php"><button class="article-button-user">AUTHORS</button></a>
             </div>
 
             <div class="col-span-full l-col-start-1 l-col-end-13 table-section volunteer-general">
@@ -126,13 +126,6 @@ $stmt->execute();
                                 <tr class="column-names">
                                     <td>Title</td>
                                     <td>Image</td>
-                                    <td class="dropdown-table">
-                                        <select class="dropdown-select">
-                                            <option value="email-volunteer">Author</option>
-                                            <option value="message-volunteer">Headline</option>
-                                            <option value="message-volunteer">Text</option>
-                                        </select>
-                                    </td>
                                     <td class="desktop-options hidden">Author</td>
                                     <td class="desktop-options hidden">Headline</td>
                                     <td class="desktop-options hidden">Text</td>
@@ -151,8 +144,8 @@ $stmt->execute();
                                     echo 
                                         '<td>'.$row['title'].'</td>
                                         <td>'.$row['image'].'</td>
-                                        <td class="email-volunteer">'.$row['author_fname'].' '.$row['author_lname'].'</td>
-                                        <td class="email-volunteer">'.$first_three_words_phrase.'...</td>
+                                        <td class="email-volunteer hidden">'.$row['author_fname'].' '.$row['author_lname'].'</td>
+                                        <td class="email-volunteer hidden">'.$first_three_words_phrase.'...</td>
                                         <td class="notes-volunteer hidden">'.$first_three_words_text.'...</td>
                                         <td class="buttons-column">
                                             <a href="article_more.php?id='.$row['id'].'"><button class="button-table-general">More</button></a>

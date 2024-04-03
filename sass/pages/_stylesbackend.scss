@@ -1,0 +1,19 @@
+.more-information .text-more {
+  margin-right: 73px;
+}
+
+.article-button-user {
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .buttons-more-info a .article-button-user {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .table-responsive .type-user {
+    display: block;
+  }
+}

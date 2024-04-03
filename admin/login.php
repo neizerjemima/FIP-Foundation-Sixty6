@@ -13,7 +13,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $_SESSION['username'] = $row['username'];
 
-header('Location: home.html');
+header('Location: home.php');
 
 }else{
     header('Location: login_form.php');

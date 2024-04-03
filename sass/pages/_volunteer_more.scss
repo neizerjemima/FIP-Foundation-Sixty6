@@ -45,6 +45,22 @@
   );
 }
 
+/* Style for the dropdown container */
+.dropdown-userinter {
+  font-family: "Nexa-Bold", sans-serif;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 3px;
+  color: #333;
+}
+
+.dropdown-userinter option {
+  font-family: "Nexa-Bold", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
 @media (min-width: 768px) {
   .more-information-long {
     display: flex;
@@ -67,5 +83,9 @@
     width: 80px;
     height: 40px;
     font-size: 15px;
+  }
+
+  .more-information .events-description {
+    margin-right: 22px;
   }
 }
