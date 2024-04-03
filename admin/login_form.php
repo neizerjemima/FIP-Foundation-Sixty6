@@ -9,8 +9,8 @@
     <script type="module" src="../js/main.js"></script>
 
 </head>
-<body id="login-website" data-page="login-cms">
-    <div class="grid-con">
+<body data-page="login-cms">
+    <div class="grid-con" id="login-website">
         <h1 class="hidden">Login - Foundation Sixty6</h1>
         <div class="col-span-full l-col-span-full" id="container-login">
             <div id="login-form" class="inside-login">

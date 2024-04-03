@@ -47,15 +47,14 @@ $row = $stmtVolunteer->fetch(PDO::FETCH_ASSOC);
 
             <div class="nav-user">
                 <ul id="list-user">
-                <li><a href="#"><i class="fa-solid fa-caret-down" id="triangle"></i></a>
+                <li><i class="fa-solid fa-caret-down" id="triangle"></i>
                     <ul class="dropdown">
-                    <li><a href="#">Edit Profile</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="logout.php">Log Out</a></li>
                     </ul>
                 </li>
                 </ul>
             </div>
-            <h3 class="hidden" id="user-name">User Name</h3>
+            <h3 class="hidden" id="user-name"><?php echo $_SESSION['username']; ?></h3>
         </div>
         <div class="box m-col-start-2 m-col-end-6 l-col-start-1 l-col-end-5 xl-col-start-1 xl-col-end-5" id="title-section">
             <h3>VOLUNTEERS</h3>
@@ -68,17 +67,18 @@ $row = $stmtVolunteer->fetch(PDO::FETCH_ASSOC);
 				<img src="../images/white-burger.png" alt="Burger Menu" id="hamburger-image">
 			</button>  
         </div>
-        <nav class="burger_menu">
+         <nav class="burger_menu">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="volunteer.html">Volunteers</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="collaborators.html">Collaborators</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="donations.html">Donations</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="gethelp.html">Get Help</a></li>
-                <li><a href="messages.html">Messages</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="volunteer.php">Volunteers</a></li>
+                <li><a href="team.php">Team</a></li>
+                <li><a href="collaborators.php">Collaborators</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="donations.php">Donations</a></li>
+                <li><a href="articles.php">Articles</a></li>
+                <li><a href="gethelp.php">Get Help</a></li>
+                <li><a href="messages.php">Messages</a></li>
             </ul>
         </nav>
     </header>
@@ -88,37 +88,37 @@ $row = $stmtVolunteer->fetch(PDO::FETCH_ASSOC);
             <a href=""><img src="../images/FSixty6-logo.svg" alt="" class="logo"></a>
         </div>
 
-        <div class="sidebar-menu">
+         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="home.php">Home</a>
                   </li>
                   <li class="active-user">
-                    <a href="volunteer.html" >Volunteers</a>
+                    <a href="volunteer.php" >Volunteers</a>
                   </li>
                   <li>
-                    <a href="" >Team</a>
+                    <a href="team.php" >Team</a>
                   </li>
                   <li>
-                    <a href="" >Collaborators</a>
+                    <a href="collaborators.php" >Collaborators</a>
                   </li>
                   <li>
-                    <a href="" >Events</a>
+                    <a href="events.php" >Events</a>
                   </li>
                   <li>
-                    <a href="" >Events</a>
+                    <a href="newsletter.php" >Newsletter</a>
                   </li>
                   <li>
-                    <a href="" >Donations</a>
+                    <a href="donations.php" >Donations</a>
                   </li>
                   <li>
-                    <a href="" >Articles</a>
+                    <a href="articles.php" >Articles</a>
                   </li>
                   <li>
-                    <a href="">Get Help</a>
+                    <a href="gethelp.php">Get Help</a>
                   </li>
                   <li>
-                    <a href="" >Messages</a>
+                    <a href="messages.php" >Messages</a>
                   </li>
             </ul>
         </div>
@@ -154,7 +154,7 @@ $row = $stmtVolunteer->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="more-information">
                     <label for="role">Role: </label>
-                    <select name="role">
+                    <select name="role" class="dropdown-userinter">
                     <?php foreach ($roles as $role): ?>
                         <option value="<?php echo $role['id']; ?>" <?php echo ($role['id'] == $row['role']) ? 'selected' : ''; ?>>
                             <?php echo $role['name']; ?>
