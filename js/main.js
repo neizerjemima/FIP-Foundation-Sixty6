@@ -61,6 +61,7 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
+  backend_newsletter();
  }else if (document.body.dataset.page === "articles"){
   backend_volunteer();
   backend_donation();
