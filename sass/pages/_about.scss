@@ -17,13 +17,13 @@
 }
 
 #about h2 {
-    color: a.$secondary-color;
+    color: a.$primary-color;
     margin-top: 20px;
     text-align: center;
 }
 
 #about p {
-    color: a.$secondary-color;
+    color: a.$primary-color;
     padding: 20px;
 }
 
@@ -58,12 +58,13 @@
 }
 
 #where {
-    background-color: a.$third-color;
+    background-color: a.$accent-color;
 }
 
 #where h2 {
     margin-top: 30px;
     text-align: center;
+    color:  a.$secondary-color;
 }
 
 #where p {
@@ -83,7 +84,7 @@
 }
 
 #impact p{
-    color: a.$third-color;
+    color: a.$accent-color;
 }
 
 @media screen and (min-width: 768px) {
