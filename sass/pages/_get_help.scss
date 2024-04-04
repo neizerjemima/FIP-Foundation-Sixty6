@@ -20,7 +20,7 @@
 #feelings h2{
     padding-left: 15px;
     font-size: 24px;
-    color: b.$third-color;
+    color: b.$primary-color;
     margin-bottom: 10px;
 }
 
@@ -34,7 +34,7 @@
     width: 125px;
     height: 70px;
     margin: 10px;
-    background-color: #7A2A85;
+    background-color: b.$primary-color;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -42,7 +42,7 @@
 
 .box-text-slider:hover{
     cursor: pointer;
-    background-color: #271762;
+    background-color: b.$accent-color;
 }
 
 #text-slider div p {
@@ -108,7 +108,7 @@
 
 #contact-form-help h2{
     margin-top: 20px;
-    color: #FFFFFF;
+    color: b.$primary-color;;
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
@@ -117,7 +117,7 @@
 }
 
 #help-p-contact p{
-    color: #FFFFFF;
+    color: b.$primary-color;;
     font-size: 12px;
     padding-left: 25px;
     padding-right: 25px;
@@ -143,6 +143,8 @@
     font-size: 14px;
     margin-bottom: 10px;
     height: 40px;
+    border: none;
+    resize: none;
 }
 
 #input-box-help{
@@ -153,19 +155,22 @@
 
 #help-form textarea{
     margin-bottom: 20px;
+    height: 200px;
 }
 
 #button-help-contact {
-    width: 57px;
+    width: 93px;
     height: 40px;
     font-size: 17px;
-    margin-right: 20px;
-    margin-left: auto; 
+    // margin-right: 20px;
+    // margin-left: auto; 
     background-color: b.$primary-color;
     font-family: b.$heading-font-family;
     font-weight: bolder;
     color: b.$secondary-color;
     margin-bottom: 20px;
+    border: none;
+
 }
 
 .lightbox-help {
