@@ -8,8 +8,8 @@ footer {
     margin-top: 50%;
 
     img {
-        margin-top: 52px;
-        margin-bottom: 52px;
+        margin-top: 40px;
+        // margin-bottom: 10px;
     }
 
     h3{
@@ -45,7 +45,7 @@ footer {
 
 
     #info {
-        margin-left: 50px;
+        // margin-left: 20px;
         display: flex;
         flex-direction: column;
         a{
@@ -64,10 +64,11 @@ footer {
 
     form {
         margin-left: 33px;
+        margin-right: 33px;
     input {
         border: none;
         margin-bottom: 13px;
-        width: 360px;
+        width: 330px;
         padding-left: 20px;
         height: 42px;
         &::placeholder {
@@ -81,10 +82,14 @@ footer {
     input[type="submit"] {
         width: 20%;
         padding-left: 0;
-       color: a.$secondary-color;
-       background-color: a.$primary-color;
-       font-size: 17px;
-       margin-left: 72%;
+        color: a.$secondary-color;
+        background-color: a.$primary-color;
+    //    font-size: 17px;
+        margin-left: 72%;
+        background-color: a.$primary-color;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    
+   
     }
 
     input[type="submit"]:hover {
@@ -99,22 +104,24 @@ footer {
         padding-top: 46px;
     
         img {
-            margin-top: 44px;
+            margin-top: 40px;
             margin-bottom: 0;
         }
     
         h3{
             font-size: 18px;
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
         }
         .fa-brands{ 
             font-size: 23px;
         }
         #social-icons {
-            margin-left: 50px;
+            margin-left: 0px;
+            margin-top: -30px;
             
             i 
-            {margin-bottom: 10px;
+            {
+                // margin-bottom: 10px;
                 span{
                     margin-left: 10px;
                     font-size: 16px;
@@ -123,9 +130,12 @@ footer {
         }
     
         #info {
-            margin-left: 50px;
+            margin-left: 20px;
+            // margin-top: 30px;
+            
             a{
                     font-size: 16px;
+                    margin-bottom: 8px;
             }
         }
     
@@ -137,6 +147,7 @@ footer {
             margin-left: 0;
         input {
             padding-left: 17px;
+            width: 280px;
             
             &::placeholder {
                 font-size: 17px;
@@ -214,10 +225,16 @@ footer {
     
         input[type="submit"] {
             width: 26%;
-            margin-left: 62%;
+            margin-left: 48%;
             height: 30px;
         }
     }
     }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer #insights form input[type=submit] {
+        margin-left: 28%;
     }
 }

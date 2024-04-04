@@ -194,9 +194,6 @@
     margin-bottom: 40px;
 }
 
-// .donation-button:hover {
-//     background-color: a.$primary-color;
-// }
 
 #slogan {
     text-align: center;
@@ -206,19 +203,15 @@
 @media screen and (min-width: 768px) {
 
 #hero-con h3 {
-        top: 30%;
+        top: 20%;
         left: 60%;
-        font-size: 10px;
+        font-size: 16px;
     }
 
 #list {
-        top: 36%; 
+        top: 26%; 
         left: 60%;
-    }
-
-#seeMore {
-        top: 37%; 
-        left: 80%;
+        font-size: 16px;
     }
 
 #mission {
@@ -235,7 +228,7 @@
     background-color: a.$third-color;
     margin: 0 auto;
     padding: 20px;
-    color: a.$secondary-color;
+    color: a.$primary-color;
     font-size: 10px; 
 }
 
@@ -243,7 +236,7 @@
     position: absolute;
     margin-top: 80px;
     color: a.$secondary-color;
-    padding: 10px;
+    padding: 5px;
  }
 
 #statistics {
@@ -258,7 +251,7 @@
 
 #statistics p {
     font-size: 28px;
-    color: a.$third-color;
+    color: a.$accent-color;
 }
 
 #statistics span {
@@ -359,20 +352,20 @@
     text-align: center; 
     margin-top: 80px;  
     margin-bottom: 60px;
-    color: a.$secondary-color;
+    color: a.$primary-color;
 }
 
 #donate a {
    margin-left: 120px;
    font-size: 22px;
-   padding: 20px;
+   padding: 10px;
 }
 
 #needHelp {
-    top: 20%; 
+    top: 12%; 
     left: 86%;
     // padding: 10px 0px 10px 25px ;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 #needHelp:hover {
@@ -383,21 +376,22 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #seeMore {
-        top: 37%; 
-        margin-left: 10px;
-        padding-bottom: 8px;
-        font-size: 16px;
-    }
+    // #seeMore {
+    //     top: 37%; 
+    //     margin-left: 10px;
+    //     padding-bottom: 8px;
+    //     font-size: 16px;
+    // }
+
 
     #hero-con h3 {
-        top: 30%;
+        top: 20%;
         left: 60%;
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #list {
-        font-size: 16px;
+        font-size: 22px;
     }
 
     #mission p {
@@ -422,6 +416,10 @@
         padding: 10px;
         text-align: center;
     }
+
+    #video a {
+        font-size: 22px;
+    }
     
     .colaborators-images img {
 
@@ -430,10 +428,16 @@
 
     #donate a {
         margin-left:  230px;
+        font-size: 40px;
+    }
+
+    #donate h2 {
+        margin-top: 150px;
+        font-size: 40px;
     }
 
     #newEvent{
-        background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
+        background: linear-gradient(to right, #F48F28 50%, #88b274 50%);
         background-size: 100% 100%;
     
         p{
@@ -443,10 +447,10 @@
     }
 
     #needHelp {
-        top:25%;
+        top:15%;
         left: 89%;
         // padding: 10px 10px 10px 30px ;
-        font-size: 30px;
+        font-size: 22px;
         box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.766);
     }
 }
@@ -493,34 +497,37 @@
 
 @media screen and (min-width: 1920px) {
 
-    #seeMore {
-        font-size: 22px;
-        padding-bottom: 7px;
-        padding-top: 7px;
+    #hero-con h2 {
+        top: 10%;
+        left: 15%;
     }
+
+    #hero-con h3 {
+        top: 20%;
+        left: 60%;
+        font-size: 42px;
+    }
+
     
     #needHelp {
-        top: 20%;
+        top: 14%;
     }
 
     #list {
-        font-size: 22px;
+        top:28%;
+        font-size: 32px;
     }
 
     #mission h2 {
-margin-left: 60px;
+    margin-left: 60px;
     }
         
-
-
     #mission p {
         line-height: normal;
         padding: 50px;
         font-size: 36px; 
     }
 
-
-    
     #statistics img {
        
         margin-left: 130px;
@@ -541,6 +548,14 @@ margin-left: 60px;
         font-size: 200px;
         color: a.$primary-color;
     }
+
+    #video a {
+        font-size: 42px;
+    }
+
+    .seeMore1, .seeMore2 {
+            font-size: 42px;
+        }
     
     .colaborators-images img {
 
