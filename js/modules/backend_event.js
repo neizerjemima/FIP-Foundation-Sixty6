@@ -31,7 +31,7 @@ export function backend_event(){
                     const lightboxContent = document.querySelector('.content-lightbox');
                     if (lightboxContent) {
                         lightboxContent.innerHTML = `
-                            <div>
+                            <div class="image-box-events">
                                 <img src="images/${eventData.photo}" alt="${eventData.title}" class="image-lightbox-event">
                             </div>
                             <div class="text-lightbox-event">
