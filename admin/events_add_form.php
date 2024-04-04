@@ -20,7 +20,7 @@ require_once('../includes/connect.php');
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
 </head>
-<body class="user-website" data-page="volunteer-add-cms">
+<body class="user-website" data-page="cms">
     <header id="main-header-user" class="grid-con">
 
     
