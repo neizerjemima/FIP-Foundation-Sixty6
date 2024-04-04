@@ -30,12 +30,14 @@ if (document.body.dataset.page === "home"){
   backend_collaborator();
   volunteer_button();
   donation_button();
+  backend_newsletter();
  } else if (document.body.dataset.page === "faq"){
     backend_volunteer();
     backend_donation();
     burger_menu();
     volunteer_button();
     donation_button();
+    backend_newsletter();
  }  else if (document.body.dataset.page === "gethelp"){
   backend_volunteer();
   backend_donation();
@@ -68,6 +70,7 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
+   backend_newsletter();
 }else if (document.body.dataset.page === "events"){
   backend_volunteer();
   backend_donation();
@@ -75,27 +78,19 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
+   backend_newsletter();
   }else if (document.body.dataset.page === "media"){
     backend_volunteer();
     backend_donation();
     burger_menu();
     volunteer_button();
     donation_button();
+    backend_newsletter();
  }
 
 //User interface
 
-else if (document.body.dataset.page === "home-cms"){
+else if (document.body.dataset.page === "cms"){
   burger_user();
- } else if (document.body.dataset.page === "login-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-add-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-edit-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-more-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-principal-cms"){
-  burger_user();
- }
+ } 
 
