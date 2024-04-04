@@ -33,7 +33,7 @@
   min-height: 100vh;
   display: block;
   z-index: 98;
-  background-image: linear-gradient(to right top, #88b274, #90b37f, #97b48a, #9fb494, #a6b59f);
+  background-color: #a491e8;
   padding-top: 120px;
   transition: 0.4s;
   list-style-type: none;
@@ -56,23 +56,27 @@
   text-align: center;
   padding: 12px 12px;
   font-size: 12px;
-   background-image: linear-gradient(to right top, #ffffff, #fafbfc, #f5f8f8, #f1f4f3, #eef0ed);
-  color: #88B274;
-  border: 1px solid #88b274;
+  background: rgb(70, 46, 159);
+  background: linear-gradient(
+    180deg,
+    rgba(70, 46, 159) 0%,
+    rgba(39, 23, 98) 100%
+  );
+
+  color: #fff;
   text-decoration: none;
 }
-.burger_menu ul li a:hover{
-  color: #f48f28;
-   border: 1px solid #f48f28;
-} 
 
+.burger_menu a:hover {
+  background-color: red;
+}
 
 #triangle {
   font-size: 30px;
 }
 
 #user-section {
-  background-color: #88b274;
+  background-color: #282828;
   margin: 0 auto;
   padding: 0;
 }
@@ -102,9 +106,8 @@
 }
 
 .nav-user li a {
-    color: #ffffff;
+  color: #fff;
 }
-
 
 .dropdown li:hover,
 .dropdown li:focus-within,
@@ -118,8 +121,7 @@
 }
 
 .nav-user ul li ul {
-   background: #88b274;
-  border: 1px solid #88b274;
+  background: #ac5910;
   visibility: hidden;
   opacity: 0;
   min-width: 10rem;
@@ -182,7 +184,6 @@
   #user-name {
     display: block;
     font-family: "Nexa-Regular";
-    font-size: 14px;
   }
 
   #list-user li {

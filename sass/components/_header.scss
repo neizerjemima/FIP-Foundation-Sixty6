@@ -71,14 +71,15 @@ a {
    grid-row: 1;
    z-index: 1;
    margin-left: 60px;
-   margin-top: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
    nav{
       margin-top: 20px;
    }
 }
 
    #burger-menu li:last-child {
-      background-color: a.$third-color;
+      background-color: a.$accent-color;
       border-radius: 2px;
       padding: 1px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -89,6 +90,14 @@ a {
       color: a.$secondary-color;
    }
 
+   #burger-menu li:last-child a:hover {
+      color: a.$secondary-color;
+   }
+
+   #burger-menu li:last-child:hover {
+      background-color: a.$primary-color;
+   }
+
    #burger-menu li:nth-child(5) {
       background-color: a.$primary-color;
       padding: 3px;
@@ -97,9 +106,17 @@ a {
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       cursor: pointer;
    }
-   
+
    #burger-menu li:nth-child(5) a {
       color: a.$secondary-color;
+   }
+
+   #burger-menu li:nth-child(5) a:hover {
+      color: a.$secondary-color;
+   }
+
+   #burger-menu li:nth-child(5):hover {
+      background-color: a.$accent-color;
    }
 
 
@@ -120,7 +137,8 @@ a {
          margin-top: 40px;
       }
       img {
-         margin-top: 15px;
+         margin-top: 10px;
+         max-width: 90%;
       }
    }
 

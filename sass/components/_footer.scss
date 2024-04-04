@@ -20,11 +20,13 @@ footer {
     .fa-brands{ 
         font-size: 23px;
     }
+
+
     #social-icons {
         margin-left: 50px;
         display: flex;
         flex-direction: column;
-        
+
         i 
         {margin-bottom: 10px;
             span{
@@ -35,6 +37,12 @@ footer {
             }
         }
     }
+
+    #social-icons i:hover {
+        color: a.$accent-color;
+        cursor: pointer;
+    }
+
 
     #info {
         margin-left: 50px;

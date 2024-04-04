@@ -82,7 +82,7 @@ export function backend_volunteer() {
 
               volunteerBox.classList.add("hidden");
               volunteerBox.style.display = "none";
-              lightBoxVolunteer.style.backgroundColor = "#fffefc";
+              lightBoxVolunteer.style.backgroundColor = "#7A2A85";
               volunteerBoxReceived.classList.remove("hidden");
               volunteerBoxReceived.style.display = "block";
               gsap.fromTo(

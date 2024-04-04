@@ -55,7 +55,7 @@
     padding: 7px;
     height: 33px;
     width: 200px;
-    background-color: #FEE1C7;
+    background-color: #282828;
     margin: 0 auto;
     margin-bottom: 20px;
   }
@@ -64,20 +64,11 @@
     background-color: #88b274;
   }
 
-  .sidebar-menu ul li:hover a{
-        color: #fff;
-  }
-
   .sidebar-menu ul .active-user {
     background-color: #f48f28;
   }
 
   .sidebar-menu ul li a {
-    color: #000000;
-  }
-
-  
-  .sidebar-menu ul .active-user a{
-    color: #fff;
+    color: #ffff;
   }
 }

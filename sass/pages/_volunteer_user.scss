@@ -6,7 +6,6 @@
 .buttons-column {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .button-table-general {
@@ -15,8 +14,12 @@
   font-size: 10px;
   color: #fff;
   cursor: pointer;
-  text-align: center;
-  background-image: linear-gradient(to right top, #88b274, #90b37f, #97b48a, #9fb494, #a6b59f);
+  background: rgb(240, 181, 3);
+  background: linear-gradient(
+    180deg,
+    rgb(221, 151, 0) 0%,
+    rgb(255, 174, 52) 100%
+  );
 }
 
 .dropdown-select {

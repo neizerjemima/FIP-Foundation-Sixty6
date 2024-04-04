@@ -14,7 +14,7 @@ h2 {
 
 h3 {
     font-family: v.$heading-font-family;
-    font-size: 14px;
+    font-size: 12px;
     color: v.$accent-color;
     margin-bottom: 22px;
     font-weight: 500;
@@ -25,7 +25,7 @@ p {
     line-height: 24px;
     margin-bottom: 20px;
     font-size: 12px;
-    // color: v.$accent-color;
+    color: v.$body-text-color;
     font-weight: 300;
 }
 
@@ -44,6 +44,8 @@ p {
 }
 }
 
+
+
 @media screen and (min-width: 1200px) {
 
     h2 {
@@ -57,4 +59,34 @@ p {
     p {
         font-size: 20px;
     }
+}
+
+@media screen and (min-width: 1600px) {
+
+    h2 {
+        font-size: 48px;
     }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    h2 {
+        font-size: 48px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+}
