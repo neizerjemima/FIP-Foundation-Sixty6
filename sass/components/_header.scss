@@ -195,9 +195,36 @@ a {
 
 @media screen and (min-width: 1920px) {
    #logo {
-      margin-left: 20px;
+      margin-left: 50px;
       img {
          margin-top: 15px;
       }
-   }   
+   } 
+   
+   #main-nav {
+      margin-top: 6%;
+      // margin-bottom: 2%;
+      // border-left: 1px;
+      // padding-left: 30px;
+      // grid-row: 1;
+  }
+
+  #main-nav ul li a {
+   font-size: 32px;
+  }
+
+  #burger-menu li:nth-child(5) {
+   // padding: 20px 20px 20px 10px;
+   padding-top: 20px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   padding-right: 20px;
+}
+
+  #burger-menu li:last-child {
+   padding-top: 20px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   padding-right: 20px;
+}
 }

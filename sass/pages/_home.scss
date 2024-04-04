@@ -62,3 +62,27 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     font-size: 8px;
 }
+
+@media screen and (min-width: 768px) {
+    #seeMore {
+        top: 26%; 
+        left: 86%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #seeMore {
+        top: 26%; 
+        left: 82%;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #seeMore {
+        top: 28%; 
+        left: 82%;
+        font-size: 32px;
+    }
+}
