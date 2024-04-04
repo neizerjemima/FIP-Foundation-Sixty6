@@ -136,15 +136,13 @@
 #help-form input:not(:last-child), #help-form textarea, #input-box-help input{
     width: 300px;
     background-color: b.$secondary-color;
-    color: b.$primary-color;
+    color: #606060;
     font-family: b.$body-font-family;
     font-weight: bold;
     padding: 2px;
     font-size: 14px;
     margin-bottom: 10px;
     height: 40px;
-    resize: none;
-    border: none;
 }
 
 #input-box-help{
@@ -168,7 +166,6 @@
     font-weight: bolder;
     color: b.$secondary-color;
     margin-bottom: 20px;
-    border: none;
 }
 
 .lightbox-help {

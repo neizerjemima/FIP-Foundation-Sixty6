@@ -7,7 +7,7 @@
 
 #hero-con h2 {
     position: absolute; 
-    top: 10%; 
+    top: 6%; 
     left: 10%;
     color: a.$primary-color; 
     font-family: a.$bold-body-font;
@@ -27,12 +27,6 @@
     font-size: 10px;
 }
 
-#seeMore {
-    top: 35%; 
-    left: 65%;
-    font-size: 10px;
-}
-
 #seeMore:hover {
     background-color: a.$primary-color;
 }
@@ -40,12 +34,13 @@
 #needHelp {
     position: fixed; 
     top: 8%; 
-    left: 80%;
+    left: 90%;
     color: a.$secondary-color; 
     background-color: a.$accent-color;
-    letter-spacing: .8px;
-    padding:4px ;
-    font-size: 14px;
+    // letter-spacing: .8px;
+    padding:3px;
+    padding-top: 5px;
+    font-size: 10px;
     z-index: 1;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     width: 500px;
@@ -59,6 +54,7 @@
 #mission h2 {
     position: absolute;
     padding: 30px;
+    color: a.$secondary-color;
  }
 
  #mission p {
@@ -84,8 +80,8 @@
 }
 
 #statistics p {
-    font-size: 20px;
-    color: a.$third-color;
+    font-size: 14px;
+    color: a.$accent-color;
 }
 
 #statistics span {
@@ -116,7 +112,7 @@
 }
 
 #newEvent {
-    background-color: a.$third-color;
+    background-color: a.$accent-color;
 }
 
 #newEvent h2 {
@@ -138,7 +134,6 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
-    border-radius: 3px;
 }
 
 .seeMore1:hover {
@@ -150,11 +145,10 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
-    border-radius: 3px;
 }
 
 .seeMore2:hover {
-    background-color: a.$third-color;
+    background-color: a.$primary-color;
 }
 
 #colaborators {
@@ -185,18 +179,19 @@
     text-align: center; 
     margin-top: 40px;  
     margin-bottom: 60px;
-    color: a.$secondary-color;
+    color: a.$primary-color;
 }
 
 #donate a {
-   margin-left:  120px;
-   font-size: 30px;
+   margin-left:  160px;
+//    font-size: 30px;
    padding: 3%;
    cursor: pointer;
 }
 
 #donate img {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 // .donation-button:hover {
@@ -438,7 +433,7 @@
     }
 
     #newEvent{
-        background: linear-gradient(to right, #F48F28 50%, #f8a047 50%);
+        background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
         background-size: 100% 100%;
     
         p{

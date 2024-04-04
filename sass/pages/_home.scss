@@ -41,10 +41,9 @@
 
 #list {
     position: absolute; 
-    width: 20%;
     color: a.$primary-color; 
     border-radius: 2px;
-    padding: 5px;
+    padding: 1px;
     border-color: transparent;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     img {
@@ -54,9 +53,12 @@
 
 #seeMore {
     position: absolute; 
+    top: 30%; 
+    left: 79%;
     color: a.$secondary-color; 
-    background-color: a.$third-color;
-    padding: 5px ;
+    background-color: a.$primary-color;
+    padding: 2px ;
     border-radius: 2px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-size: 8px;
 }

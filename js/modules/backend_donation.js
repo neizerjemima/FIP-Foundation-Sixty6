@@ -70,7 +70,7 @@ export function backend_donation() {
 
                         donationBoxForm.style.display = "none";
                         donationBoxForm.classList.add("hidden")
-                        donationLightBox.style.backgroundColor ="#fffefc";
+                        donationLightBox.style.backgroundColor ="#7A2A85";
                         responseBoxFormDonation.style.display = "block";
                         responseBoxFormDonation.classList.remove("hidden")
 
