@@ -38,8 +38,8 @@ export function backend_article(){
                             <div class="text-lightbox">
                             <p><span class="heading-text">${articleData.title}</span></p>
                             <p><span class="content-article">${articleData.text}</span></p>
-                            <p><span class="author">${articleData.first_name} ${articleData.last_name}</span></p>
-                            <p><span class="about">${articleData.about}</span></p>
+                            <p id="paragraph-author"><span class="author">${articleData.first_name} ${articleData.last_name}</span></p>
+                            <p id="paragraph-article"><span class="about">${articleData.about}</span></p>
                             </div>
                         `;
                         const lightbox = document.querySelector("#newsReveal");
