@@ -5,6 +5,7 @@ export function gethelp_lightbox(){
     const closeButtons = document.querySelectorAll('.closeContent-help');
 
 
+    
 
     function openLightBox(index) {
         lightboxes.forEach(lightbox => {
@@ -36,4 +37,3 @@ export function gethelp_lightbox(){
     });
 
 }
-

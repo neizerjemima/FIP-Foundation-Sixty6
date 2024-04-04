@@ -70,10 +70,11 @@ export function backend_donation() {
 
                         donationBoxForm.style.display = "none";
                         donationBoxForm.classList.add("hidden")
-                        donationLightBox.style.backgroundColor ="#7A2A85";
+                        donationLightBox.style.backgroundColor ="#fffefc";
                         responseBoxFormDonation.style.display = "block";
                         responseBoxFormDonation.classList.remove("hidden")
 
+                        
                         gsap.fromTo('#response-form-donation', {
                             y: 35,
                             opacity: 0,

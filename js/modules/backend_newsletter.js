@@ -9,6 +9,7 @@ export function backend_newsletter() {
         },
       };
     },
+    
     methods: {
       submitForm() {
         if (!this.formData.name || !this.formData.email) {
@@ -49,4 +50,5 @@ export function backend_newsletter() {
 
   newsletter.mount("#insights");
 }
+
 

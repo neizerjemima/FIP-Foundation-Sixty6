@@ -3,12 +3,10 @@ import { countdown } from "./modules/countdown.js";
 import { volunteer_button } from "./modules/volunteer_button.js";
 import { donation_button } from "./modules/donation_buttton.js";
 import { gethelp_lightbox } from "./modules/gethelp_lightbox.js";
-import { article_lightbox } from "./modules/article_lightbox.js";
+
+
+
 import { burger_user } from "./modules/burger_user.js";
-import { menutable_user } from "./modules/menutable_user.js";
-
-
-
 import { backend_article } from "./modules/backend_article.js";
 import { backend_event } from "./modules/backend_event.js";
 import { backend_contact } from "./modules/backend_contact.js";
@@ -32,12 +30,14 @@ if (document.body.dataset.page === "home"){
   backend_collaborator();
   volunteer_button();
   donation_button();
+  backend_newsletter();
  } else if (document.body.dataset.page === "faq"){
     backend_volunteer();
     backend_donation();
     burger_menu();
     volunteer_button();
     donation_button();
+    backend_newsletter();
  }  else if (document.body.dataset.page === "gethelp"){
   backend_volunteer();
   backend_donation();
@@ -70,7 +70,7 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
-   // article_lightbox();
+   backend_newsletter();
 }else if (document.body.dataset.page === "events"){
   backend_volunteer();
   backend_donation();
@@ -78,28 +78,20 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
+   backend_newsletter();
   }else if (document.body.dataset.page === "media"){
     backend_volunteer();
     backend_donation();
     burger_menu();
     volunteer_button();
     donation_button();
+    backend_newsletter();
  }
 
 //User interface
 
-else if (document.body.dataset.page === "home-cms"){
+else if (document.body.dataset.page === "cms"){
   burger_user();
- } else if (document.body.dataset.page === "login-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-add-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-edit-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-more-cms"){
-  burger_user();
- }else if (document.body.dataset.page === "volunteer-principal-cms"){
-  burger_user();
-  menutable_user();
- }
+ } 
+
 
