@@ -138,6 +138,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
+    border-radius: 3px;
 }
 
 .seeMore1:hover {
@@ -149,6 +150,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
+    border-radius: 3px;
 }
 
 .seeMore2:hover {
@@ -436,7 +438,7 @@
     }
 
     #newEvent{
-        background: linear-gradient(to right, #271762 50%, #7A2A85 50%);
+        background: linear-gradient(to right, #F48F28 50%, #f8a047 50%);
         background-size: 100% 100%;
     
         p{

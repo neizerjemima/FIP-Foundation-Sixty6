@@ -1,3 +1,4 @@
+@use '../abstracts' as a;
 .lightbox {
     position: fixed;
     top: 0;
@@ -8,25 +9,59 @@
     padding: 5px;
     box-sizing: border-box;
     z-index: 9999; 
+    overflow-y: auto;
+    // text-align: center;
+}
+.content-article, .about{
+    font-size: 15px;
+}
+.heading-text-event {
+    color: a.$primary-color;
+}
+
+.heading-text { 
+    font-size: 30px;
+    color: #F48F28;
+    text-transform: uppercase;
     text-align: center;
 }
 
+.author { 
+    font-size: 25px;
+    color: #F48F28;
+}
+
 .image-lightbox{
-    margin-top: 50px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .closeContent {
-    font-size: 30px;
+    font-size: 70px;
     float: right; 
+    color: #F48F28;
+    &:hover{
+        color: #88b274;
+        // transition-duration: .5s;
+        transition: 0.8s ease-in-out;
+    }
 }
-
-@media (min-width: 1200px) {
+@media screen and (min-width: 768px) {
     .content-lightbox {
         display: flex;
         flex-direction: row; 
         align-items: center;
         justify-content: center; 
-        height: 100vh;
+        // height: 100vh;
+    }
+
+    .about { margin-top: -10px;}
+
+    .image-lightbox{
+        margin-top: 0;
+        max-width: 87%;
+        margin-bottom: 0;
     }
 
     .content-lightbox div {
@@ -34,5 +69,80 @@
     }
     .text-lightbox{
         text-align: left;
+        margin-top: 59px;
+    }
+    .heading {
+        margin-top: 130px;
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .content-lightbox {
+        height: 100vh;
+    }
+
+    
+    .about-event {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .image-lightbox-event {
+        max-width: 110%;
+    }
+
+    .image-lightbox{
+        margin-top: 0;
+        max-width: 81%;
+        margin-bottom: 0;
+        margin-left: 30px;
+    }
+    .text-lightbox { 
+        margin-top: 0;
+        padding-left: 0;
+        // margin-right: 38px;
+        margin-left: -56px;
+    }
+
+    .closeContent {
+        font-size: 97px;
+    }
+
+    .content-lightbox div {
+        padding: 50px;
+    }
+
+    .heading-text, .author { 
+        font-size: 19px;
+        color: #F48F28;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .image-lightbox {
+        max-width: 105%;
+    }
+    .closeContent {
+        font-size: 135px;
+        margin-right: 71px;
+        margin-top: 30px;
+    }
+    .content-article, .about {
+        line-height: 27px;
+        font-size: 17px;
+    }
+
+    .text-lightbox {
+        margin-top: -200px;
+        // margin-left: 59px;
+        // padding-left: 32px;
+    }
+
+    .heading-text { 
+        font-size: 23px;
+        font-family: a.$bold-body-font;
     }
 }
