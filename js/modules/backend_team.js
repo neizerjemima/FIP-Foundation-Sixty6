@@ -13,6 +13,7 @@ export function backend_team() {
                 });
         },
     
+        
         data() {
             return {
                 teammembersData: [],
@@ -27,3 +28,4 @@ export function backend_team() {
     
     team.mount("#team");
 }
+

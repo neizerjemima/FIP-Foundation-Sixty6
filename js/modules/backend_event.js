@@ -13,6 +13,7 @@ export function backend_event(){
                 });
         },
     
+        
         data() {
             return {
                 eventsData: [],

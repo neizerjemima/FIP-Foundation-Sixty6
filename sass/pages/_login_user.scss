@@ -3,7 +3,7 @@
 }
 
 #login-website {
-  background-color: #de760b;
+  background-color: #FEE1C7;
   margin: 0 auto;
 }
 
@@ -13,22 +13,7 @@
 }
 
 #login-form {
-  // background-image: linear-gradient(
-  //   to right top,
-  //   #8e8e8e,
-  //   #a9a9a9,
-  //   #c5c5c5,
-  //   #e2e2e2,
-  //   #ffffff
-  // );
-  background-image: linear-gradient(
-    to right top,
-    #000000,
-    #171717,
-    #262626,
-    #373737,
-    #484848
-  );
+   background-image: linear-gradient(to right top, #e7e7e7, #ededed, #f3f3f3, #f9f9f9, #ffffff);
   margin: 0 auto;
   height: 686px;
   text-align: center;
@@ -52,7 +37,8 @@
   width: 260px;
   height: 52px;
   border: none;
-  background-color: #fff4f4;
+  // background-color: #FEE1C7;
+  background-color: white;
   color: rgb(0, 0, 0);
   padding-left: 10px;
 }
@@ -66,22 +52,19 @@
   cursor: pointer;
   height: 61px;
   font-weight: bold;
-  // background-image: linear-gradient(
-  //   to right top,
-  //   #f48f28,
-  //   #f78c20,
-  //   #f98818,
-  //   #fc840e,
-  //   #ff8000
-  // );
-  background-image: linear-gradient(
-    to right top,
-    #ff3e09,
-    #ff5800,
-    #ff6d00,
-    #ff7f00,
-    #ff9000
-  );
+   background-image: linear-gradient(to right top, #88b274, #90b37f, #97b48a, #9fb494, #a6b59f);
+}
+
+
+
+
+#login-input #login-button{
+  color: #ffffff;
+}
+#login-input #login-button:hover{
+  background-image: linear-gradient(to right top, #ffffff, #fafbfc, #f5f8f8, #f1f4f3, #eef0ed);
+  color: #88B274;
+  border: 1px solid #88b274;
 }
 
 #login-image {
@@ -152,4 +135,9 @@
     display: block;
     height: 100%;
   }
+
+  #login-input #login-button{
+      font-size: 22px;
+    }
 }
+

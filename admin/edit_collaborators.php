@@ -12,3 +12,4 @@ $stmt->execute();
 $stmt = null;
 header('Location: collaborators.php');
 ?>
+
