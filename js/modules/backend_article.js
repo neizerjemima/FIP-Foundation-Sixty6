@@ -32,7 +32,7 @@ export function backend_article(){
                     if (lightboxContent) {
                         lightboxContent.innerHTML = `
 
-                            <div id="image-box-articles">
+                            <div class="image-box-articles">
                                 <img src="images/${articleData.image}" alt="${articleData.title}" class="image-lightbox">
                             </div>
                             <div class="text-lightbox">
