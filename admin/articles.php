@@ -17,7 +17,8 @@ $stmt->execute();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Articles</title>
+    <link rel="Foundation Sixty 6 fav icon" type="image/svg" href="../images/logo_lightbox.svg"/>
     <link rel ="stylesheet" href="../css/main.css">
     <link rel ="stylesheet" href="../css/grid.css">
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
@@ -29,11 +30,11 @@ $stmt->execute();
     
         <div class="box col-start-1 col-end-2 m-col-start-1 m-col-end-2 l-col-start-10 l-col-end-12 xl-col-start-10 xl-col-end-12"  id="user-section">
 
-            <div class="nav-user">
+             <div class="nav-user">
                 <ul id="list-user">
               <li><i class="fa-solid fa-caret-down" id="triangle"></i>
-                    <ul class="dropdown">
-                    <li><a href="logout.php">Log Out</a></li>
+                    <a href="logout.php"><ul class="dropdown">
+                    <li>Log Out</li></a>
                     </ul>
                 </li>
                 </ul>
@@ -132,7 +133,7 @@ $stmt->execute();
                                     <td>Action</td>
                                 </tr>
                                 <tbody>
-                                    <tr>
+                                    
 
                                 <?php
 
@@ -142,7 +143,8 @@ $stmt->execute();
                                     $first_three_words_text = implode(' ', array_slice(explode(' ', $row['text']), 0, 3));
                                     $first_three_words_phrase = implode(' ', array_slice(explode(' ', $row['attention_phrase']), 0, 3));
                                     echo 
-                                        '<td>'.$row['title'].'</td>
+                                    
+                                        '<tr><td>'.$row['title'].'</td>
                                         <td>'.$row['image'].'</td>
                                         <td class="email-volunteer hidden">'.$row['author_fname'].' '.$row['author_lname'].'</td>
                                         <td class="email-volunteer hidden">'.$first_three_words_phrase.'...</td>

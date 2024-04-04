@@ -16,7 +16,8 @@ $stmt->execute();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Newsletter</title>
+    <link rel="Foundation Sixty 6 fav icon" type="image/svg" href="../images/logo_lightbox.svg"/>
     <link rel ="stylesheet" href="../css/main.css">
     <link rel ="stylesheet" href="../css/grid.css">
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
@@ -31,8 +32,8 @@ $stmt->execute();
             <div class="nav-user">
                 <ul id="list-user">
               <li><i class="fa-solid fa-caret-down" id="triangle"></i>
-                    <ul class="dropdown">
-                    <li><a href="logout.php">Log Out</a></li>
+                    <a href="logout.php"><ul class="dropdown">
+                    <li>Log Out</li></a>
                     </ul>
                 </li>
                 </ul>
@@ -123,7 +124,7 @@ $stmt->execute();
                                     <td>Action</td>
                                 </tr>
                                 <tbody>
-                                    <tr>
+                                   
 
                                 <?php
 
@@ -131,7 +132,8 @@ $stmt->execute();
 
                                  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                     echo 
-                                        '<td>'.$row['name'].'</td>
+                                     
+                                        '<tr> <td>'.$row['name'].'</td>
                                         <td>'.$row['email'].'</td>
                                         <td class="buttons-column">
                                             <a href="delete_newsletter.php?id='.$row['id'].'"><button class="button-table-general">Delete</button></a>
