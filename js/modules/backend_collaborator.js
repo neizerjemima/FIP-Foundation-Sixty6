@@ -13,6 +13,7 @@ export function backend_collaborator() {
                 });
         },
     
+        
         data() {
             return {
                 collaboratorsData: [],

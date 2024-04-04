@@ -14,3 +14,4 @@ $stmt->execute();
 $stmt = null;
 header('Location: events.php');
 ?>
+

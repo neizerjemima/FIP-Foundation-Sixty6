@@ -9,6 +9,7 @@ export function backend_gethelp() {
                 feedback: '*Please fill out all required fields'
             };
         },
+        
         methods: {
             submitForm() {
                 if (!this.name || !this.email || !this.subject || !this.message) {

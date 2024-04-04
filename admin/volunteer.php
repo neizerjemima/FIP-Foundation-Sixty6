@@ -13,6 +13,8 @@ $stmt = $connection->prepare('SELECT v.*, r.name AS role_name FROM volunteers v 
 $stmt->execute();
 ?>
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

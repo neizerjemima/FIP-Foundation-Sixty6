@@ -12,7 +12,8 @@ export function backend_article(){
                     console.log(error);
                 });
         },
-    
+   
+        
         data() {
             return {
                 articlesData: [],

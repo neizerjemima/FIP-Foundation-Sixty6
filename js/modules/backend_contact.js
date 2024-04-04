@@ -40,6 +40,7 @@ export function backend_contact() {
                         this.feedback = "Your message has been received!";
                     }
                 })
+                
                 .catch(error => {
                     console.error(error);
                     this.feedback = "Sorry, an error occurred while processing your request.";

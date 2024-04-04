@@ -74,6 +74,7 @@ export function backend_donation() {
                         responseBoxFormDonation.style.display = "block";
                         responseBoxFormDonation.classList.remove("hidden")
 
+                        
                         gsap.fromTo('#response-form-donation', {
                             y: 35,
                             opacity: 0,

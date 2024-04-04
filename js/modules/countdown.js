@@ -15,6 +15,7 @@ export function countdown(){
         animateCountdown("#numberCount2", 0);
         animateCountdown("#numberCount3", 0);
     }
+    
 
      function replayCountdownAnimations() {
         animateCountdown("#numberCount1", 4000);

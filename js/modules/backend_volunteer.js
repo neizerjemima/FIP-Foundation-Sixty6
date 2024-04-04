@@ -87,6 +87,7 @@ export function backend_volunteer() {
               volunteerBoxReceived.style.display = "block";
               gsap.fromTo(
                 "#response-form-volunteer",
+                
                 {
                   y: 35,
                   opacity: 0,

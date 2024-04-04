@@ -14,6 +14,7 @@ $stmt = $connection->prepare('SELECT v.*, r.first_name AS author_fname, r.last_n
 $stmt->execute();
 ?>
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

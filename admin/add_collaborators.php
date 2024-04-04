@@ -21,3 +21,4 @@ $last_id = $connection->lastInsertId();
 $stmt = null;
 header('Location: collaborators.php');
 ?>
+

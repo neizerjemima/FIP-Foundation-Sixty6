@@ -19,6 +19,7 @@ export function burger_user(){
       burger_image.src = "../images/white-burger.png";
   }
 
+  
   burger_menu.addEventListener("click", closeBurgerMenu);
   btn_burger.addEventListener("click", () => {
       if (btn_burger.classList.contains('is-active')) {

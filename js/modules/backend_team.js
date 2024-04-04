@@ -13,6 +13,7 @@ export function backend_team() {
                 });
         },
     
+        
         data() {
             return {
                 teammembersData: [],
