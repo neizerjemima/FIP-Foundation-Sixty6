@@ -1,4 +1,6 @@
 @use '../abstracts' as a;
+
+
 .lightbox {
     position: fixed;
     top: 0;
@@ -8,32 +10,62 @@
     background-color: white;
     padding: 5px;
     box-sizing: border-box;
-    z-index: 9999; 
-    overflow-y: auto;
-    // text-align: center;
+    z-index: 98; 
+    overflow-y: scroll; /* Enable vertical scrolling */
+    min-height: 100vh; /* Set height to occupy full viewport */
+    width: 100%; /* Set width to occupy full viewport */
+    transition: 0.4s; /* Add transition for smooth animation */
 }
-.content-article, .about{
+
+/* For Firefox */
+@-moz-document url-prefix() {
+    .lightbox {
+        scrollbar-color: #a8a8a8 #f4f4f4;
+        scrollbar-width: thin;
+        width: 99%;
+    }
+}
+
+
+
+
+
+
+
+.about{
     font-size: 15px;
 }
 .heading-text-event {
     color: a.$primary-color;
 }
 
-.heading-text { 
-    font-size: 30px;
+.content-lightbox .text-lightbox .heading-text { 
+    font-size: 15px;
     color: #F48F28;
     text-transform: uppercase;
     text-align: center;
 }
 
-.author { 
-    font-size: 25px;
+.content-lightbox .text-lightbox p .author { 
+    font-size: 19px;
     color: #F48F28;
 }
 
+.content-lightbox .text-lightbox p .about{
+    font-size: 10px;
+    line-height: 1px;  
+}
+
+.content-lightbox .text-lightbox {
+    text-align: left;
+    line-height:15px
+}
+
+
+
 .image-lightbox{
-    margin-top: 50px;
-    max-width: 90%;
+    margin-top: 90px;
+    max-width: 40%;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -48,6 +80,19 @@
         transition: 0.8s ease-in-out;
     }
 }
+
+.content-lightbox #image-box-articles{
+    text-align: center;
+}
+
+.text-lightbox p .heading-text{
+    font-size: 10px;
+}
+
+.content-article{
+    font-size: 10px;
+}
+
 @media screen and (min-width: 768px) {
     .content-lightbox {
         display: flex;

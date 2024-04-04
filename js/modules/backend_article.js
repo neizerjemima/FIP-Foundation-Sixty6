@@ -31,7 +31,8 @@ export function backend_article(){
                     const lightboxContent = document.querySelector(".content-lightbox");
                     if (lightboxContent) {
                         lightboxContent.innerHTML = `
-                            <div>
+
+                            <div id="image-box-articles">
                                 <img src="images/${articleData.image}" alt="${articleData.title}" class="image-lightbox">
                             </div>
                             <div class="text-lightbox">
