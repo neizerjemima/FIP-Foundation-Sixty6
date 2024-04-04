@@ -3,9 +3,7 @@ import { countdown } from "./modules/countdown.js";
 import { volunteer_button } from "./modules/volunteer_button.js";
 import { donation_button } from "./modules/donation_buttton.js";
 import { gethelp_lightbox } from "./modules/gethelp_lightbox.js";
-import { article_lightbox } from "./modules/article_lightbox.js";
 import { burger_user } from "./modules/burger_user.js";
-import { menutable_user } from "./modules/menutable_user.js";
 
 
 
@@ -70,7 +68,6 @@ if (document.body.dataset.page === "home"){
    burger_menu();
    volunteer_button();
    donation_button();
-   // article_lightbox();
 }else if (document.body.dataset.page === "events"){
   backend_volunteer();
   backend_donation();
@@ -100,6 +97,5 @@ else if (document.body.dataset.page === "home-cms"){
   burger_user();
  }else if (document.body.dataset.page === "volunteer-principal-cms"){
   burger_user();
-  menutable_user();
  }
 

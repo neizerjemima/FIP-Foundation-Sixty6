@@ -40,6 +40,7 @@ $stmtDonations->execute();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="Foundation Sixty 6 fav icon" type="image/svg" href="../images/logo_lightbox.svg"/>
     <link rel ="stylesheet" href="../css/main.css">
     <link rel ="stylesheet" href="../css/grid.css">
     <script src="https://kit.fontawesome.com/2436fc0b94.js" crossorigin="anonymous"></script>
@@ -51,11 +52,11 @@ $stmtDonations->execute();
     
         <div class="box col-start-1 col-end-2 m-col-start-1 m-col-end-2 l-col-start-10 l-col-end-12 xl-col-start-10 xl-col-end-12"  id="user-section">
 
-            <div class="nav-user">
+             <div class="nav-user">
                 <ul id="list-user">
               <li><i class="fa-solid fa-caret-down" id="triangle"></i>
-                    <ul class="dropdown">
-                    <li><a href="logout.php">Log Out</a></li>
+                    <a href="logout.php"><ul class="dropdown">
+                    <li>Log Out</li></a>
                     </ul>
                 </li>
                 </ul>
@@ -63,7 +64,7 @@ $stmtDonations->execute();
             <h3 class="hidden" id="user-name"><?php echo $_SESSION['username']; ?></h3>
         </div>
         <div class="box m-col-start-2 m-col-end-6 l-col-start-1 l-col-end-5 xl-col-start-1 xl-col-end-5" id="title-section">
-            <h3>HOME PAGE</h3>
+            <h3>HOME</h3>
         </div>
 
 

@@ -16,7 +16,7 @@ $_SESSION['username'] = $row['username'];
 header('Location: home.php');
 
 }else{
-    header('Location: login_form.php');
+    header('Location: login_form.html');
 }
 
 $stmt = null;
