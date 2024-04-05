@@ -168,8 +168,6 @@ textarea::placeholder  {
     width: 93px;
     height: 40px;
     font-size: 17px;
-    // margin-right: 20px;
-    // margin-left: auto; 
     background-color: b.$primary-color;
     font-family: b.$heading-font-family;
     font-weight: bolder;
@@ -179,18 +177,6 @@ textarea::placeholder  {
 
 }
 
-.lightbox-help {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
 
 .lightbox-content {
     background-color: white;
@@ -208,7 +194,7 @@ textarea::placeholder  {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #F7F0F0;
+    background-color: b.$third-color;
     padding: 5px;
     box-sizing: border-box;
     z-index: 9999; 
@@ -218,19 +204,44 @@ textarea::placeholder  {
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #000000;
+    color: b.$primary-color;
     cursor: pointer;
-    font-size: 100px;
+    font-size: 70px;
     z-index: 999999; 
 }
 
+.box-gethelp-lightbox{
+    margin-top: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .lightbox-help img{
-    width: 500px;
+    margin-top: 17px;
+    width: 47%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox-help h3{
-    color: #7A2A85;
-    font-size: 30px;
+    margin-top: 35px;
+    color: #f48f28;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.box-gethelp-lightbox p{
+    padding: 10px;
+    font-size: 10px;
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+    line-height: 2;
+}
+
+.box-gethelp-lightbox p:last-child{
     font-weight: bold;
 }
 
@@ -369,7 +380,63 @@ textarea::placeholder  {
         padding-bottom: 40px;
     }
 
-    
+    //Lightbox
+
+    .box-gethelp-lightbox{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+
+      .box-gethelp-lightbox > *:first-child {
+    flex-basis: 40%;
+    text-align: right;
+}
+
+.image-gethelp-lightbox img {
+    align-self: flex-end;
+  }
+
+    .box-gethelp-lightbox > *:not(:first-child) {
+        flex-basis: 60%;
+        padding-right: 7px;
+    }
+
+
+    .image-gethelp-lightbox img{
+        margin-top: 0px;
+        width: 80%;
+        margin-left: 0px;
+        margin-right: 35px;
+        padding-left: 0;
+    }
+
+    .lightbox-help h3{
+        margin-top: 0;
+        text-align: left;
+        color: #f48f28;
+        font-size: 30px;
+    }
+
+    .box-gethelp-lightbox p{
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 2;
+    }
+
+    .box-gethelp-lightbox div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box-gethelp-lightbox p:last-child{
+        margin-top: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -495,10 +562,7 @@ textarea::placeholder  {
         height: 200px;
     }
 
-}
-
-@media (min-width: 1200px) {
-    #button-help-contact {
+       #button-help-contact {
         width: 177px;
         height: 55px;
         font-size: 24px;
@@ -507,16 +571,60 @@ textarea::placeholder  {
         margin-bottom: 25px;
     }
 
+    //Lightbox
 
-    
 
+    .image-gethelp-lightbox{
+        text-align: right;
+    }
+
+      .image-gethelp-lightbox img{
+        margin-top: 0px;
+        width: 65%;
+        margin-right: 70px;
+        padding-left: 0;
+    }
+
+     .lightbox-help h3{
+        font-size: 50px;
+    }
+
+    .box-gethelp-lightbox p{
+        font-size: 17px;
+        line-height: 2;
+    }
 
 }
+
 
 @media (min-width: 1920px) {
-#help-p-contact{
-   
-    margin-left: 300px;
-    margin-right: 300px;
-}
+    #help-p-contact{
+    
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    //Lightbox
+
+      .image-gethelp-lightbox img{
+        margin-top: 0px;
+        width: 57%;
+        
+        padding-right: 0;
+        margin-left: 90px;
+    }
+
+    .lightbox-help h3{
+        font-size: 66px;
+    }
+
+    .box-gethelp-lightbox{
+        padding-right: 150px;
+    }
+
+    .box-gethelp-lightbox p{
+        
+        font-size: 24px;
+        line-height: 2;
+    }
 }
