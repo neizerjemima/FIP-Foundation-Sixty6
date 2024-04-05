@@ -53,14 +53,14 @@
 
 #seeMore {
     position: absolute; 
-    top: 30%; 
+    top: 33%; 
     left: 79%;
     color: a.$secondary-color; 
     background-color: a.$primary-color;
     padding: 2px ;
     border-radius: 2px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    font-size: 8px;
+    font-size: 7px;
 }
 
 @media screen and (min-width: 768px) {
