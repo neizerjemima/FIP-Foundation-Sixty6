@@ -23,7 +23,6 @@ footer {
 
 
     #social-icons {
-        margin-left: 50px;
         display: flex;
         flex-direction: column;
 
@@ -68,8 +67,9 @@ footer {
     input {
         border: none;
         margin-bottom: 13px;
-        width: 330px;
-        padding-left: 20px;
+        width: 234px;
+        width: 84%;
+        // padding-left: 20px;
         height: 42px;
         &::placeholder {
             color: a.$primary-color;
@@ -80,12 +80,11 @@ footer {
     }
 
     input[type="submit"] {
-        width: 20%;
+        max-width: 33%;
         padding-left: 0;
         color: a.$secondary-color;
         background-color: a.$primary-color;
     //    font-size: 17px;
-        margin-left: 72%;
         background-color: a.$primary-color;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     
