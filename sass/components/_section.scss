@@ -60,19 +60,32 @@
  #mission p {
     position: absolute;
     padding: 30px;
+    padding-right: 100px;
     color: a.$secondary-color;
     margin-top: 30px;
  }
 
+@media (max-width: 768px) {
+    .hand-image {
+    height: auto;
+    max-height: 790px; 
+    width: auto; 
+    max-width: none; 
+    display: block;
+    margin-left: calc(100% - 100vw - 15px);
+    margin-right: 0; 
+    }
+}
+
  #statistics {
     margin-top: 50px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 #statistics img {
     max-width: 50%;
-    margin-left: 100px;
-    margin-bottom: 30px;
+        margin: 0 auto 30px; 
 }
 
 #statistics h2 {
@@ -111,23 +124,59 @@
 
 }
 
-#newEvent {
-    background-color: a.$accent-color;
+.mobile-articles{
+    background-color: a.$primary-color;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-#newEvent h2 {
+.mobile-events{
+    background-color: a.$third-color;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-button-newevent{
+    margin-top: 20px;
+}
+
+#newEvent {
+    background-color: a.$accent-color;
+    display: none;
+}
+
+#newEvent-mobile h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#newEvent h2{
     text-align: center;
     margin-top: 30px;
 }
 
-#newEvent p {
+#newEvent p, #newEvent-mobile p {
     color: a.$secondary-color;
     padding: 20px;
 }
 
-#newEvent div {
+#newEvent div{
     margin-bottom: 30px;
 }
+
+#media-button{
+    margin-top: 20px;
+    text-align: center;
+}
+
 
 .seeMore1 {
     background-color: a.$primary-color;
@@ -201,6 +250,15 @@
 }
 
 @media screen and (min-width: 768px) {
+
+#newEvent-mobile{
+    display: none;
+}
+
+#newEvent{
+    display: grid;
+    padding-bottom: 30px;
+}
 
 #hero-con h3 {
         top: 20%;
@@ -305,6 +363,7 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     color: a.$secondary-color;
     padding: 5px;
+    text-align: center;
 }
 
 .seeMore2 {
@@ -371,6 +430,16 @@
 #needHelp:hover {
     background-color: a.$primary-color;
 }
+
+ #newEvent{
+        background: linear-gradient(to right, #F48F28 50%, #FEE1C7 50%);
+        background-size: 100% 100%;
+    
+        p{
+            font-family: a.$body-font-family;
+            font-size: 17px;
+        }
+    }
 
 
 }
@@ -562,11 +631,21 @@
     .seeMore1, .seeMore2 {
             font-size: 42px;
         }
-    
-    .colaborators-images img {
 
-        margin-left: 180px; 
+    //Collaborators
+
+    .colaborators-images {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;
     }
+
+    .colaborators-images img {
+        max-width: 60%;
+        margin: 15px; 
+    }
+
 
     #donate h2 {
         margin-top: 250px;
