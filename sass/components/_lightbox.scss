@@ -11,10 +11,10 @@
     padding: 5px;
     box-sizing: border-box;
     z-index: 98; 
-    overflow-y: scroll; /* Enable vertical scrolling */
-    min-height: 100vh; /* Set height to occupy full viewport */
-    width: 100%; /* Set width to occupy full viewport */
-    transition: 0.4s; /* Add transition for smooth animation */
+    overflow-y: scroll; 
+    min-height: 100vh;
+    width: 100%; 
+    transition: 0.4s; 
     background-color: a.$third-color;
 }
 
