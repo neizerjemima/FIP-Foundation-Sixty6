@@ -174,7 +174,7 @@ textarea::placeholder  {
     color: b.$secondary-color;
     margin-bottom: 20px;
     border: none;
-
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -600,8 +600,9 @@ textarea::placeholder  {
 @media (min-width: 1920px) {
     #help-p-contact{
     
-        margin-left: 300px;
-        margin-right: 300px;
+        margin-left: 350px;
+        margin-right: 350px;
+        text-align: justify;
     }
 
     //Lightbox
